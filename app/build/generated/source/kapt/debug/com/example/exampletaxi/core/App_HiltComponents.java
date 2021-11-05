@@ -1,6 +1,7 @@
 package com.example.exampletaxi.core;
 
 import androidx.hilt.lifecycle.ViewModelFactoryModules;
+import com.example.data.di.CacheModule;
 import com.example.data.di.CloudModule;
 import com.example.data.di.CoreModule;
 import com.example.exampletaxi.MainActivity_GeneratedInjector;
@@ -120,6 +121,7 @@ public final class App_HiltComponents {
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
           ApplicationContextModule.class,
+          CacheModule.class,
           CloudModule.class,
           CoreModule.class
       }

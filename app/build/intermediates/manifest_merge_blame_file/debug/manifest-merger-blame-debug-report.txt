@@ -13,120 +13,50 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:5:5-66
 11-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:5:22-64
-12
-13    <queries>
-13-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:7:5-13:15
-14        <intent>
-14-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:8:9-12:18
-15            <action android:name="android.intent.action.CREATE_DOCUMENT" />
-15-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:9:13-76
-15-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:9:21-73
-16
-17            <data android:mimeType="*/*" />
-17-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:11:13-44
-17-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:11:19-41
-18        </intent>
-19    </queries>
-20
-21    <application
-21-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:7:5-24:19
-22        android:name="com.example.exampletaxi.core.App"
-22-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:8:9-33
-23        android:allowBackup="true"
-23-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:9:9-35
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\253e0510136e4eab8b9b1a0e8bf3bf48\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-25        android:debuggable="true"
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:10:9-43
-27        android:label="@string/app_name"
-27-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:11:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:12:9-54
-29        android:supportsRtl="true"
-29-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:13:9-35
-30        android:testOnly="true"
-31        android:theme="@style/Theme.ExampleTaxi" >
-31-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:14:9-49
-32        <activity
-32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:15:9-23:20
-33            android:name="com.example.exampletaxi.MainActivity"
-33-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:16:13-41
-34            android:exported="true" >
-34-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:17:13-36
-35            <intent-filter>
-35-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:18:13-22:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:17-69
-36-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:17-77
-38-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:27-74
-39            </intent-filter>
-40        </activity>
-41        <activity
-41-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:16:9-21:52
-42            android:name="com.chuckerteam.chucker.internal.ui.MainActivity"
-42-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:17:13-76
-43            android:label="@string/chucker_name"
-43-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:18:13-49
-44            android:launchMode="singleTask"
-44-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:19:13-44
-45            android:taskAffinity="com.chuckerteam.chucker.task"
-45-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:20:13-64
-46            android:theme="@style/Chucker.Theme" />
-46-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:21:13-49
-47        <activity
-47-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:22:9-25:52
-48            android:name="com.chuckerteam.chucker.internal.ui.transaction.TransactionActivity"
-48-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:23:13-95
-49            android:parentActivityName="com.chuckerteam.chucker.internal.ui.MainActivity"
-49-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:24:13-90
-50            android:theme="@style/Chucker.Theme" />
-50-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:25:13-49
-51        <activity
-51-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:26:9-29:52
-52            android:name="com.chuckerteam.chucker.internal.ui.throwable.ThrowableActivity"
-52-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:27:13-91
-53            android:parentActivityName="com.chuckerteam.chucker.internal.ui.MainActivity"
-53-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:28:13-90
-54            android:theme="@style/Chucker.Theme" />
-54-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:29:13-49
-55
-56        <service
-56-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:31:9-33:40
-57            android:name="com.chuckerteam.chucker.internal.support.ClearDatabaseService"
-57-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:32:13-89
-58            android:exported="false" />
-58-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:33:13-37
-59
-60        <provider
-60-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:35:9-43:20
-61            android:name="com.chuckerteam.chucker.internal.support.ChuckerFileProvider"
-61-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:36:13-88
-62            android:authorities="com.example.exampletaxi.com.chuckerteam.chucker.provider"
-62-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:37:13-84
-63            android:exported="false"
-63-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:38:13-37
-64            android:grantUriPermissions="true" >
-64-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:39:13-47
-65            <meta-data
-65-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:40:13-42:66
-66                android:name="android.support.FILE_PROVIDER_PATHS"
-66-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:41:17-67
-67                android:resource="@xml/chucker_provider_paths" />
-67-->[com.github.chuckerteam.chucker:library:3.5.2] C:\Users\Normal_User\.gradle\caches\transforms-3\d66219e26c9892959047eefba8667333\transformed\jetified-library-3.5.2\AndroidManifest.xml:42:17-63
-68        </provider>
-69
-70        <service
-70-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\11cb5692d19b9a8b7823dd882bd61d64\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
-71            android:name="androidx.room.MultiInstanceInvalidationService"
-71-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\11cb5692d19b9a8b7823dd882bd61d64\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
-72            android:directBootAware="true"
-72-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\11cb5692d19b9a8b7823dd882bd61d64\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
-73            android:exported="false" />
-73-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\11cb5692d19b9a8b7823dd882bd61d64\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
-74    </application>
-75
-76</manifest>
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:7:5-80
+13-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:7:22-78
+14
+15    <application
+15-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:9:5-26:19
+16        android:name="com.example.exampletaxi.core.App"
+16-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:10:9-33
+17        android:allowBackup="true"
+17-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:11:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\5aadc9dc899b5018a57064d37201c0a9\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:12:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:13:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:14:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:15:9-35
+24        android:testOnly="true"
+25        android:theme="@style/Theme.ExampleTaxi" >
+25-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:16:9-49
+26        <activity
+26-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:17:9-25:20
+27            android:name="com.example.exampletaxi.MainActivity"
+27-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:18:13-41
+28            android:exported="true" >
+28-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:13-36
+29            <intent-filter>
+29-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:17-69
+30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:23:17-77
+32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:23:27-74
+33            </intent-filter>
+34        </activity>
+35    </application>
+36
+37</manifest>

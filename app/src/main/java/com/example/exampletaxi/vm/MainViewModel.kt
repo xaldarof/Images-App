@@ -1,5 +1,6 @@
 package com.example.exampletaxi.vm
 
+import android.widget.ImageView
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagingData
 import androidx.paging.map
@@ -19,10 +20,14 @@ class MainViewModel
                     private val mapper: ImageMapperImpl): ViewModel() {
 
     fun fetchImages(): Flow<PagingData<ImageUiModel>> {
-       return repository.fetchImages().map {
-            it.map {
+       return repository.fetchImages().map { it ->
+           it.map {
                 mapper.mapToUi(it)
             }
         }
+    }
+
+    suspend fun saveImage(imageView: ImageView):String{
+       return repository.saveImage(imageView)
     }
 }

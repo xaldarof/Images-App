@@ -18,12 +18,17 @@ class ImagePagingSource
     }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ImageDomainModel> {
-        val nextPageNumber = params.key ?:1
-        val response = imageApiService.fetchImages(page = nextPageNumber)
-        val data = response.imageDomainModel
-        val nextKey = if (data.isEmpty()) null else nextPageNumber + 1
+        return try {
+            val nextPageNumber = params.key ?: 1
+            val response = imageApiService.fetchImages(page = nextPageNumber)
+            val data = response.imageDomainModel
+            val nextKey = if (data.isEmpty()) null else nextPageNumber + 1
 
-        return LoadResult.Page(data = data,prevKey = if (nextPageNumber == 1)
-            null else nextPageNumber,nextKey = nextKey)
+            LoadResult.Page(data = data,prevKey = if (nextPageNumber == 1)
+                null else nextPageNumber,nextKey = nextKey)
+
+        }catch (e:Exception){
+            LoadResult.Error(e)
+        }
     }
 }

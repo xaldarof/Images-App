@@ -1,22 +1,28 @@
-com/example/data/realization/DataRepositoryImpl_Factory.java
- com.example.data.realization.DataRepositoryImpl_Factory
-com/example/data/BuildConfig.java
- com.example.data.BuildConfig
-com/example/data/realization/ImageDataSourceImpl_Factory.java
- com.example.data.realization.ImageDataSourceImpl_Factory
-com/example/data/di/CloudModule_ProvideImageServiceFactory.java
- com.example.data.di.CloudModule_ProvideImageServiceFactory
-com/example/data/cloud/api/ImagePagingSource_Factory.java
- com.example.data.cloud.api.ImagePagingSource_Factory
-com/example/data/di/CloudModule_ProvideDataRepositoryFactory.java
- com.example.data.di.CloudModule_ProvideDataRepositoryFactory
 hilt_aggregated_deps/_com_example_data_di_CoreModule.java
  hilt_aggregated_deps._com_example_data_di_CoreModule
-com/example/data/di/CloudModule_ProvideRetrofitFactory.java
- com.example.data.di.CloudModule_ProvideRetrofitFactory
+com/example/data/BuildConfig.java
+ com.example.data.BuildConfig
 hilt_aggregated_deps/_com_example_data_di_CloudModule.java
  hilt_aggregated_deps._com_example_data_di_CloudModule
-com/example/data/di/CloudModule_ProvideRetrofitClientFactory.java
- com.example.data.di.CloudModule_ProvideRetrofitClientFactory
+com/example/data/cloud/api/ImagePagingSource_Factory.java
+ com.example.data.cloud.api.ImagePagingSource_Factory
+com/example/data/realization/ImageDataSourceImpl_Factory.java
+ com.example.data.realization.ImageDataSourceImpl_Factory
+hilt_aggregated_deps/_com_example_data_di_CacheModule.java
+ hilt_aggregated_deps._com_example_data_di_CacheModule
+com/example/data/realization/DataRepositoryImpl_Factory.java
+ com.example.data.realization.DataRepositoryImpl_Factory
+com/example/data/di/CloudModule_ProvideImageServiceFactory.java
+ com.example.data.di.CloudModule_ProvideImageServiceFactory
+com/example/data/di/CloudModule_ProvideDataRepositoryFactory.java
+ com.example.data.di.CloudModule_ProvideDataRepositoryFactory
+com/example/data/di/CloudModule_ProvideRetrofitFactory.java
+ com.example.data.di.CloudModule_ProvideRetrofitFactory
 com/example/data/di/CloudModule_ProvideImageDataSourceFactory.java
  com.example.data.di.CloudModule_ProvideImageDataSourceFactory
+com/example/data/di/CloudModule_ProvideRetrofitClientFactory.java
+ com.example.data.di.CloudModule_ProvideRetrofitClientFactory
+com/example/data/realization/ImageSaverImpl_Factory.java
+ com.example.data.realization.ImageSaverImpl_Factory
+com/example/data/di/CacheModule_ProvideImageSaverFactory.java
+ com.example.data.di.CacheModule_ProvideImageSaverFactory

@@ -4,9 +4,10 @@ package com.example.exampletaxi.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -17,24 +18,28 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final LinearLayout container;
+  public final ConstraintLayout container;
+
+  @NonNull
+  public final ImageView errorIcon;
 
   @NonNull
   public final RecyclerView rv;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout container,
-      @NonNull RecyclerView rv) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout container, @NonNull ImageView errorIcon, @NonNull RecyclerView rv) {
     this.rootView = rootView;
     this.container = container;
+    this.errorIcon = errorIcon;
     this.rv = rv;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -59,7 +64,13 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      LinearLayout container = (LinearLayout) rootView;
+      ConstraintLayout container = (ConstraintLayout) rootView;
+
+      id = R.id.errorIcon;
+      ImageView errorIcon = ViewBindings.findChildViewById(rootView, id);
+      if (errorIcon == null) {
+        break missingId;
+      }
 
       id = R.id.rv;
       RecyclerView rv = ViewBindings.findChildViewById(rootView, id);
@@ -67,7 +78,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, container, rv);
+      return new ActivityMainBinding((ConstraintLayout) rootView, container, errorIcon, rv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

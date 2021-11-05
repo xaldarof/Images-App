@@ -8,7 +8,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.example.data.cloud.abstraction.ImageDataSource;
+import com.example.data.cloud.abstraction.ImageSaver;
 import com.example.data.cloud.api.ImageApiService;
+import com.example.data.di.CacheModule;
+import com.example.data.di.CacheModule_ProvideImageSaverFactory;
 import com.example.data.di.CloudModule;
 import com.example.data.di.CloudModule_ProvideDataRepositoryFactory;
 import com.example.data.di.CloudModule_ProvideImageDataSourceFactory;
@@ -16,6 +19,7 @@ import com.example.data.di.CloudModule_ProvideImageServiceFactory;
 import com.example.data.di.CloudModule_ProvideRetrofitClientFactory;
 import com.example.data.di.CloudModule_ProvideRetrofitFactory;
 import com.example.data.realization.DataRepositoryImpl;
+import com.example.data.realization.ImageSaverImpl;
 import com.example.domain.DataRepository;
 import com.example.exampletaxi.MainActivity;
 import com.example.exampletaxi.mappers.ImageMapperImpl;
@@ -54,6 +58,8 @@ import retrofit2.Retrofit;
 public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponents.SingletonC {
   private final ApplicationContextModule applicationContextModule;
 
+  private final CacheModule cacheModule;
+
   private volatile Object okHttpClient = new MemoizedSentinel();
 
   private volatile Object retrofit = new MemoizedSentinel();
@@ -61,8 +67,9 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
   private volatile Object imageApiService = new MemoizedSentinel();
 
   private DaggerApp_HiltComponents_SingletonC(
-      ApplicationContextModule applicationContextModuleParam) {
+      ApplicationContextModule applicationContextModuleParam, CacheModule cacheModuleParam) {
     this.applicationContextModule = applicationContextModuleParam;
+    this.cacheModule = cacheModuleParam;
   }
 
   public static Builder builder() {
@@ -115,8 +122,16 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
     return CloudModule_ProvideImageDataSourceFactory.provideImageDataSource(imageApiService());
   }
 
+  private ImageSaverImpl imageSaverImpl() {
+    return new ImageSaverImpl(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+  }
+
+  private ImageSaver imageSaver() {
+    return CacheModule_ProvideImageSaverFactory.provideImageSaver(cacheModule, imageSaverImpl());
+  }
+
   private DataRepositoryImpl dataRepositoryImpl() {
-    return new DataRepositoryImpl(imageDataSource());
+    return new DataRepositoryImpl(imageDataSource(), imageSaver());
   }
 
   private DataRepository dataRepository() {
@@ -140,11 +155,18 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
   public static final class Builder {
     private ApplicationContextModule applicationContextModule;
 
+    private CacheModule cacheModule;
+
     private Builder() {
     }
 
     public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
       this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
+      return this;
+    }
+
+    public Builder cacheModule(CacheModule cacheModule) {
+      this.cacheModule = Preconditions.checkNotNull(cacheModule);
       return this;
     }
 
@@ -159,7 +181,10 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
 
     public App_HiltComponents.SingletonC build() {
       Preconditions.checkBuilderRequirement(applicationContextModule, ApplicationContextModule.class);
-      return new DaggerApp_HiltComponents_SingletonC(applicationContextModule);
+      if (cacheModule == null) {
+        this.cacheModule = new CacheModule();
+      }
+      return new DaggerApp_HiltComponents_SingletonC(applicationContextModule, cacheModule);
     }
   }
 
@@ -223,7 +248,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       }
 
       @Override
-      public void injectMainActivity(MainActivity mainActivity) {
+      public void injectMainActivity(MainActivity arg0) {
       }
 
       @Override

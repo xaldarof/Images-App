@@ -2,6 +2,7 @@
 package com.example.data.realization;
 
 import com.example.data.cloud.abstraction.ImageDataSource;
+import com.example.data.cloud.abstraction.ImageSaver;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
@@ -14,21 +15,26 @@ import javax.inject.Provider;
 public final class DataRepositoryImpl_Factory implements Factory<DataRepositoryImpl> {
   private final Provider<ImageDataSource> imageDataSourceProvider;
 
-  public DataRepositoryImpl_Factory(Provider<ImageDataSource> imageDataSourceProvider) {
+  private final Provider<ImageSaver> imageSaverProvider;
+
+  public DataRepositoryImpl_Factory(Provider<ImageDataSource> imageDataSourceProvider,
+      Provider<ImageSaver> imageSaverProvider) {
     this.imageDataSourceProvider = imageDataSourceProvider;
+    this.imageSaverProvider = imageSaverProvider;
   }
 
   @Override
   public DataRepositoryImpl get() {
-    return newInstance(imageDataSourceProvider.get());
+    return newInstance(imageDataSourceProvider.get(), imageSaverProvider.get());
   }
 
-  public static DataRepositoryImpl_Factory create(
-      Provider<ImageDataSource> imageDataSourceProvider) {
-    return new DataRepositoryImpl_Factory(imageDataSourceProvider);
+  public static DataRepositoryImpl_Factory create(Provider<ImageDataSource> imageDataSourceProvider,
+      Provider<ImageSaver> imageSaverProvider) {
+    return new DataRepositoryImpl_Factory(imageDataSourceProvider, imageSaverProvider);
   }
 
-  public static DataRepositoryImpl newInstance(ImageDataSource imageDataSource) {
-    return new DataRepositoryImpl(imageDataSource);
+  public static DataRepositoryImpl newInstance(ImageDataSource imageDataSource,
+      ImageSaver imageSaver) {
+    return new DataRepositoryImpl(imageDataSource, imageSaver);
   }
 }
