@@ -1,0 +1,87 @@
+com/example/exampletaxi/vm/MainViewModel_HiltModules_KeyModule_ProvideFactory.java
+ com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory
+ com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
+com/example/exampletaxi/Hilt_MainActivity.java
+ com.example.exampletaxi.Hilt_MainActivity
+ com.example.exampletaxi.Hilt_MainActivity$1
+com/example/exampletaxi/databinding/FragmentBaseBinding.java
+ com.example.exampletaxi.databinding.FragmentBaseBinding
+dagger/hilt/internal/aggregatedroot/codegen/_com_example_exampletaxi_core_App.java
+ dagger.hilt.internal.aggregatedroot.codegen._com_example_exampletaxi_core_App
+com/example/exampletaxi/core/DaggerApp_HiltComponents_SingletonC.java
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$1
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl$FragmentCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl$FragmentCI
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl$FragmentCI$ViewWithFragmentCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl$FragmentCI$ViewWithFragmentCI
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl$ViewCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ActivityCImpl$ViewCI
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ViewModelCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ViewModelCImpl
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ActivityRetainedCImpl$ViewModelCImpl$SwitchingProvider
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$Builder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ServiceCBuilder
+ com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ServiceCImpl
+com/example/exampletaxi/databinding/FragmentFirstBinding.java
+ com.example.exampletaxi.databinding.FragmentFirstBinding
+com/example/exampletaxi/vm/MainViewModel_HiltModules.java
+ com.example.exampletaxi.vm.MainViewModel_HiltModules
+ com.example.exampletaxi.vm.MainViewModel_HiltModules$BindsModule
+ com.example.exampletaxi.vm.MainViewModel_HiltModules$KeyModule
+hilt_aggregated_deps/_com_example_exampletaxi_vm_MainViewModel_HiltModules_BindsModule.java
+ hilt_aggregated_deps._com_example_exampletaxi_vm_MainViewModel_HiltModules_BindsModule
+hilt_aggregated_deps/_com_example_exampletaxi_MainActivity_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_exampletaxi_MainActivity_GeneratedInjector
+com/example/exampletaxi/mappers/ImageMapperImpl_Factory.java
+ com.example.exampletaxi.mappers.ImageMapperImpl_Factory
+ com.example.exampletaxi.mappers.ImageMapperImpl_Factory$InstanceHolder
+com/example/exampletaxi/MainActivity_GeneratedInjector.java
+ com.example.exampletaxi.MainActivity_GeneratedInjector
+com/example/exampletaxi/core/Hilt_App.java
+ com.example.exampletaxi.core.Hilt_App
+ com.example.exampletaxi.core.Hilt_App$1
+com/example/exampletaxi/vm/MainViewModel_Factory.java
+ com.example.exampletaxi.vm.MainViewModel_Factory
+hilt_aggregated_deps/_com_example_exampletaxi_core_App_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_exampletaxi_core_App_GeneratedInjector
+com/example/exampletaxi/databinding/ActivityMainBinding.java
+ com.example.exampletaxi.databinding.ActivityMainBinding
+com/example/exampletaxi/BuildConfig.java
+ com.example.exampletaxi.BuildConfig
+dagger/hilt/internal/processedrootsentinel/codegen/_com_example_exampletaxi_core_App.java
+ dagger.hilt.internal.processedrootsentinel.codegen._com_example_exampletaxi_core_App
+com/example/exampletaxi/core/App_HiltComponents.java
+ com.example.exampletaxi.core.App_HiltComponents
+ com.example.exampletaxi.core.App_HiltComponents$ActivityC
+ com.example.exampletaxi.core.App_HiltComponents$ActivityC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$ActivityCBuilderModule
+ com.example.exampletaxi.core.App_HiltComponents$ActivityRetainedC
+ com.example.exampletaxi.core.App_HiltComponents$ActivityRetainedC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$ActivityRetainedCBuilderModule
+ com.example.exampletaxi.core.App_HiltComponents$FragmentC
+ com.example.exampletaxi.core.App_HiltComponents$FragmentC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$FragmentCBuilderModule
+ com.example.exampletaxi.core.App_HiltComponents$ServiceC
+ com.example.exampletaxi.core.App_HiltComponents$ServiceC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$ServiceCBuilderModule
+ com.example.exampletaxi.core.App_HiltComponents$SingletonC
+ com.example.exampletaxi.core.App_HiltComponents$ViewC
+ com.example.exampletaxi.core.App_HiltComponents$ViewC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$ViewCBuilderModule
+ com.example.exampletaxi.core.App_HiltComponents$ViewModelC
+ com.example.exampletaxi.core.App_HiltComponents$ViewModelC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$ViewModelCBuilderModule
+ com.example.exampletaxi.core.App_HiltComponents$ViewWithFragmentC
+ com.example.exampletaxi.core.App_HiltComponents$ViewWithFragmentC$Builder
+ com.example.exampletaxi.core.App_HiltComponents$ViewWithFragmentCBuilderModule
+hilt_aggregated_deps/_com_example_exampletaxi_vm_MainViewModel_HiltModules_KeyModule.java
+ hilt_aggregated_deps._com_example_exampletaxi_vm_MainViewModel_HiltModules_KeyModule
+com/example/exampletaxi/core/App_GeneratedInjector.java
+ com.example.exampletaxi.core.App_GeneratedInjector
+com/example/exampletaxi/databinding/ImageItemBinding.java
+ com.example.exampletaxi.databinding.ImageItemBinding
