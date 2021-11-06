@@ -8,8 +8,10 @@ import kotlinx.coroutines.flow.Flow
 
 interface DataRepository {
 
-    fun fetchImages():Flow<PagingData<ImageDomainModel>>
+    fun fetchImages(query:String):Flow<PagingData<ImageDomainModel>>
 
-    suspend fun saveImage(imageView: ImageView):String
+    suspend fun saveImage(imageView: ImageView)
+
+    suspend fun shareImage(imageView: ImageView)
 
 }

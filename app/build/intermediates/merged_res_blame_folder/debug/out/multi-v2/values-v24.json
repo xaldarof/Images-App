@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Normal_User\\.gradle\\caches\\transforms-3\\69386d4742379cb286dc97e8cac43096\\transformed\\appcompat-1.3.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Normal_User\\.gradle\\caches\\transforms-3\\1d54eb117bdfc6496946a537feb5c2c7\\transformed\\appcompat-1.3.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Normal_User\\.gradle\\caches\\transforms-3\\ecc85a25f684d65429bcadc11c113faf\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Normal_User\\.gradle\\caches\\transforms-3\\53a7235d8e586ec4eb849ea0e4e09727\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -19,27 +19,15 @@ class ImagesPagingAdapter(private val callBack: CallBack): PagingDataAdapter<Ima
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(imageUiModel: ImageUiModel) {
-            binding.commentsTv.text = imageUiModel.comments.toString()
-            binding.likesTv.text = imageUiModel.likes.toString()
-            binding.userNameTv.text = imageUiModel.user
-            binding.userIdTv.text = imageUiModel.user_id.toString()
-
-            binding.optionsBtn.setOnClickListener {
-                callBack.onClickOptions(imageUiModel,binding.optionsBtn,binding.image)
-            }
-            binding.image.setOnClickListener {
-                binding.cardView.startTransform()
-            }
-
-            Glide.with(binding.root.context)
-                .load(imageUiModel.userImageURL)
-                .error(R.drawable.ic_baseline_person_24)
-                .into(binding.userAvatarImg)
 
             Glide.with(binding.root.context)
                 .load(imageUiModel.webFormat)
                 .placeholder(R.drawable.ic_baseline_arrow_downward_24)
                 .into(binding.image)
+
+            binding.image.setOnClickListener {
+                callBack.onClickOpenImage(imageUiModel,binding.image)
+            }
 
         }
     }
@@ -70,6 +58,6 @@ class ImagesPagingAdapter(private val callBack: CallBack): PagingDataAdapter<Ima
     }
 
     interface CallBack {
-        fun onClickOptions(uiModel: ImageUiModel,view:View,image:ImageView)
+        fun onClickOpenImage(uiModel: ImageUiModel,imageView: ImageView)
     }
 }

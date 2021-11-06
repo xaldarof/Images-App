@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface ImageDataSource {
 
-    fun fetchImages():Flow<PagingData<ImageDomainModel>>
+    fun fetchImages(query:String):Flow<PagingData<ImageDomainModel>>
 
 }

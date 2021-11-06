@@ -13,7 +13,7 @@ interface ImageApiService {
         @Query("key") key:String = Constants.ACCESS_KEY,
         @Query("per_page") perPage:Int = Constants.PAGE_SIZE,
         @Query("page") page:Int,
-        @Query("q") query:String = "dog"
+        @Query("q") query:String
     ):ImageCloudModel
 
 }

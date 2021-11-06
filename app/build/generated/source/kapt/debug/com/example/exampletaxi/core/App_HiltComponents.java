@@ -3,9 +3,9 @@ package com.example.exampletaxi.core;
 import androidx.hilt.lifecycle.ViewModelFactoryModules;
 import com.example.data.di.CacheModule;
 import com.example.data.di.CloudModule;
-import com.example.data.di.CoreModule;
 import com.example.exampletaxi.MainActivity_GeneratedInjector;
 import com.example.exampletaxi.fragments.HomeFragment_GeneratedInjector;
+import com.example.exampletaxi.fragments.SearchFragment_GeneratedInjector;
 import com.example.exampletaxi.vm.MainViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
@@ -123,8 +123,7 @@ public final class App_HiltComponents {
           ServiceCBuilderModule.class,
           ApplicationContextModule.class,
           CacheModule.class,
-          CloudModule.class,
-          CoreModule.class
+          CloudModule.class
       }
   )
   @Singleton
@@ -216,6 +215,7 @@ public final class App_HiltComponents {
   )
   @FragmentScoped
   public abstract static class FragmentC implements HomeFragment_GeneratedInjector,
+      SearchFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

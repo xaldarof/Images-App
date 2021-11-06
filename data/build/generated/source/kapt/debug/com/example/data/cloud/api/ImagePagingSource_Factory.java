@@ -13,21 +13,25 @@ import javax.inject.Provider;
 public final class ImagePagingSource_Factory implements Factory<ImagePagingSource> {
   private final Provider<ImageApiService> imageApiServiceProvider;
 
-  public ImagePagingSource_Factory(Provider<ImageApiService> imageApiServiceProvider) {
+  private final Provider<String> queryProvider;
+
+  public ImagePagingSource_Factory(Provider<ImageApiService> imageApiServiceProvider,
+      Provider<String> queryProvider) {
     this.imageApiServiceProvider = imageApiServiceProvider;
+    this.queryProvider = queryProvider;
   }
 
   @Override
   public ImagePagingSource get() {
-    return newInstance(imageApiServiceProvider.get());
+    return newInstance(imageApiServiceProvider.get(), queryProvider.get());
   }
 
-  public static ImagePagingSource_Factory create(
-      Provider<ImageApiService> imageApiServiceProvider) {
-    return new ImagePagingSource_Factory(imageApiServiceProvider);
+  public static ImagePagingSource_Factory create(Provider<ImageApiService> imageApiServiceProvider,
+      Provider<String> queryProvider) {
+    return new ImagePagingSource_Factory(imageApiServiceProvider, queryProvider);
   }
 
-  public static ImagePagingSource newInstance(ImageApiService imageApiService) {
-    return new ImagePagingSource(imageApiService);
+  public static ImagePagingSource newInstance(ImageApiService imageApiService, String query) {
+    return new ImagePagingSource(imageApiService, query);
   }
 }

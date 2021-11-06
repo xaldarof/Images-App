@@ -2,7 +2,10 @@ package com.example.exampletaxi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.exampletaxi.adapters.FragmentController
 import com.example.exampletaxi.databinding.ActivityMainBinding
+import com.example.exampletaxi.fragments.HomeFragment
+import com.example.exampletaxi.fragments.SearchFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,6 +20,5 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
     }
-
 }
 

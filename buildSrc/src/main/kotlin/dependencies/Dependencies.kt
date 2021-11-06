@@ -64,7 +64,11 @@ object Dependencies {
     object View {
         object Versions {
             const val transformationLayout_version = "1.1.0"
+            const val flexBoxLayout_version = "3.0.0"
+            const val stegged_version = "1.3.0-alpha02"
         }
         const val transformationLayout = "com.github.skydoves:transformationlayout:${Versions.transformationLayout_version}"
+        const val flexBoxLayout = "com.google.android.flexbox:flexbox:${Versions.flexBoxLayout_version}"
+        const val steggedLayoutManager = "com.google.android.material:material:${Versions.stegged_version}"
     }
 }

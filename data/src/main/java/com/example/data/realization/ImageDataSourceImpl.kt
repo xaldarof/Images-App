@@ -16,14 +16,14 @@ class ImageDataSourceImpl
 @Inject constructor(private val apiService: ImageApiService): ImageDataSource {
 
 
-    override fun fetchImages(): Flow<PagingData<ImageDomainModel>> {
+    override fun fetchImages(query:String): Flow<PagingData<ImageDomainModel>> {
         return Pager(
             config = PagingConfig(
                 pageSize = Constants.PAGE_SIZE,
                 enablePlaceholders = false
             ),
             pagingSourceFactory = {
-                ImagePagingSource(apiService)
+                ImagePagingSource(apiService,query)
             }
         ).flow
     }

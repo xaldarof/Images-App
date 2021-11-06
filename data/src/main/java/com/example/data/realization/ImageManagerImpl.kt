@@ -12,21 +12,25 @@ import javax.inject.Inject
 import android.content.Intent
 import android.net.Uri
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlin.coroutines.resume
-import kotlin.coroutines.suspendCoroutine
+import android.provider.MediaStore
+import android.widget.Toast
+import com.example.data.R
+import com.example.data.utils.DataConstants
+import java.io.ByteArrayOutputStream
+import java.io.FileNotFoundException
 
 
 class ImageManagerImpl @Inject constructor(@ApplicationContext private val context: Context) :
     ImageManager {
 
-    override suspend fun saveImage(imageView: ImageView) = suspendCoroutine<String> {
+    override suspend fun saveImage(imageView: ImageView)  {
         try {
             val bitmapDrawable = imageView.drawable as BitmapDrawable
             val bitmap = bitmapDrawable.bitmap
 
             var outStream: FileOutputStream? = null
             val sdCard: File = Environment.getExternalStorageDirectory()
-            val dir = File(sdCard.absolutePath.toString() + "/NewMyImages")
+            val dir = File(sdCard.absolutePath.toString() + DataConstants.FILE_NAME)
             dir.mkdirs()
             val fileName = String.format("%d.jpg", System.currentTimeMillis())
             val outFile = File(dir, fileName)
@@ -35,18 +39,31 @@ class ImageManagerImpl @Inject constructor(@ApplicationContext private val conte
             outStream.flush()
             outStream.close()
 
-            it.resume(outFile.absolutePath)
             notifyDataChanged(outFile)
 
-        }catch (e:Exception){
-            it.resume("Произошла ошибка")
+            Toast.makeText(context, "${R.string.save_in} ${outFile.absolutePath}", Toast.LENGTH_SHORT).show()
+
+        } catch (e: Exception) {
+            Toast.makeText(context, R.string.an_error, Toast.LENGTH_SHORT).show()
         }
     }
 
-    override fun shareImage(path: String) {
-        val intent = Intent(Intent.ACTION_SEND)
-        intent.data = Uri.fromFile(File(path))
-        context.startActivity(intent)
+    override fun shareImage(imageView: ImageView) {
+        val bitmapDrawable = imageView.drawable as BitmapDrawable
+        val bitmap = bitmapDrawable.bitmap
+
+        val share = Intent(Intent.ACTION_SEND)
+        share.type = DataConstants.IMAGE_TYPE
+        val bytes = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+        val path = MediaStore.Images.Media.insertImage(
+            context.contentResolver,
+            bitmap, (System.currentTimeMillis() / 1000).toString(), null
+        )
+        val imageUri = Uri.parse(path)
+        share.putExtra(Intent.EXTRA_STREAM, imageUri)
+        context.startActivity(Intent.createChooser(share, DataConstants.SELECT_APP))
+
     }
 
     private fun notifyDataChanged(file: File) {

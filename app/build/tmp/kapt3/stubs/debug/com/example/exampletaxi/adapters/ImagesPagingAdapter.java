@@ -61,12 +61,11 @@ public final class ImagesPagingAdapter extends androidx.paging.PagingDataAdapter
         }
     }
     
-    @kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u00020\u0001J \u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tH&\u00a8\u0006\n"}, d2 = {"Lcom/example/exampletaxi/adapters/ImagesPagingAdapter$CallBack;", "", "onClickOptions", "", "uiModel", "Lcom/example/exampletaxi/core/ImageUiModel;", "view", "Landroid/view/View;", "image", "Landroid/widget/ImageView;", "app_debug"})
+    @kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u00020\u0001J\u0018\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0007H&\u00a8\u0006\b"}, d2 = {"Lcom/example/exampletaxi/adapters/ImagesPagingAdapter$CallBack;", "", "onClickOpenImage", "", "uiModel", "Lcom/example/exampletaxi/core/ImageUiModel;", "imageView", "Landroid/widget/ImageView;", "app_debug"})
     public static abstract interface CallBack {
         
-        public abstract void onClickOptions(@org.jetbrains.annotations.NotNull()
+        public abstract void onClickOpenImage(@org.jetbrains.annotations.NotNull()
         com.example.exampletaxi.core.ImageUiModel uiModel, @org.jetbrains.annotations.NotNull()
-        android.view.View view, @org.jetbrains.annotations.NotNull()
-        android.widget.ImageView image);
+        android.widget.ImageView imageView);
     }
 }

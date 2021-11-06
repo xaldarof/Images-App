@@ -23,6 +23,7 @@ import com.example.data.realization.ImageManagerImpl;
 import com.example.domain.DataRepository;
 import com.example.exampletaxi.MainActivity;
 import com.example.exampletaxi.fragments.HomeFragment;
+import com.example.exampletaxi.fragments.SearchFragment;
 import com.example.exampletaxi.mappers.ImageMapperImpl;
 import com.example.exampletaxi.vm.MainViewModel;
 import com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -249,7 +250,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       }
 
       @Override
-      public void injectMainActivity(MainActivity arg0) {
+      public void injectMainActivity(MainActivity mainActivity) {
       }
 
       @Override
@@ -299,7 +300,11 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
         }
 
         @Override
-        public void injectHomeFragment(HomeFragment arg0) {
+        public void injectHomeFragment(HomeFragment homeFragment) {
+        }
+
+        @Override
+        public void injectSearchFragment(SearchFragment searchFragment) {
         }
 
         @Override

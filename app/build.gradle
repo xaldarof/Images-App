@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -42,6 +43,7 @@ android {
 dependencies {
     implementation project(":domain")
     implementation project(":data")
+    implementation project(":core")
 
     implementation(Dependencies.Network.paging3)
     implementation(Dependencies.Coroutines.coroutines)
@@ -52,6 +54,8 @@ dependencies {
 
 
     implementation(Dependencies.View.transformationLayout)
+    implementation(Dependencies.View.steggedLayoutManager)
+    implementation(Dependencies.View.flexBoxLayout)
 
 
 
