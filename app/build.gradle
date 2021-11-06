@@ -51,6 +51,9 @@ dependencies {
     implementation(Dependencies.Network.glide)
 
 
+    implementation(Dependencies.View.transformationLayout)
+
+
 
     implementation(Dependencies.Di.legacySupport)
     kapt(Dependencies.Di.hiltCompiler)

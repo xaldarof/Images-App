@@ -2,7 +2,7 @@ package com.example.data.realization
 
 import android.content.Context
 import android.graphics.Bitmap
-import com.example.data.cloud.abstraction.ImageSaver
+import com.example.data.cloud.abstraction.ImageManager
 import android.graphics.drawable.BitmapDrawable
 import android.os.Environment
 import android.widget.ImageView
@@ -16,8 +16,8 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 
-class ImageSaverImpl @Inject constructor(@ApplicationContext private val context: Context) :
-    ImageSaver {
+class ImageManagerImpl @Inject constructor(@ApplicationContext private val context: Context) :
+    ImageManager {
 
     override suspend fun saveImage(imageView: ImageView) = suspendCoroutine<String> {
         try {
@@ -41,6 +41,12 @@ class ImageSaverImpl @Inject constructor(@ApplicationContext private val context
         }catch (e:Exception){
             it.resume("Произошла ошибка")
         }
+    }
+
+    override fun shareImage(path: String) {
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.data = Uri.fromFile(File(path))
+        context.startActivity(intent)
     }
 
     private fun notifyDataChanged(file: File) {

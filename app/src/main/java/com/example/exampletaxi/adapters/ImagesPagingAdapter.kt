@@ -27,7 +27,9 @@ class ImagesPagingAdapter(private val callBack: CallBack): PagingDataAdapter<Ima
             binding.optionsBtn.setOnClickListener {
                 callBack.onClickOptions(imageUiModel,binding.optionsBtn,binding.image)
             }
-
+            binding.image.setOnClickListener {
+                binding.cardView.startTransform()
+            }
 
             Glide.with(binding.root.context)
                 .load(imageUiModel.userImageURL)

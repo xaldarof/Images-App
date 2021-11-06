@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.example.data.cloud.abstraction.ImageDataSource;
-import com.example.data.cloud.abstraction.ImageSaver;
+import com.example.data.cloud.abstraction.ImageManager;
 import com.example.data.cloud.api.ImageApiService;
 import com.example.data.di.CacheModule;
 import com.example.data.di.CacheModule_ProvideImageSaverFactory;
@@ -19,9 +19,10 @@ import com.example.data.di.CloudModule_ProvideImageServiceFactory;
 import com.example.data.di.CloudModule_ProvideRetrofitClientFactory;
 import com.example.data.di.CloudModule_ProvideRetrofitFactory;
 import com.example.data.realization.DataRepositoryImpl;
-import com.example.data.realization.ImageSaverImpl;
+import com.example.data.realization.ImageManagerImpl;
 import com.example.domain.DataRepository;
 import com.example.exampletaxi.MainActivity;
+import com.example.exampletaxi.fragments.HomeFragment;
 import com.example.exampletaxi.mappers.ImageMapperImpl;
 import com.example.exampletaxi.vm.MainViewModel;
 import com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -122,16 +123,16 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
     return CloudModule_ProvideImageDataSourceFactory.provideImageDataSource(imageApiService());
   }
 
-  private ImageSaverImpl imageSaverImpl() {
-    return new ImageSaverImpl(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+  private ImageManagerImpl imageManagerImpl() {
+    return new ImageManagerImpl(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
   }
 
-  private ImageSaver imageSaver() {
-    return CacheModule_ProvideImageSaverFactory.provideImageSaver(cacheModule, imageSaverImpl());
+  private ImageManager imageManager() {
+    return CacheModule_ProvideImageSaverFactory.provideImageSaver(cacheModule, imageManagerImpl());
   }
 
   private DataRepositoryImpl dataRepositoryImpl() {
-    return new DataRepositoryImpl(imageDataSource(), imageSaver());
+    return new DataRepositoryImpl(imageDataSource(), imageManager());
   }
 
   private DataRepository dataRepository() {
@@ -295,6 +296,10 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       private final class FragmentCI extends App_HiltComponents.FragmentC {
         private FragmentCI(Fragment fragment) {
 
+        }
+
+        @Override
+        public void injectHomeFragment(HomeFragment arg0) {
         }
 
         @Override

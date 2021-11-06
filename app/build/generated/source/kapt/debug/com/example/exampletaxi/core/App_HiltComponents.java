@@ -5,6 +5,7 @@ import com.example.data.di.CacheModule;
 import com.example.data.di.CloudModule;
 import com.example.data.di.CoreModule;
 import com.example.exampletaxi.MainActivity_GeneratedInjector;
+import com.example.exampletaxi.fragments.HomeFragment_GeneratedInjector;
 import com.example.exampletaxi.vm.MainViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
@@ -214,7 +215,8 @@ public final class App_HiltComponents {
       }
   )
   @FragmentScoped
-  public abstract static class FragmentC implements FragmentComponent,
+  public abstract static class FragmentC implements HomeFragment_GeneratedInjector,
+      FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,
       GeneratedComponent {

@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.exampletaxi.R;
+import com.skydoves.transformationlayout.TransformationLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,7 +23,7 @@ public final class ImageItemBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final CardView cardView;
+  public final TransformationLayout cardView;
 
   @NonNull
   public final TextView commentsTv;
@@ -43,6 +44,9 @@ public final class ImageItemBinding implements ViewBinding {
   public final CardView imageView3;
 
   @NonNull
+  public final ConstraintLayout itemContainer;
+
+  @NonNull
   public final TextView likesTv;
 
   @NonNull
@@ -57,11 +61,13 @@ public final class ImageItemBinding implements ViewBinding {
   @NonNull
   public final TextView userNameTv;
 
-  private ImageItemBinding(@NonNull ConstraintLayout rootView, @NonNull CardView cardView,
-      @NonNull TextView commentsTv, @NonNull ConstraintLayout constraintLayout,
-      @NonNull ImageView image, @NonNull ImageView imageView, @NonNull ImageView imageView2,
-      @NonNull CardView imageView3, @NonNull TextView likesTv, @NonNull ImageView optionsBtn,
-      @NonNull ImageView userAvatarImg, @NonNull TextView userIdTv, @NonNull TextView userNameTv) {
+  private ImageItemBinding(@NonNull ConstraintLayout rootView,
+      @NonNull TransformationLayout cardView, @NonNull TextView commentsTv,
+      @NonNull ConstraintLayout constraintLayout, @NonNull ImageView image,
+      @NonNull ImageView imageView, @NonNull ImageView imageView2, @NonNull CardView imageView3,
+      @NonNull ConstraintLayout itemContainer, @NonNull TextView likesTv,
+      @NonNull ImageView optionsBtn, @NonNull ImageView userAvatarImg, @NonNull TextView userIdTv,
+      @NonNull TextView userNameTv) {
     this.rootView = rootView;
     this.cardView = cardView;
     this.commentsTv = commentsTv;
@@ -70,6 +76,7 @@ public final class ImageItemBinding implements ViewBinding {
     this.imageView = imageView;
     this.imageView2 = imageView2;
     this.imageView3 = imageView3;
+    this.itemContainer = itemContainer;
     this.likesTv = likesTv;
     this.optionsBtn = optionsBtn;
     this.userAvatarImg = userAvatarImg;
@@ -105,7 +112,7 @@ public final class ImageItemBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.cardView;
-      CardView cardView = ViewBindings.findChildViewById(rootView, id);
+      TransformationLayout cardView = ViewBindings.findChildViewById(rootView, id);
       if (cardView == null) {
         break missingId;
       }
@@ -146,6 +153,8 @@ public final class ImageItemBinding implements ViewBinding {
         break missingId;
       }
 
+      ConstraintLayout itemContainer = (ConstraintLayout) rootView;
+
       id = R.id.likesTv;
       TextView likesTv = ViewBindings.findChildViewById(rootView, id);
       if (likesTv == null) {
@@ -177,8 +186,8 @@ public final class ImageItemBinding implements ViewBinding {
       }
 
       return new ImageItemBinding((ConstraintLayout) rootView, cardView, commentsTv,
-          constraintLayout, image, imageView, imageView2, imageView3, likesTv, optionsBtn,
-          userAvatarImg, userIdTv, userNameTv);
+          constraintLayout, image, imageView, imageView2, imageView3, itemContainer, likesTv,
+          optionsBtn, userAvatarImg, userIdTv, userNameTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

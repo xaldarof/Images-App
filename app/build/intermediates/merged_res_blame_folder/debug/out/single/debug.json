@@ -72,10 +72,6 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_base.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_base.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
@@ -96,8 +92,8 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_first.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_first.xml"
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",

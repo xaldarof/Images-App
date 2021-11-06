@@ -1039,6 +1039,20 @@ attr trackThickness
 attr trackTint
 attr trackTintMode
 attr transformPivotTarget
+attr transformation_allContainerColor
+attr transformation_containerColor
+attr transformation_direction
+attr transformation_duration
+attr transformation_elevationShadowEnabled
+attr transformation_endElevation
+attr transformation_fadeMode
+attr transformation_fitMode
+attr transformation_holdAtEndEnabled
+attr transformation_pathMode
+attr transformation_scrimColor
+attr transformation_startElevation
+attr transformation_targetView
+attr transformation_zOrder
 attr transitionDisable
 attr transitionEasing
 attr transitionFlags
@@ -2009,6 +2023,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id cross
 id currentState
 id custom
 id customPanel
@@ -2054,7 +2069,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id enterBtn
+id entering
 id errorIcon
 id exitUntilCollapsed
 id expand_activities_button
@@ -2069,7 +2084,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragmentFirst2
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2083,9 +2097,11 @@ id grouping
 id groups
 id guideline
 id header_title
+id height
 id hideable
 id home
 id homeAsUp
+id homeFragment
 id honorRequest
 id horizontal_only
 id icon
@@ -2098,6 +2114,7 @@ id imageView
 id imageView2
 id imageView3
 id immediateStop
+id in
 id included
 id info
 id invisible
@@ -2107,6 +2124,7 @@ id item1
 id item2
 id item3
 id item4
+id item_container
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -2178,9 +2196,9 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id name
 id nav_controller_view_tag
 id nav_graph
+id nav_host_fragment
 id nav_host_fragment_container
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
@@ -2201,6 +2219,7 @@ id notification_main_column_container
 id off
 id on
 id optionsBtn
+id out
 id outline
 id outward
 id overshoot
@@ -2225,6 +2244,7 @@ id radio
 id ratio
 id rectangles
 id retryBtn
+id returning
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2256,6 +2276,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id share
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2329,6 +2350,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id through
 id time
 id title
 id titleDividerNoCustom
@@ -2352,7 +2374,6 @@ id up
 id useLogo
 id userAvatarImg
 id userIdTv
-id userName
 id userNameTv
 id vertical_only
 id view_offset_helper
@@ -2363,6 +2384,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id west
+id width
 id withText
 id withinBounds
 id wrap
@@ -2457,8 +2479,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout footer_layout
-layout fragment_base
-layout fragment_first
+layout fragment_home
 layout image_item
 layout material_chip_input_combo
 layout material_clock_display
@@ -3527,6 +3548,7 @@ styleable ThemeEnforcement android_textAppearance enforceMaterialTheme enforceTe
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight menu navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor
 styleable Tooltip android_textAppearance android_padding android_layout_margin android_minWidth android_minHeight android_text backgroundTint
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation transformPivotTarget
+styleable TransformationLayout transformation_allContainerColor transformation_containerColor transformation_direction transformation_duration transformation_elevationShadowEnabled transformation_endElevation transformation_fadeMode transformation_fitMode transformation_holdAtEndEnabled transformation_pathMode transformation_scrimColor transformation_startElevation transformation_targetView transformation_zOrder
 styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration layoutDuringTransition motionInterpolator pathMotionArc staggered transitionDisable transitionFlags
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
 styleable View android_theme android_focusable paddingEnd paddingStart theme

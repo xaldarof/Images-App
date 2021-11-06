@@ -59,6 +59,12 @@ object Dependencies {
         }
         const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_version}"
         const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle_version}"
+    }
 
+    object View {
+        object Versions {
+            const val transformationLayout_version = "1.1.0"
+        }
+        const val transformationLayout = "com.github.skydoves:transformationlayout:${Versions.transformationLayout_version}"
     }
 }

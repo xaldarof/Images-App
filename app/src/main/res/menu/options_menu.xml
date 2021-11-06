@@ -10,4 +10,12 @@
         android:title="Download"
         tools:ignore="UnusedAttribute" />
 
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_baseline_arrow_downward_24"
+        android:iconTint="#4CAF50"
+        android:iconTintMode="src_in"
+        android:title="Share"
+        tools:ignore="UnusedAttribute" />
+
 </menu>

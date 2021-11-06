@@ -1,19 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_first.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\footer_layout.xml",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\footer_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_base.xml",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_base.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\image_item.xml",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\image_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",

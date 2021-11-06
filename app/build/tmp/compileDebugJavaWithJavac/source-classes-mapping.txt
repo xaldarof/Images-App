@@ -1,18 +1,19 @@
 com/example/exampletaxi/vm/MainViewModel_HiltModules_KeyModule_ProvideFactory.java
  com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory
  com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
-hilt_aggregated_deps/_com_example_exampletaxi_core_App_GeneratedInjector.java
- hilt_aggregated_deps._com_example_exampletaxi_core_App_GeneratedInjector
-com/example/exampletaxi/BuildConfig.java
- com.example.exampletaxi.BuildConfig
+com/example/exampletaxi/Hilt_MainActivity.java
+ com.example.exampletaxi.Hilt_MainActivity
+ com.example.exampletaxi.Hilt_MainActivity$1
 dagger/hilt/internal/aggregatedroot/codegen/_com_example_exampletaxi_core_App.java
  dagger.hilt.internal.aggregatedroot.codegen._com_example_exampletaxi_core_App
-dagger/hilt/internal/processedrootsentinel/codegen/_com_example_exampletaxi_core_App.java
- dagger.hilt.internal.processedrootsentinel.codegen._com_example_exampletaxi_core_App
-hilt_aggregated_deps/_com_example_exampletaxi_vm_MainViewModel_HiltModules_KeyModule.java
- hilt_aggregated_deps._com_example_exampletaxi_vm_MainViewModel_HiltModules_KeyModule
-com/example/exampletaxi/vm/MainViewModel_Factory.java
- com.example.exampletaxi.vm.MainViewModel_Factory
+com/example/exampletaxi/core/App_GeneratedInjector.java
+ com.example.exampletaxi.core.App_GeneratedInjector
+com/example/exampletaxi/vm/MainViewModel_HiltModules.java
+ com.example.exampletaxi.vm.MainViewModel_HiltModules
+ com.example.exampletaxi.vm.MainViewModel_HiltModules$BindsModule
+ com.example.exampletaxi.vm.MainViewModel_HiltModules$KeyModule
+com/example/exampletaxi/databinding/FooterLayoutBinding.java
+ com.example.exampletaxi.databinding.FooterLayoutBinding
 hilt_aggregated_deps/_com_example_exampletaxi_vm_MainViewModel_HiltModules_BindsModule.java
  hilt_aggregated_deps._com_example_exampletaxi_vm_MainViewModel_HiltModules_BindsModule
 hilt_aggregated_deps/_com_example_exampletaxi_MainActivity_GeneratedInjector.java
@@ -20,22 +21,27 @@ hilt_aggregated_deps/_com_example_exampletaxi_MainActivity_GeneratedInjector.jav
 com/example/exampletaxi/mappers/ImageMapperImpl_Factory.java
  com.example.exampletaxi.mappers.ImageMapperImpl_Factory
  com.example.exampletaxi.mappers.ImageMapperImpl_Factory$InstanceHolder
-com/example/exampletaxi/core/App_GeneratedInjector.java
- com.example.exampletaxi.core.App_GeneratedInjector
-com/example/exampletaxi/vm/MainViewModel_HiltModules.java
- com.example.exampletaxi.vm.MainViewModel_HiltModules
- com.example.exampletaxi.vm.MainViewModel_HiltModules$BindsModule
- com.example.exampletaxi.vm.MainViewModel_HiltModules$KeyModule
+com/example/exampletaxi/MainActivity_GeneratedInjector.java
+ com.example.exampletaxi.MainActivity_GeneratedInjector
+hilt_aggregated_deps/_com_example_exampletaxi_vm_MainViewModel_HiltModules_KeyModule.java
+ hilt_aggregated_deps._com_example_exampletaxi_vm_MainViewModel_HiltModules_KeyModule
+com/example/exampletaxi/vm/MainViewModel_Factory.java
+ com.example.exampletaxi.vm.MainViewModel_Factory
+hilt_aggregated_deps/_com_example_exampletaxi_fragments_HomeFragment_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_exampletaxi_fragments_HomeFragment_GeneratedInjector
+hilt_aggregated_deps/_com_example_exampletaxi_core_App_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_exampletaxi_core_App_GeneratedInjector
+com/example/exampletaxi/databinding/ActivityMainBinding.java
+ com.example.exampletaxi.databinding.ActivityMainBinding
+com/example/exampletaxi/BuildConfig.java
+ com.example.exampletaxi.BuildConfig
+dagger/hilt/internal/processedrootsentinel/codegen/_com_example_exampletaxi_core_App.java
+ dagger.hilt.internal.processedrootsentinel.codegen._com_example_exampletaxi_core_App
+com/example/exampletaxi/databinding/FragmentHomeBinding.java
+ com.example.exampletaxi.databinding.FragmentHomeBinding
 com/example/exampletaxi/core/Hilt_App.java
  com.example.exampletaxi.core.Hilt_App
  com.example.exampletaxi.core.Hilt_App$1
-com/example/exampletaxi/Hilt_MainActivity.java
- com.example.exampletaxi.Hilt_MainActivity
- com.example.exampletaxi.Hilt_MainActivity$1
-com/example/exampletaxi/databinding/FragmentBaseBinding.java
- com.example.exampletaxi.databinding.FragmentBaseBinding
-com/example/exampletaxi/databinding/ActivityMainBinding.java
- com.example.exampletaxi.databinding.ActivityMainBinding
 com/example/exampletaxi/core/DaggerApp_HiltComponents_SingletonC.java
  com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC
  com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$1
@@ -55,10 +61,6 @@ com/example/exampletaxi/core/DaggerApp_HiltComponents_SingletonC.java
  com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$Builder
  com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ServiceCBuilder
  com.example.exampletaxi.core.DaggerApp_HiltComponents_SingletonC$ServiceCImpl
-com/example/exampletaxi/databinding/FragmentFirstBinding.java
- com.example.exampletaxi.databinding.FragmentFirstBinding
-com/example/exampletaxi/databinding/FooterLayoutBinding.java
- com.example.exampletaxi.databinding.FooterLayoutBinding
 com/example/exampletaxi/core/App_HiltComponents.java
  com.example.exampletaxi.core.App_HiltComponents
  com.example.exampletaxi.core.App_HiltComponents$ActivityC
@@ -83,7 +85,9 @@ com/example/exampletaxi/core/App_HiltComponents.java
  com.example.exampletaxi.core.App_HiltComponents$ViewWithFragmentC
  com.example.exampletaxi.core.App_HiltComponents$ViewWithFragmentC$Builder
  com.example.exampletaxi.core.App_HiltComponents$ViewWithFragmentCBuilderModule
-com/example/exampletaxi/MainActivity_GeneratedInjector.java
- com.example.exampletaxi.MainActivity_GeneratedInjector
+com/example/exampletaxi/fragments/Hilt_HomeFragment.java
+ com.example.exampletaxi.fragments.Hilt_HomeFragment
+com/example/exampletaxi/fragments/HomeFragment_GeneratedInjector.java
+ com.example.exampletaxi.fragments.HomeFragment_GeneratedInjector
 com/example/exampletaxi/databinding/ImageItemBinding.java
  com.example.exampletaxi.databinding.ImageItemBinding

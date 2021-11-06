@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Normal_User\\.gradle\\caches\\transforms-3\\94b19350b5c127a314d97a733ba70708\\transformed\\material-1.4.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Normal_User\\.gradle\\caches\\transforms-3\\e1aafb95c5cc95041f5f6481221231a9\\transformed\\material-1.4.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
