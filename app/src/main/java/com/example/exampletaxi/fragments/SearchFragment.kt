@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.HeaderFooterAdapter
 import com.example.exampletaxi.adapters.ImagesPagingAdapter
 import com.example.exampletaxi.core.ImageUiModel
@@ -98,5 +100,12 @@ class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.C
 
     override fun onClickRetry() {
         adapter.retry()
+    }
+
+    override fun onClickAddFavorites(uiModel: ImageUiModel) {
+        lifecycleScope.launch {
+            viewModel.saveCacheImage(uiModel)
+            Toast.makeText(requireContext(), R.string.success_add , Toast.LENGTH_SHORT).show()
+        }
     }
 }

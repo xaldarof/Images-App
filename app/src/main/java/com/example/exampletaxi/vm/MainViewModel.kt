@@ -1,16 +1,17 @@
 package com.example.exampletaxi.vm
 
+import android.util.Log
 import android.widget.ImageView
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagingData
 import androidx.paging.map
 import com.example.domain.DataRepository
-import com.example.domain.models.ImageDomainModel
+import com.example.domain.models.ImageDbModel
 import com.example.exampletaxi.core.ImageUiModel
-import com.example.exampletaxi.mappers.ImageMapper
 import com.example.exampletaxi.mappers.ImageMapperImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
@@ -28,11 +29,26 @@ class MainViewModel
         }
     }
 
-    suspend fun saveImage(imageView: ImageView){
+    suspend fun saveImage(imageView: ImageView) {
         repository.saveImage(imageView)
     }
 
     suspend fun shareImage(imageView: ImageView){
         repository.shareImage(imageView)
     }
+
+    suspend fun fetchCacheImagesAsFlow() : Flow<List<ImageDbModel>> {
+        return repository.fetchCacheImagesAsFlow()
+    }
+
+    fun fetchCacheImages() : List<ImageUiModel> {
+        return mapper.mapToUi(repository.fetchCacheImages())
+    }
+
+    fun removeCacheImage(model: ImageDbModel){
+        repository.removeCacheImage(model.id)
+    }
+
+    suspend fun saveCacheImage(uiModel: ImageUiModel) = repository.saveCacheImage(mapper.mapToDb(uiModel))
+
 }

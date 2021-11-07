@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.FragmentController
 import com.example.exampletaxi.databinding.FragmentContainerBinding
 
@@ -24,7 +23,10 @@ class ContainerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        FragmentController(binding,this,listOf(HomeFragment(), SearchFragment()))
+        FragmentController(
+            binding,
+            this,
+            listOf(HomeFragment(), SearchFragment(), FavoritesFragment(), SettingsFragment()))
 
 
     }

@@ -908,6 +908,7 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
+attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -1083,16 +1084,6 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
-attr zoomage_animateOnReset
-attr zoomage_autoCenter
-attr zoomage_autoResetMode
-attr zoomage_doubleTapToZoom
-attr zoomage_doubleTapToZoomScaleFactor
-attr zoomage_maxScale
-attr zoomage_minScale
-attr zoomage_restrictBounds
-attr zoomage_translatable
-attr zoomage_zoomable
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
@@ -1130,6 +1121,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color black_light
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1143,6 +1135,8 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color checkbox_themeable_attribute_color
+color custom_white
+color dark
 color def_color
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
@@ -1192,6 +1186,8 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color icon_click
+color icon_white
 color light_black
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1841,9 +1837,12 @@ drawable ic_baseline_arrow_downward_24
 drawable ic_baseline_border_all_24
 drawable ic_baseline_clear_24
 drawable ic_baseline_close_24
+drawable ic_baseline_dark_mode_24
+drawable ic_baseline_delete_outline_24
 drawable ic_baseline_exit_to_app_24
 drawable ic_baseline_favorite_24
 drawable ic_baseline_insert_comment_24
+drawable ic_baseline_language_24
 drawable ic_baseline_mobile_screen_share_24
 drawable ic_baseline_more_vert_24
 drawable ic_baseline_open_in_new_24
@@ -1853,6 +1852,7 @@ drawable ic_baseline_save_alt_24
 drawable ic_baseline_search_24
 drawable ic_baseline_share_24
 drawable ic_baseline_signal_wifi_bad_24
+drawable ic_baseline_star_24
 drawable ic_baseline_wifi_off_24
 drawable ic_clock_black_24dp
 drawable ic_empty_box
@@ -1902,21 +1902,20 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable search_style
+drawable switch_thumb
 drawable tab_layout_background
 drawable test_custom_background
 drawable test_img
+drawable thumb_track
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
-id ALWAYS
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
-id NEVER
 id NO_DEBUG
-id OVER
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1924,7 +1923,6 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id UNDER
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1984,6 +1982,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addFavoritesBtn
 id alertTitle
 id aligned
 id all
@@ -2055,6 +2054,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id darkThemeSwitch
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2091,6 +2091,7 @@ id easeOut
 id east
 id edit_query
 id elastic
+id empty_icon
 id end
 id endToStart
 id end_padder
@@ -2111,6 +2112,8 @@ id fitToContents
 id fixed
 id flip
 id floating
+id fontSwitch
+id fontThemeSwitch
 id forever
 id fragment_container_view_tag
 id frost
@@ -2137,6 +2140,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img
+id img2
 id immediateStop
 id included
 id info
@@ -2159,6 +2164,7 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id masked
@@ -2265,6 +2271,9 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id relativeLayout
+id relativeLayout2
+id removeFavoriteBtn
 id retryBtn
 id reverseSawtooth
 id right
@@ -2376,6 +2385,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id themeSwitch
 id time
 id title
 id titleDividerNoCustom
@@ -2489,6 +2499,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout cache_image_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2506,10 +2517,13 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout error_layout
+layout favorite_item_dialog
 layout footer_layout
 layout fragment_container
+layout fragment_favorites
 layout fragment_home
 layout fragment_search
+layout fragment_settings
 layout fragment_view_image
 layout image_item
 layout material_chip_input_combo
@@ -2626,6 +2640,7 @@ string abc_toolbar_collapse_description
 string an_error
 string app_name
 string appbar_scrolling_view_behavior
+string bold_font
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string character_counter_content_description
@@ -2633,6 +2648,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string dark_theme
+string empty
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2709,7 +2726,10 @@ string retry
 string save_in
 string search
 string search_menu_title
+string settings
 string status_bar_notification_info_overflow
+string success_add
+string success_remove
 string test_name
 string test_num
 style AlertDialog_AppCompat
@@ -3578,6 +3598,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text
@@ -3597,7 +3618,6 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
-styleable ZoomageView zoomage_animateOnReset zoomage_autoCenter zoomage_autoResetMode zoomage_doubleTapToZoom zoomage_doubleTapToZoomScaleFactor zoomage_maxScale zoomage_minScale zoomage_restrictBounds zoomage_translatable zoomage_zoomable
 styleable include constraintSet
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

@@ -9,7 +9,7 @@ public final class Constants {
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String BASE_URL = "https://pixabay.com/";
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String ACCESS_KEY = "18372265-23dd084a52fad58a52dd60195";
+    public static final java.lang.String ACCESS_KEY = "24226230-79188c5de1fdbf2c8a222d181";
     public static final int PAGE_SIZE = 7;
     
     private Constants() {

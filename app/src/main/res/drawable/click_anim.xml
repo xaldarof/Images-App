@@ -4,22 +4,21 @@
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <corners android:radius="180dp" />
-            <solid android:color="#F1EBEB" />
+            <solid android:color="@color/icon_click" />
         </shape>
     </item>
 
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
             <corners android:radius="180dp" />
-            <solid android:color="@color/white" />
+            <solid android:color="@color/black_light" />
         </shape>
     </item>
 
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
             <corners android:radius="180dp" />
-            <solid android:color="@color/white" />
+            <solid android:color="@color/black_light" />
         </shape>
     </item>
-
 </selector>

@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.HeaderFooterAdapter
 import com.example.exampletaxi.adapters.ImagesPagingAdapter
 import com.example.exampletaxi.core.ImageUiModel
@@ -30,8 +32,7 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
     private val viewModel: MainViewModel by viewModels()
     private lateinit var adapter: ImagesPagingAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):
-            View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -46,6 +47,11 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
 
         binding.retryBtn.setOnClickListener {
             adapter.retry()
+        }
+
+        binding.homeContainer.setOnRefreshListener {
+            adapter.retry()
+            binding.homeContainer.isRefreshing = false
         }
 
         lifecycleScope.launch {
@@ -87,5 +93,12 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
 
     override fun onClickRetry() {
         adapter.retry()
+    }
+
+    override fun onClickAddFavorites(uiModel: ImageUiModel) {
+        lifecycleScope.launch {
+            viewModel.saveCacheImage(uiModel)
+            Toast.makeText(requireContext(), R.string.success_add , Toast.LENGTH_SHORT).show()
+        }
     }
 }

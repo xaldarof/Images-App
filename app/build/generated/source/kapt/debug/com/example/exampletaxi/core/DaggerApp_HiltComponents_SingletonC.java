@@ -3,15 +3,24 @@ package com.example.exampletaxi.core;
 
 import android.app.Activity;
 import android.app.Service;
+import android.content.SharedPreferences;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
+import com.example.data.cache.AppDatabase;
+import com.example.data.cache.ImageDao;
+import com.example.data.cache.UserSettings;
 import com.example.data.cloud.abstraction.ImageDataSource;
 import com.example.data.cloud.abstraction.ImageManager;
 import com.example.data.cloud.api.ImageApiService;
 import com.example.data.di.CacheModule;
+import com.example.data.di.CacheModule_ProvideDatabaseFactory;
 import com.example.data.di.CacheModule_ProvideImageSaverFactory;
+import com.example.data.di.CacheModule_ProvideImagesDaoFactory;
+import com.example.data.di.CacheModule_ProvideSharedPrfFactory;
+import com.example.data.di.CacheModule_ProvideUserSettingsFactory;
+import com.example.data.di.CacheModule_ProvideUserSettingsRepositoryFactory;
 import com.example.data.di.CloudModule;
 import com.example.data.di.CloudModule_ProvideDataRepositoryFactory;
 import com.example.data.di.CloudModule_ProvideImageDataSourceFactory;
@@ -20,13 +29,19 @@ import com.example.data.di.CloudModule_ProvideRetrofitClientFactory;
 import com.example.data.di.CloudModule_ProvideRetrofitFactory;
 import com.example.data.realization.DataRepositoryImpl;
 import com.example.data.realization.ImageManagerImpl;
+import com.example.data.realization.UserSettingsImpl;
 import com.example.domain.DataRepository;
+import com.example.domain.UserSettingsRepository;
 import com.example.exampletaxi.MainActivity;
+import com.example.exampletaxi.fragments.FavoritesFragment;
 import com.example.exampletaxi.fragments.HomeFragment;
 import com.example.exampletaxi.fragments.SearchFragment;
+import com.example.exampletaxi.fragments.SettingsFragment;
 import com.example.exampletaxi.mappers.ImageMapperImpl;
 import com.example.exampletaxi.vm.MainViewModel;
 import com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.exampletaxi.vm.SettingsViewModel;
+import com.example.exampletaxi.vm.SettingsViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
 import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
@@ -43,9 +58,10 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideAppl
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
-import java.util.Collections;
+import dagger.internal.SetBuilder;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
@@ -60,18 +76,21 @@ import retrofit2.Retrofit;
 public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponents.SingletonC {
   private final ApplicationContextModule applicationContextModule;
 
-  private final CacheModule cacheModule;
-
   private volatile Object okHttpClient = new MemoizedSentinel();
 
   private volatile Object retrofit = new MemoizedSentinel();
 
   private volatile Object imageApiService = new MemoizedSentinel();
 
+  private volatile Object appDatabase = new MemoizedSentinel();
+
+  private volatile Object imageDao = new MemoizedSentinel();
+
+  private volatile Object sharedPreferences = new MemoizedSentinel();
+
   private DaggerApp_HiltComponents_SingletonC(
-      ApplicationContextModule applicationContextModuleParam, CacheModule cacheModuleParam) {
+      ApplicationContextModule applicationContextModuleParam) {
     this.applicationContextModule = applicationContextModuleParam;
-    this.cacheModule = cacheModuleParam;
   }
 
   public static Builder builder() {
@@ -120,8 +139,36 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
     return (ImageApiService) local;
   }
 
+  private AppDatabase appDatabase() {
+    Object local = appDatabase;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = appDatabase;
+        if (local instanceof MemoizedSentinel) {
+          local = CacheModule_ProvideDatabaseFactory.provideDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          appDatabase = DoubleCheck.reentrantCheck(appDatabase, local);
+        }
+      }
+    }
+    return (AppDatabase) local;
+  }
+
+  private ImageDao imageDao() {
+    Object local = imageDao;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = imageDao;
+        if (local instanceof MemoizedSentinel) {
+          local = CacheModule_ProvideImagesDaoFactory.provideImagesDao(appDatabase());
+          imageDao = DoubleCheck.reentrantCheck(imageDao, local);
+        }
+      }
+    }
+    return (ImageDao) local;
+  }
+
   private ImageDataSource imageDataSource() {
-    return CloudModule_ProvideImageDataSourceFactory.provideImageDataSource(imageApiService());
+    return CloudModule_ProvideImageDataSourceFactory.provideImageDataSource(imageApiService(), imageDao());
   }
 
   private ImageManagerImpl imageManagerImpl() {
@@ -129,7 +176,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
   }
 
   private ImageManager imageManager() {
-    return CacheModule_ProvideImageSaverFactory.provideImageSaver(cacheModule, imageManagerImpl());
+    return CacheModule_ProvideImageSaverFactory.provideImageSaver(imageManagerImpl());
   }
 
   private DataRepositoryImpl dataRepositoryImpl() {
@@ -138,6 +185,32 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
 
   private DataRepository dataRepository() {
     return CloudModule_ProvideDataRepositoryFactory.provideDataRepository(dataRepositoryImpl());
+  }
+
+  private SharedPreferences sharedPreferences() {
+    Object local = sharedPreferences;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = sharedPreferences;
+        if (local instanceof MemoizedSentinel) {
+          local = CacheModule_ProvideSharedPrfFactory.provideSharedPrf(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          sharedPreferences = DoubleCheck.reentrantCheck(sharedPreferences, local);
+        }
+      }
+    }
+    return (SharedPreferences) local;
+  }
+
+  private UserSettingsImpl userSettingsImpl() {
+    return new UserSettingsImpl(sharedPreferences());
+  }
+
+  private UserSettings userSettings() {
+    return CacheModule_ProvideUserSettingsFactory.provideUserSettings(userSettingsImpl(), sharedPreferences());
+  }
+
+  private UserSettingsRepository userSettingsRepository() {
+    return CacheModule_ProvideUserSettingsRepositoryFactory.provideUserSettingsRepository(userSettings());
   }
 
   @Override
@@ -157,8 +230,6 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
   public static final class Builder {
     private ApplicationContextModule applicationContextModule;
 
-    private CacheModule cacheModule;
-
     private Builder() {
     }
 
@@ -167,8 +238,12 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       return this;
     }
 
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
     public Builder cacheModule(CacheModule cacheModule) {
-      this.cacheModule = Preconditions.checkNotNull(cacheModule);
+      Preconditions.checkNotNull(cacheModule);
       return this;
     }
 
@@ -183,10 +258,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
 
     public App_HiltComponents.SingletonC build() {
       Preconditions.checkBuilderRequirement(applicationContextModule, ApplicationContextModule.class);
-      if (cacheModule == null) {
-        this.cacheModule = new CacheModule();
-      }
-      return new DaggerApp_HiltComponents_SingletonC(applicationContextModule, cacheModule);
+      return new DaggerApp_HiltComponents_SingletonC(applicationContextModule);
     }
   }
 
@@ -250,7 +322,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       }
 
       @Override
-      public void injectMainActivity(MainActivity arg0) {
+      public void injectMainActivity(MainActivity mainActivity) {
       }
 
       @Override
@@ -260,7 +332,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
 
       @Override
       public Set<String> getViewModelKeys() {
-        return Collections.<String>singleton(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+        return SetBuilder.<String>newSetBuilder(2).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SettingsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
       }
 
       @Override
@@ -300,11 +372,19 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
         }
 
         @Override
-        public void injectHomeFragment(HomeFragment arg0) {
+        public void injectFavoritesFragment(FavoritesFragment favoritesFragment) {
+        }
+
+        @Override
+        public void injectHomeFragment(HomeFragment homeFragment) {
         }
 
         @Override
         public void injectSearchFragment(SearchFragment searchFragment) {
+        }
+
+        @Override
+        public void injectSettingsFragment(SettingsFragment settingsFragment) {
         }
 
         @Override
@@ -382,6 +462,8 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
     private final class ViewModelCImpl extends App_HiltComponents.ViewModelC {
       private volatile Provider<MainViewModel> mainViewModelProvider;
 
+      private volatile Provider<SettingsViewModel> settingsViewModelProvider;
+
       private ViewModelCImpl(SavedStateHandle savedStateHandle) {
 
       }
@@ -399,9 +481,22 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
         return (Provider<MainViewModel>) local;
       }
 
+      private SettingsViewModel settingsViewModel() {
+        return new SettingsViewModel(DaggerApp_HiltComponents_SingletonC.this.userSettingsRepository());
+      }
+
+      private Provider<SettingsViewModel> settingsViewModelProvider() {
+        Object local = settingsViewModelProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(1);
+          settingsViewModelProvider = (Provider<SettingsViewModel>) local;
+        }
+        return (Provider<SettingsViewModel>) local;
+      }
+
       @Override
       public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-        return Collections.<String, Provider<ViewModel>>singletonMap("com.example.exampletaxi.vm.MainViewModel", (Provider) mainViewModelProvider());
+        return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.example.exampletaxi.vm.MainViewModel", (Provider) mainViewModelProvider()).put("com.example.exampletaxi.vm.SettingsViewModel", (Provider) settingsViewModelProvider()).build();
       }
 
       private final class SwitchingProvider<T> implements Provider<T> {
@@ -417,6 +512,9 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
           switch (id) {
             case 0: // com.example.exampletaxi.vm.MainViewModel 
             return (T) ViewModelCImpl.this.mainViewModel();
+
+            case 1: // com.example.exampletaxi.vm.SettingsViewModel 
+            return (T) ViewModelCImpl.this.settingsViewModel();
 
             default: throw new AssertionError(id);
           }

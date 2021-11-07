@@ -66,6 +66,11 @@ class FragmentController(
                     tab.icon =  ContextCompat.getDrawable(binding.root.context,
                         R.drawable.ic_baseline_favorite_24)
                 }
+
+                3 -> {
+                    tab.icon =  ContextCompat.getDrawable(binding.root.context,
+                        R.drawable.ic_baseline_star_24)
+                }
             }
 
         }.attach()

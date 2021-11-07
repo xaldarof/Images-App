@@ -8,4 +8,10 @@
     <string name="nothing_found">Nothing found</string>
     <string name="retry">retry</string>
     <string name="test_name">Jack Nelsie</string>
+    <string name="success_remove">Successfully remove from favorites</string>
+    <string name="success_add">Successfully added to favorites</string>
+    <string name="settings">Settings</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="bold_font">Language</string>
+    <string name="empty">No favoritess...</string>
 </resources>

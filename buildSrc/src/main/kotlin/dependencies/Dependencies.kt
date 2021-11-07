@@ -31,6 +31,20 @@ object Dependencies {
         const val RetrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.gsonConverter_version}"
     }
 
+    object Cache {
+        object Versions{
+           const val persistenceRoom = "1.1.1"
+           const val roomRuntime = "2.3.0"
+           const val room = "2.3.0"
+           const val roomCompiler = "2.3.0"
+        }
+        const val persistenceRoom = "android.arch.persistence.room:compiler:${Versions.persistenceRoom}"
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.roomRuntime}"
+        const val room = "androidx.room:room-ktx:${Versions.room}"
+        const val roomCompiler = "androidx.room:room-compiler:${Versions.roomCompiler}"
+
+    }
+
     object Di {
         object Versions{
             const val legacySupport_version = "1.0.0"

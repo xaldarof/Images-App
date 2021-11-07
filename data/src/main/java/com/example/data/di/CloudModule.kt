@@ -2,6 +2,7 @@ package com.example.data.di
 
 import android.content.Context
 import com.chuckerteam.chucker.api.ChuckerInterceptor
+import com.example.data.cache.ImageDao
 import com.example.data.cloud.abstraction.ImageDataSource
 import com.example.data.cloud.api.ImageApiService
 import com.example.data.core.Constants
@@ -29,8 +30,8 @@ object CloudModule {
     }
 
     @Provides
-    fun provideImageDataSource(service: ImageApiService): ImageDataSource {
-        return ImageDataSourceImpl(service)
+    fun provideImageDataSource(service: ImageApiService,dao: ImageDao): ImageDataSource {
+        return ImageDataSourceImpl(service,dao)
     }
 
 

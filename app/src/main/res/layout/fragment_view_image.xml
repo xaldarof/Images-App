@@ -27,8 +27,8 @@
                 android:id="@+id/exitBtn"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:background="@drawable/click_anim"
                 android:layout_marginEnd="12dp"
+                android:background="@drawable/click_anim"
                 android:elevation="1dp"
                 android:src="@drawable/ic_baseline_close_24"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -69,6 +69,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/test_name"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/userAvatarCardView"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,9 +90,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_remove_red_eye_24"
                 android:text="@string/test_num"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/authorName"
-                app:layout_constraintTop_toBottomOf="@+id/authorName" />
+                app:layout_constraintTop_toBottomOf="@+id/authorName"
+                app:tint="@color/icon_white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -107,15 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/test_img"
-                app:zoomage_animateOnReset="false"
-                app:zoomage_autoCenter="true"
-                app:zoomage_autoResetMode="UNDER"
-                app:zoomage_maxScale="8"
-                app:zoomage_minScale="0.6"
-                app:zoomage_restrictBounds="true"
-                app:zoomage_translatable="true"
-                app:zoomage_zoomable="true" />
+                android:src="@drawable/test_img" />
 
         </androidx.cardview.widget.CardView>
 
@@ -171,6 +164,21 @@
                 android:elevation="1dp"
                 android:padding="8dp"
                 android:src="@drawable/ic_baseline_open_in_new_24"
+                app:layout_constraintStart_toStartOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/addFavoritesBtn"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/image_margin"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/click_anim"
+                android:elevation="1dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_star_24"
                 app:layout_constraintStart_toStartOf="@+id/image"
                 app:layout_constraintTop_toBottomOf="@+id/image"
                 app:tint="@color/black" />

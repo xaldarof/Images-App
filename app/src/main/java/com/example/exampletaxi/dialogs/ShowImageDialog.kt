@@ -47,7 +47,6 @@ class ShowImageDialog(private val callBack:CallBack ,
 
         setUpImages(uiModel.largeImageURL,binding.largeImage)
         setUpImages(uiModel.userImageURL,binding.userAvatarImage)
-
         setUpClicks()
 
         return dialog
@@ -87,6 +86,7 @@ class ShowImageDialog(private val callBack:CallBack ,
         binding.openBrowserBtn.setOnClickListener { callBack.onOpenBrowser(uiModel) }
         binding.userAvatarCardView.setOnClickListener { callBack.onOpenUserPage(uiModel) }
         binding.exitBtn.setOnClickListener { dismiss() }
+        binding.addFavoritesBtn.setOnClickListener { callBack.onClickAddFavorites(uiModel) }
     }
 
     interface CallBack {
@@ -95,5 +95,6 @@ class ShowImageDialog(private val callBack:CallBack ,
         fun onOpenBrowser(uiModel: ImageUiModel)
         fun onOpenUserPage(uiModel: ImageUiModel)
         fun onClickRetry()
+        fun onClickAddFavorites(uiModel: ImageUiModel)
     }
 }

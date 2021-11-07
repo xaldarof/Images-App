@@ -27,7 +27,7 @@
 17        android:allowBackup="true"
 17-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:11:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\347f49e5ad64a566e732a0d4d2b5d185\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\ca9d33ffcbb506eb8610e077ad398dc3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
 20-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:12:9-43
@@ -59,6 +59,15 @@
 33-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:24:27-74
 34            </intent-filter>
 35        </activity>
-36    </application>
-37
-38</manifest>
+36
+37        <service
+37-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\ea10f6679b36990049b809c9707ec188\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+38            android:name="androidx.room.MultiInstanceInvalidationService"
+38-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\ea10f6679b36990049b809c9707ec188\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+39            android:directBootAware="true"
+39-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\ea10f6679b36990049b809c9707ec188\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+40            android:exported="false" />
+40-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\ea10f6679b36990049b809c9707ec188\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+41    </application>
+42
+43</manifest>

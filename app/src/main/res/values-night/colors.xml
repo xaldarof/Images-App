@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark">#121212</color>
+    <color name="black">#FFFFFF</color>
+    <color name="white">#121212</color>
+    <color name="custom_white">#000000</color>
+    <color name="icon_white">#696766</color>
+    <color name="black_light">#232121</color>
+    <color name="icon_click">#696766</color>
+
+</resources>
