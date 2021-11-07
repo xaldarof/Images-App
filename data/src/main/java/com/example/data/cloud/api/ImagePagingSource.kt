@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class ImagePagingSource
 
-@Inject constructor(private val imageApiService: ImageApiService,private val query:String="dog"): PagingSource<Int,ImageDomainModel>() {
+@Inject constructor(private val imageApiService: ImageApiService,private val query:String): PagingSource<Int,ImageDomainModel>() {
 
 
     override fun getRefreshKey(state: PagingState<Int, ImageDomainModel>): Int? {

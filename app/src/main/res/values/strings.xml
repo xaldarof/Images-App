@@ -3,5 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="test_num">234</string>
-    <string name="search">Search image...</string>
+    <string name="search">Search image…</string>
+    <string name="no_connection">No Internet Connection…</string>
+    <string name="nothing_found">Nothing found</string>
+    <string name="retry">retry</string>
+    <string name="test_name">Jack Nelsie</string>
 </resources>

@@ -250,7 +250,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       }
 
       @Override
-      public void injectMainActivity(MainActivity mainActivity) {
+      public void injectMainActivity(MainActivity arg0) {
       }
 
       @Override
@@ -300,7 +300,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
         }
 
         @Override
-        public void injectHomeFragment(HomeFragment homeFragment) {
+        public void injectHomeFragment(HomeFragment arg0) {
         }
 
         @Override

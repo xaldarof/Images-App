@@ -8,13 +8,31 @@
         android:id="@+id/progressView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_gravity="center" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/retryBtn"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:text="retry"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/error_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_connection" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/retryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="24dp"
+            android:background="@drawable/tab_layout_background"
+            android:text="@string/retry" />
+
+    </LinearLayout>
 
 </LinearLayout>

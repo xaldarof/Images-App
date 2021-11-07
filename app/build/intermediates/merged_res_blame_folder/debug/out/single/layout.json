@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\error_layout.xml",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\error_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\activity_main.xml"
     },

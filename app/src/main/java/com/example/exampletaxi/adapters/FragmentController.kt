@@ -1,7 +1,6 @@
 package com.example.exampletaxi.adapters
 
 import android.annotation.SuppressLint
-import android.graphics.PorterDuff
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -14,8 +13,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 @SuppressLint("UseCompatLoadingForDrawables")
 class FragmentController(
     private val binding: FragmentContainerBinding,
-    private val fragment:Fragment,
-    private val fragments: List<Fragment>) : ViewPager2.OnPageChangeCallback(){
+    fragment:Fragment,
+    fragments: List<Fragment>) : ViewPager2.OnPageChangeCallback(){
 
 
     private var fragmentAdapter: FragmentAdapter =
@@ -26,20 +25,24 @@ class FragmentController(
         binding.pager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         binding.pager.adapter = fragmentAdapter
         binding.pager.offscreenPageLimit = fragmentAdapter.itemCount
+        val context = binding.root.context
 
+        for (i in fragments.indices) {
+            binding.tabLayout.getTabAt(i)?.icon?.setTint(ContextCompat.getColor(context,R.color.light_black))
+        }
 
         binding.pager.apply {
             registerOnPageChangeCallback(this@FragmentController)
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-        binding.tabLayout.setOnTabSelectedListener(object :TabLayout.OnTabSelectedListener{
+        binding.tabLayout.addOnTabSelectedListener(object :TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                tab!!.icon?.setColorFilter(binding.root.context.resources.getColor(R.color.black), PorterDuff.Mode.SRC_IN)
+                tab!!.icon?.setTint(ContextCompat.getColor(context,R.color.black))
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                tab!!.icon?.setColorFilter(binding.root.context.resources.getColor(R.color.light_black), PorterDuff.Mode.SRC_IN)
+                tab!!.icon?.setTint(ContextCompat.getColor(context,R.color.light_black))
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {

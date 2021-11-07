@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_exit_to_app_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_exit_to_app_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
@@ -8,40 +12,32 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_share_24.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_test_img.jpg.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable-v24\\test_img.jpg"
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_down.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\anim\\slide_down.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_test_img.jpg.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable-v24\\test_img.jpg"
+    },
+    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_border_all_24.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_border_all_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_signal_wifi_bad_24.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_signal_wifi_bad_24.xml"
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_insert_comment_24.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_insert_comment_24.xml"
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_signal_wifi_bad_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_signal_wifi_bad_24.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_more_vert_24.xml.flat",
@@ -50,10 +46,6 @@
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\anim_anim_enter.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\anim\\anim_enter.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_search_style.xml.flat",
@@ -68,28 +60,16 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\footer_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_save_alt_24.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_save_alt_24.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_layout_background.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\layout_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_image_item.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\image_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_open_in_new_24.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_open_in_new_24.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -100,6 +80,14 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_downward_24.xml"
     },
     {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_remove_red_eye_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_remove_red_eye_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_close_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_close_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_img.png.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable-v24\\img.png"
     },
@@ -108,20 +96,12 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_mobile_screen_share_24.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_mobile_screen_share_24.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_view_image.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_view_image.xml"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
@@ -136,6 +116,78 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_clear_24.xml"
     },
     {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_avatar_img_background.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\avatar_img_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_wifi_off_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_wifi_off_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_border_all_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_border_all_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_sad.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_sad.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_empty_box.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_empty_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_insert_comment_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_insert_comment_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_no_connection.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_no_connection.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\anim_anim_enter.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\anim\\anim_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_save_alt_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_save_alt_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_image_item.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\image_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_mobile_screen_share_24.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_mobile_screen_share_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_error_layout.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\error_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_click_anim.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\click_anim.xml"
+    },
+    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
     },
@@ -144,28 +196,20 @@
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\layout\\fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_layout_background.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\tab_layout_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_sad3.xml.flat",
+        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\ic_sad3.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\menu_options_menu.xml.flat",
         "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\menu\\options_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\drawable_avatar_img_background.xml.flat",
-        "source": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\src\\main\\res\\drawable\\avatar_img_background.xml"
     },
     {
         "merged": "C:\\Users\\Normal_User\\AndroidStudioProjects\\ExampleTaxi\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_container.xml.flat",

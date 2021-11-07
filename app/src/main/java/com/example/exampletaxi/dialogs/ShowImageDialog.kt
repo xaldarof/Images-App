@@ -1,50 +1,99 @@
 package com.example.exampletaxi.dialogs
 
-import android.content.Context
-import android.util.Log
+import android.app.Dialog
+import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.exampletaxi.R
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.FragmentViewImageBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import android.content.Intent
-import androidx.core.content.ContextCompat
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
+import com.example.exampletaxi.databinding.ErrorLayoutBinding
+import com.example.exampletaxi.utils.makeExpanded
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-import androidx.core.content.ContextCompat.startActivity
-import java.io.FileNotFoundException
-import java.io.InputStream
+class ShowImageDialog(private val callBack:CallBack ,
+                      private val uiModel: ImageUiModel) :
+    BottomSheetDialogFragment() {
+
+    private lateinit var binding:FragmentViewImageBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        dialog!!.setOnShowListener { it.makeExpanded() }
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        dialog?.window?.attributes?.windowAnimations = R.style.DialogAnimation
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+        binding = FragmentViewImageBinding.inflate(dialog.layoutInflater)
+        dialog.setContentView(binding.root)
+
+        binding.authorName.text = uiModel.user
+        binding.views.text = uiModel.views.toString()
+
+        setUpImages(uiModel.largeImageURL,binding.largeImage)
+        setUpImages(uiModel.userImageURL,binding.userAvatarImage)
+
+        setUpClicks()
+
+        return dialog
+    }
 
 
-class ShowImageDialog(context: Context, private val uiModel: ImageUiModel) :
-    BottomSheetDialog(context, R.style.BottomSheetDialogTheme) {
+    private fun setUpImages(url:String,img:ImageView){
+        Glide.with(requireContext())
+            .load(url)
+            .error(R.drawable.ic_baseline_person_24)
+            .listener(object: RequestListener<Drawable> {
+                override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?,
+                                          isFirstResource: Boolean): Boolean {
+                    Toast.makeText(requireContext(), R.string.no_connection, Toast.LENGTH_SHORT).show()
+                    val binding = ErrorLayoutBinding.inflate(layoutInflater)
+                    dialog?.setContentView(binding.root)
 
+                    binding.retryBtn.setOnClickListener {
+                        callBack.onClickRetry()
+                        dismiss()
+                    }
 
-    fun showDialog(callBack: CallBack) {
-        val binding = FragmentViewImageBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+                    return false
+                }
 
-        window?.attributes?.windowAnimations = R.style.DialogAnimation
+                override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?,
+                                             dataSource: DataSource?, isFirstResource: Boolean): Boolean {
+                    return false
+                }
+            })
+            .into(img)
+    }
 
-        Glide.with(context)
-            .load(uiModel.largeImageURL)
-            .into(binding.largeImage)
-        Log.d("res", "DIALOG = ${uiModel.largeImageURL}")
-
-        Glide.with(context)
-            .load(uiModel.userImageURL)
-            .into(binding.userAvatarImage)
-
+    private fun setUpClicks(){
         binding.shareBtn.setOnClickListener { callBack.onShare(binding.largeImage) }
         binding.saveBtn.setOnClickListener { callBack.onSave(binding.largeImage) }
         binding.openBrowserBtn.setOnClickListener { callBack.onOpenBrowser(uiModel) }
-
-        show()
+        binding.userAvatarCardView.setOnClickListener { callBack.onOpenUserPage(uiModel) }
+        binding.exitBtn.setOnClickListener { dismiss() }
     }
 
     interface CallBack {
         fun onShare(imageView: ImageView)
         fun onSave(imageView: ImageView)
         fun onOpenBrowser(uiModel: ImageUiModel)
+        fun onOpenUserPage(uiModel: ImageUiModel)
+        fun onClickRetry()
     }
 }

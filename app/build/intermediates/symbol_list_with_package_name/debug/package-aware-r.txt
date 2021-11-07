@@ -36,6 +36,7 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim slide_down
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -110,8 +111,6 @@ attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
-attr alignContent
-attr alignItems
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
@@ -371,9 +370,6 @@ attr dialogPreferredPadding
 attr dialogTheme
 attr displayOptions
 attr divider
-attr dividerDrawable
-attr dividerDrawableHorizontal
-attr dividerDrawableVertical
 attr dividerHorizontal
 attr dividerPadding
 attr dividerVertical
@@ -446,8 +442,6 @@ attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
-attr flexDirection
-attr flexWrap
 attr floatingActionButtonStyle
 attr flow_firstHorizontalBias
 attr flow_firstHorizontalStyle
@@ -558,7 +552,6 @@ attr itemTextAppearance
 attr itemTextAppearanceActive
 attr itemTextAppearanceInactive
 attr itemTextColor
-attr justifyContent
 attr keyPositionType
 attr keyboardIcon
 attr keylines
@@ -572,7 +565,6 @@ attr layout
 attr layoutDescription
 attr layoutDuringTransition
 attr layoutManager
-attr layout_alignSelf
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -627,9 +619,6 @@ attr layout_constraintWidth_percent
 attr layout_dodgeInsetEdges
 attr layout_editor_absoluteX
 attr layout_editor_absoluteY
-attr layout_flexBasisPercent
-attr layout_flexGrow
-attr layout_flexShrink
 attr layout_goneMarginBaseline
 attr layout_goneMarginBottom
 attr layout_goneMarginEnd
@@ -640,15 +629,9 @@ attr layout_goneMarginTop
 attr layout_insetEdge
 attr layout_keyline
 attr layout_marginBaseline
-attr layout_maxHeight
-attr layout_maxWidth
-attr layout_minHeight
-attr layout_minWidth
 attr layout_optimizationLevel
-attr layout_order
 attr layout_scrollFlags
 attr layout_scrollInterpolator
-attr layout_wrapBefore
 attr layout_wrapBehaviorInParent
 attr liftOnScroll
 attr liftOnScrollTargetViewId
@@ -707,7 +690,6 @@ attr maxButtonHeight
 attr maxCharacterCount
 attr maxHeight
 attr maxImageSize
-attr maxLine
 attr maxLines
 attr maxVelocity
 attr maxWidth
@@ -871,9 +853,6 @@ attr shortcutMatchRequired
 attr showAnimationBehavior
 attr showAsAction
 attr showDelay
-attr showDivider
-attr showDividerHorizontal
-attr showDividerVertical
 attr showDividers
 attr showMotionSpec
 attr showPaths
@@ -1062,20 +1041,6 @@ attr trackThickness
 attr trackTint
 attr trackTintMode
 attr transformPivotTarget
-attr transformation_allContainerColor
-attr transformation_containerColor
-attr transformation_direction
-attr transformation_duration
-attr transformation_elevationShadowEnabled
-attr transformation_endElevation
-attr transformation_fadeMode
-attr transformation_fitMode
-attr transformation_holdAtEndEnabled
-attr transformation_pathMode
-attr transformation_scrimColor
-attr transformation_startElevation
-attr transformation_targetView
-attr transformation_zOrder
 attr transitionDisable
 attr transitionEasing
 attr transitionFlags
@@ -1118,6 +1083,16 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
+attr zoomage_animateOnReset
+attr zoomage_autoCenter
+attr zoomage_autoResetMode
+attr zoomage_doubleTapToZoom
+attr zoomage_doubleTapToZoomScaleFactor
+attr zoomage_maxScale
+attr zoomage_minScale
+attr zoomage_restrictBounds
+attr zoomage_translatable
+attr zoomage_zoomable
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
@@ -1493,6 +1468,7 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen image_margin
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
@@ -1855,6 +1831,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable click_anim
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -1863,17 +1840,22 @@ drawable design_snackbar_background
 drawable ic_baseline_arrow_downward_24
 drawable ic_baseline_border_all_24
 drawable ic_baseline_clear_24
+drawable ic_baseline_close_24
+drawable ic_baseline_exit_to_app_24
 drawable ic_baseline_favorite_24
 drawable ic_baseline_insert_comment_24
 drawable ic_baseline_mobile_screen_share_24
 drawable ic_baseline_more_vert_24
 drawable ic_baseline_open_in_new_24
 drawable ic_baseline_person_24
+drawable ic_baseline_remove_red_eye_24
 drawable ic_baseline_save_alt_24
 drawable ic_baseline_search_24
 drawable ic_baseline_share_24
 drawable ic_baseline_signal_wifi_bad_24
+drawable ic_baseline_wifi_off_24
 drawable ic_clock_black_24dp
+drawable ic_empty_box
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1881,6 +1863,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_no_connection
+drawable ic_sad
+drawable ic_sad3
 drawable img
 drawable layout_background
 drawable material_cursor_drawable
@@ -1923,12 +1908,15 @@ drawable test_img
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id ALWAYS
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
+id NEVER
 id NO_DEBUG
+id OVER
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1936,6 +1924,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id UNDER
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2007,6 +1996,7 @@ id anticipate
 id arc
 id asConfigured
 id async
+id authorName
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -2048,11 +2038,10 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id column
-id column_reverse
 id confirm_button
 id constraint
 id constraintLayout
+id constraintLayout2
 id container
 id containerFragment
 id content
@@ -2062,7 +2051,6 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
-id cross
 id currentState
 id custom
 id customPanel
@@ -2108,8 +2096,9 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id entering
 id errorIcon
+id error_container
+id exitBtn
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2120,8 +2109,6 @@ id fill_vertical
 id filled
 id fitToContents
 id fixed
-id flex_end
-id flex_start
 id flip
 id floating
 id forever
@@ -2138,7 +2125,6 @@ id grouping
 id groups
 id guideline
 id header_title
-id height
 id hideable
 id home
 id homeAsUp
@@ -2152,7 +2138,6 @@ id ignore
 id ignoreRequest
 id image
 id immediateStop
-id in
 id included
 id info
 id invisible
@@ -2253,11 +2238,9 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id nowrap
 id off
 id on
 id openBrowserBtn
-id out
 id outline
 id outward
 id overshoot
@@ -2283,16 +2266,13 @@ id radio
 id ratio
 id rectangles
 id retryBtn
-id returning
 id reverseSawtooth
 id right
 id rightToLeft
 id right_icon
 id right_side
 id rounded
-id row
 id row_index_key
-id row_reverse
 id rv
 id saveBtn
 id save_non_transition_alpha
@@ -2336,9 +2316,6 @@ id snackbar_text
 id snap
 id snapMargins
 id south
-id space_around
-id space_between
-id space_evenly
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -2385,6 +2362,7 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputLayout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2398,7 +2376,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id through
 id time
 id title
 id titleDividerNoCustom
@@ -2429,16 +2406,17 @@ id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id views
+id viewsImg
+id views_container
 id visible
 id visible_removing_fragment_view_tag
 id west
-id width
 id withText
 id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
-id wrap_reverse
 id x_left
 id x_right
 id zero_corner_chip
@@ -2527,6 +2505,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout error_layout
 layout footer_layout
 layout fragment_container
 layout fragment_home
@@ -2719,15 +2698,19 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string no_connection
+string nothing_found
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string retry
 string save_in
 string search
 string search_menu_title
 string status_bar_notification_info_overflow
+string test_name
 string test_num
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -3510,8 +3493,6 @@ styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color dra
 styleable DrawerLayout elevation
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
-styleable FlexboxLayout alignContent alignItems dividerDrawable dividerDrawableHorizontal dividerDrawableVertical flexDirection flexWrap justifyContent maxLine showDivider showDividerHorizontal showDividerVertical
-styleable FlexboxLayout_Layout layout_alignSelf layout_flexBasisPercent layout_flexGrow layout_flexShrink layout_maxHeight layout_maxWidth layout_minHeight layout_minWidth layout_order layout_wrapBefore
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
@@ -3609,7 +3590,6 @@ styleable ThemeEnforcement android_textAppearance enforceMaterialTheme enforceTe
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight menu navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor
 styleable Tooltip android_textAppearance android_padding android_layout_margin android_minWidth android_minHeight android_text backgroundTint
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation transformPivotTarget
-styleable TransformationLayout transformation_allContainerColor transformation_containerColor transformation_direction transformation_duration transformation_elevationShadowEnabled transformation_endElevation transformation_fadeMode transformation_fitMode transformation_holdAtEndEnabled transformation_pathMode transformation_scrimColor transformation_startElevation transformation_targetView transformation_zOrder
 styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration layoutDuringTransition motionInterpolator pathMotionArc staggered transitionDisable transitionFlags
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
 styleable View android_theme android_focusable paddingEnd paddingStart theme
@@ -3617,6 +3597,7 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
+styleable ZoomageView zoomage_animateOnReset zoomage_autoCenter zoomage_autoResetMode zoomage_doubleTapToZoom zoomage_doubleTapToZoomScaleFactor zoomage_maxScale zoomage_minScale zoomage_restrictBounds zoomage_translatable zoomage_zoomable
 styleable include constraintSet
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

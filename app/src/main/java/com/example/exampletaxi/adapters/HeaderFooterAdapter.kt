@@ -21,7 +21,7 @@ class HeaderFooterAdapter(private val retry:() ->Unit): LoadStateAdapter<Recycle
 
         fun onBind(loadState: LoadState){
             binding.progressView.isVisible = loadState is LoadState.Loading
-            binding.retryBtn.isVisible = loadState is LoadState.Error
+            binding.errorContainer.isVisible = loadState is LoadState.Error
         }
     }
 

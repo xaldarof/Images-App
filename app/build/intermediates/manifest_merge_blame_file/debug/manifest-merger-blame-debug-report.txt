@@ -21,13 +21,13 @@
 13-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:7:22-78
 14
 15    <application
-15-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:9:5-26:19
+15-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:9:5-27:19
 16        android:name="com.example.exampletaxi.core.App"
 16-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:10:9-33
 17        android:allowBackup="true"
 17-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:11:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\e0e8527f5b682c4233c0e9d19c357a53\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\347f49e5ad64a566e732a0d4d2b5d185\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
 20-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:12:9-43
@@ -41,22 +41,24 @@
 25        android:theme="@style/Theme.ExampleTaxi" >
 25-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:16:9-49
 26        <activity
-26-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:17:9-25:20
+26-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:17:9-26:20
 27            android:name="com.example.exampletaxi.MainActivity"
-27-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:18:13-41
-28            android:exported="true" >
-28-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:13-36
-29            <intent-filter>
-29-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:20:13-24:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:17-69
-30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:23:17-77
-32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:23:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+27-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:13-41
+28            android:exported="true"
+28-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:20:13-36
+29            android:screenOrientation="portrait" >
+29-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:18:13-49
+30            <intent-filter>
+30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:13-25:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:22:17-69
+31-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:22:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:24:17-77
+33-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:24:27-74
+34            </intent-filter>
+35        </activity>
+36    </application>
+37
+38</manifest>

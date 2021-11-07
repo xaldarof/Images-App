@@ -12,5 +12,5 @@ data class ImageUiModel(
     val userImageURL: String,
     val user_id: Int,
     val views: Int,
-    val webFormat:String
+    val webFormat:String,
 )

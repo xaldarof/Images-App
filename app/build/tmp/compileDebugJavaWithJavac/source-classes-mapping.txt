@@ -50,6 +50,8 @@ com/example/exampletaxi/core/App_GeneratedInjector.java
  com.example.exampletaxi.core.App_GeneratedInjector
 com/example/exampletaxi/databinding/ImageItemBinding.java
  com.example.exampletaxi.databinding.ImageItemBinding
+com/example/exampletaxi/databinding/ErrorLayoutBinding.java
+ com.example.exampletaxi.databinding.ErrorLayoutBinding
 com/example/exampletaxi/vm/MainViewModel_HiltModules_KeyModule_ProvideFactory.java
  com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory
  com.example.exampletaxi.vm.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder

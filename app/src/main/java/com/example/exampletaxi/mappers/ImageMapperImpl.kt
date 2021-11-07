@@ -20,7 +20,7 @@ class ImageMapperImpl @Inject constructor() : ImageMapper<ImageDomainModel, Imag
             data.userImageURL,
             data.user_id,
             data.views,
-            data.webformatURL
+            data.webformatURL,
         )
     }
 }
