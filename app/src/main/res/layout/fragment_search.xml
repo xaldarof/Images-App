@@ -23,16 +23,16 @@
             app:boxStrokeWidthFocused="0dp"
             app:endIconDrawable="@drawable/ic_baseline_clear_24"
             app:endIconMode="clear_text"
-            app:expandedHintEnabled="false"
-            app:startIconTint="@color/icon_white"
             app:endIconTint="@color/icon_white"
+            app:expandedHintEnabled="false"
             app:hintAnimationEnabled="false"
             app:hintEnabled="false"
             app:hintTextColor="@color/icon_white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@drawable/ic_baseline_search_24">
+            app:startIconDrawable="@drawable/ic_baseline_search_24"
+            app:startIconTint="@color/icon_white">
 
             <EditText
                 android:id="@+id/searchView"
@@ -41,10 +41,10 @@
                 android:layout_margin="8dp"
                 android:background="@drawable/search_style"
                 android:hint="@string/search"
-                android:textColorHint="@color/icon_white"
                 android:inputType="textPersonName"
                 android:padding="12dp"
-                android:paddingBottom="16dp" />
+                android:paddingBottom="16dp"
+                android:textColorHint="@color/icon_white" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

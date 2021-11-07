@@ -24,7 +24,6 @@ import com.example.exampletaxi.utils.CustomTextChangedListener
 import com.example.exampletaxi.utils.UiConstants.EMPTY
 import com.example.exampletaxi.utils.UiConstants.NOTHING
 import com.example.exampletaxi.utils.openBrowser
-import com.example.exampletaxi.utils.showIfEmpty
 import com.example.exampletaxi.vm.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -64,8 +63,7 @@ class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.C
         binding.searchView.addTextChangedListener(CustomTextChangedListener(object :CallBack{
             override fun afterChanged(p0: Editable?) {
                 lifecycleScope.launch {
-                    viewModel.fetchImages(if (p0.toString().isEmpty())NOTHING else p0.toString())
-                        .distinctUntilChanged()
+                    viewModel.fetchImages(if (p0.toString().isEmpty()) NOTHING else p0.toString())
                         .collectLatest {
                             adapter.submitData(it)
                         }
