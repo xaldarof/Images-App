@@ -61,13 +61,6 @@ class ShowFavoriteImageDialog(private val callBack:CallBack ,
                 override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?,
                                           isFirstResource: Boolean): Boolean {
                     Toast.makeText(requireContext(), R.string.no_connection, Toast.LENGTH_SHORT).show()
-                    val binding = ErrorLayoutBinding.inflate(layoutInflater)
-                    dialog?.setContentView(binding.root)
-
-                    binding.retryBtn.setOnClickListener {
-                        callBack.onClickRetry()
-                        dismiss()
-                    }
 
                     return false
                 }
