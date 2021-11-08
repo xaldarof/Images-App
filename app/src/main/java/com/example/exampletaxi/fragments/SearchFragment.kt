@@ -21,13 +21,12 @@ import com.example.exampletaxi.databinding.FragmentSearchBinding
 import com.example.exampletaxi.dialogs.ShowImageDialog
 import com.example.exampletaxi.utils.CallBack
 import com.example.exampletaxi.utils.CustomTextChangedListener
-import com.example.exampletaxi.utils.UiConstants.EMPTY
+import com.example.exampletaxi.utils.UiConstants.DEFAULT
 import com.example.exampletaxi.utils.UiConstants.NOTHING
 import com.example.exampletaxi.utils.openBrowser
 import com.example.exampletaxi.vm.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -73,7 +72,7 @@ class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.C
     }
 
     override fun onClickOpenImage(uiModel: ImageUiModel, imageView: ImageView) {
-        ShowImageDialog(this,uiModel).show(parentFragmentManager,EMPTY)
+        ShowImageDialog(this,uiModel).show(parentFragmentManager,DEFAULT)
     }
 
     override fun onShare(imageView: ImageView) {

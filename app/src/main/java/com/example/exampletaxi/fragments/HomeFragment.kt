@@ -18,7 +18,7 @@ import com.example.exampletaxi.adapters.ImagesPagingAdapter
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.FragmentHomeBinding
 import com.example.exampletaxi.dialogs.ShowImageDialog
-import com.example.exampletaxi.utils.UiConstants.EMPTY
+import com.example.exampletaxi.utils.UiConstants.DEFAULT
 import com.example.exampletaxi.utils.openBrowser
 import com.example.exampletaxi.vm.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,12 +50,11 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
         }
 
         binding.homeContainer.setOnRefreshListener {
-            adapter.retry()
-            binding.homeContainer.isRefreshing = false
+            adapter.refresh()
         }
 
         lifecycleScope.launch {
-            viewModel.fetchImages(EMPTY).collectLatest {
+            viewModel.fetchImages(DEFAULT).collectLatest {
                 adapter.submitData(it)
             }
         }
@@ -66,9 +65,8 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
         }
     }
 
-
     override fun onClickOpenImage(uiModel: ImageUiModel, imageView: ImageView) {
-        ShowImageDialog(this,uiModel).show(parentFragmentManager,EMPTY)
+        ShowImageDialog(this,uiModel).show(parentFragmentManager,DEFAULT)
     }
 
     override fun onShare(imageView: ImageView) {

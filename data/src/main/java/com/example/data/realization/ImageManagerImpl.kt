@@ -17,11 +17,11 @@ import android.widget.Toast
 import com.example.data.R
 import com.example.data.utils.DataConstants
 import java.io.ByteArrayOutputStream
-import java.io.FileNotFoundException
 
 
-class ImageManagerImpl @Inject constructor(@ApplicationContext private val context: Context) :
-    ImageManager {
+class ImageManagerImpl
+
+@Inject constructor(@ApplicationContext private val context: Context) : ImageManager {
 
     override suspend fun saveImage(imageView: ImageView)  {
         try {
@@ -29,8 +29,8 @@ class ImageManagerImpl @Inject constructor(@ApplicationContext private val conte
             val bitmap = bitmapDrawable.bitmap
 
             var outStream: FileOutputStream? = null
-            val sdCard: File = Environment.getExternalStorageDirectory()
-            val dir = File(sdCard.absolutePath.toString() + DataConstants.FILE_NAME)
+            val path: File = Environment.getExternalStorageDirectory()
+            val dir = File(path.absolutePath.toString() + DataConstants.FILE_NAME)
             dir.mkdirs()
             val fileName = String.format("%d.jpg", System.currentTimeMillis())
             val outFile = File(dir, fileName)
@@ -58,8 +58,7 @@ class ImageManagerImpl @Inject constructor(@ApplicationContext private val conte
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
         val path = MediaStore.Images.Media.insertImage(
             context.contentResolver,
-            bitmap, (System.currentTimeMillis() / 1000).toString(), null
-        )
+            bitmap, (System.currentTimeMillis() / 1000).toString(), null)
         val imageUri = Uri.parse(path)
         share.putExtra(Intent.EXTRA_STREAM, imageUri)
         context.startActivity(Intent.createChooser(share, DataConstants.SELECT_APP))

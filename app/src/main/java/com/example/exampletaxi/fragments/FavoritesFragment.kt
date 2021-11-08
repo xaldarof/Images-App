@@ -16,7 +16,7 @@ import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.ImageFavoritesAdapter
 import com.example.exampletaxi.databinding.FragmentFavoritesBinding
 import com.example.exampletaxi.dialogs.ShowFavoriteImageDialog
-import com.example.exampletaxi.utils.UiConstants.EMPTY
+import com.example.exampletaxi.utils.UiConstants.DEFAULT
 import com.example.exampletaxi.utils.openBrowser
 import com.example.exampletaxi.vm.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,7 +53,7 @@ class FavoritesFragment : Fragment(),ShowFavoriteImageDialog.CallBack,ImageFavor
     }
 
     override fun onClickOpenImage(model: ImageDbModel, imageView: ImageView) {
-        ShowFavoriteImageDialog(this,model).show(parentFragmentManager,EMPTY)
+        ShowFavoriteImageDialog(this,model).show(parentFragmentManager,DEFAULT)
     }
 
     override fun onShare(imageView: ImageView) {
