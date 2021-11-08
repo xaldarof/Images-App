@@ -5,7 +5,7 @@ import androidx.paging.PagingData
 import com.example.data.cloud.abstraction.ImageDataSource
 import com.example.data.cloud.abstraction.ImageManager
 import com.example.domain.models.ImageDomainModel
-import com.example.domain.DataRepository
+import com.example.domain.abstraction.DataRepository
 import com.example.domain.models.ImageDbModel
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

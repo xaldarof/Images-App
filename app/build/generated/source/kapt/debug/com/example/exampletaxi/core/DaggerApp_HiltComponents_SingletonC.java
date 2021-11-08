@@ -30,8 +30,8 @@ import com.example.data.di.CloudModule_ProvideRetrofitFactory;
 import com.example.data.realization.DataRepositoryImpl;
 import com.example.data.realization.ImageManagerImpl;
 import com.example.data.realization.UserSettingsImpl;
-import com.example.domain.DataRepository;
-import com.example.domain.UserSettingsRepository;
+import com.example.domain.abstraction.DataRepository;
+import com.example.domain.abstraction.UserSettingsRepository;
 import com.example.exampletaxi.MainActivity;
 import com.example.exampletaxi.fragments.FavoritesFragment;
 import com.example.exampletaxi.fragments.HomeFragment;
@@ -469,7 +469,7 @@ public final class DaggerApp_HiltComponents_SingletonC extends App_HiltComponent
       }
 
       private MainViewModel mainViewModel() {
-        return new MainViewModel(DaggerApp_HiltComponents_SingletonC.this.dataRepository(), new ImageMapperImpl());
+        return new MainViewModel(DaggerApp_HiltComponents_SingletonC.this.dataRepository(), new ImageMapperImpl(), DaggerApp_HiltComponents_SingletonC.this.userSettingsRepository());
       }
 
       private Provider<MainViewModel> mainViewModelProvider() {

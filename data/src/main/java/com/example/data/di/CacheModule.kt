@@ -11,7 +11,7 @@ import com.example.data.realization.ImageManagerImpl
 import com.example.data.realization.UserSettingsImpl
 import com.example.data.realization.UserSettingsRepositoryImpl
 import com.example.data.utils.DataConstants.SETTINGS_NAME
-import com.example.domain.UserSettingsRepository
+import com.example.domain.abstraction.UserSettingsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -53,7 +53,7 @@ object CacheModule {
     }
 
     @Provides
-    fun provideUserSettingsRepository(userSettings: UserSettings):UserSettingsRepository{
+    fun provideUserSettingsRepository(userSettings: UserSettings): UserSettingsRepository {
         return UserSettingsRepositoryImpl(userSettings)
     }
 

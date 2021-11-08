@@ -8,7 +8,7 @@ import com.example.data.cloud.api.ImageApiService
 import com.example.data.core.Constants
 import com.example.data.realization.DataRepositoryImpl
 import com.example.data.realization.ImageDataSourceImpl
-import com.example.domain.DataRepository
+import com.example.domain.abstraction.DataRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

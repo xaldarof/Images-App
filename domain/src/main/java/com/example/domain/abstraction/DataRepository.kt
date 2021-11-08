@@ -1,4 +1,4 @@
-package com.example.domain
+package com.example.domain.abstraction
 
 import android.widget.ImageView
 import androidx.paging.PagingData

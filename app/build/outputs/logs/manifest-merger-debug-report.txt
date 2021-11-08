@@ -29,6 +29,7 @@ MERGED from [com.google.dagger:hilt-android:2.35] C:\Users\Normal_User\.gradle\c
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\ea10f6679b36990049b809c9707ec188\transformed\room-runtime-2.3.0\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Normal_User\.gradle\caches\transforms-3\2fa35812d8223bd1be79f37edecdf067\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\7fc772d6cc271ef0b30a048792dbb2b7\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\6998b98241f5a7a4ea9c6915bb0db5e9\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Normal_User\.gradle\caches\transforms-3\f73a504e631a7d2afdb008340bebf623\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\4e88281c546a23aabf1bc9349268ce19\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\Normal_User\.gradle\caches\transforms-3\7dea5988fc01f2493b4dd17b67985a68\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
@@ -47,7 +48,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Normal_User\
 MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Normal_User\.gradle\caches\transforms-3\491efb36e20ca3969406f09fa8290ac7\transformed\jetified-gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Normal_User\.gradle\caches\transforms-3\f6af317249acba6c35ee3cc195da5e67\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Normal_User\.gradle\caches\transforms-3\8ba588dc94e9a8a19495fda27a345a03\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\6998b98241f5a7a4ea9c6915bb0db5e9\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\Normal_User\.gradle\caches\transforms-3\d8a56e1519613070beda994cdfd9ee66\transformed\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\bfc58a9b93fffe64b5308a59fc883e1f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\53d3312dab25a1e82e8cda8849f7d1e6\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -211,6 +211,8 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Normal_User\
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Normal_User\.gradle\caches\transforms-3\2fa35812d8223bd1be79f37edecdf067\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\7fc772d6cc271ef0b30a048792dbb2b7\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\7fc772d6cc271ef0b30a048792dbb2b7\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\6998b98241f5a7a4ea9c6915bb0db5e9\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\6998b98241f5a7a4ea9c6915bb0db5e9\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Normal_User\.gradle\caches\transforms-3\f73a504e631a7d2afdb008340bebf623\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Normal_User\.gradle\caches\transforms-3\f73a504e631a7d2afdb008340bebf623\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\Normal_User\.gradle\caches\transforms-3\4e88281c546a23aabf1bc9349268ce19\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
@@ -247,8 +249,6 @@ MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Normal_User\.g
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Normal_User\.gradle\caches\transforms-3\f6af317249acba6c35ee3cc195da5e67\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Normal_User\.gradle\caches\transforms-3\8ba588dc94e9a8a19495fda27a345a03\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Normal_User\.gradle\caches\transforms-3\8ba588dc94e9a8a19495fda27a345a03\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\6998b98241f5a7a4ea9c6915bb0db5e9\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\6998b98241f5a7a4ea9c6915bb0db5e9\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\Normal_User\.gradle\caches\transforms-3\d8a56e1519613070beda994cdfd9ee66\transformed\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\Normal_User\.gradle\caches\transforms-3\d8a56e1519613070beda994cdfd9ee66\transformed\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\bfc58a9b93fffe64b5308a59fc883e1f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41

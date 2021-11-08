@@ -36,6 +36,7 @@
         android:layout_margin="12dp"
         android:background="@drawable/tab_layout_background"
         android:elevation="2dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout2"
+        android:id="@+id/select_lang"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="12dp"
@@ -89,15 +90,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
-        <androidx.appcompat.widget.SwitchCompat
+        <ImageView
             android:id="@+id/fontSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginEnd="12dp"
-            android:thumb="@drawable/switch_thumb"
-            app:track="@drawable/thumb_track" />
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_chevron_left_24"
+            app:tint="@color/black" />
 
         <ImageView
             android:id="@+id/img2"
@@ -120,6 +122,55 @@
             android:layout_marginStart="0dp"
             android:layout_toEndOf="@+id/img2"
             android:text="@string/bold_font"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectRecommendation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/tab_layout_background"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_lang">
+
+        <ImageView
+            android:id="@+id/recommendations"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="12dp"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_chevron_left_24"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_baseline_image_search_24"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/recommendationsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@+id/img3"
+            android:text="@string/recs"
             android:textColor="@color/black"
             android:textSize="20sp" />
 

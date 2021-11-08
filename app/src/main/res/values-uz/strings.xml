@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Rasm qidiruvchi</string>
+    <string name="test_num">234</string>
+    <string name="search">Rasmni qidiring…</string>
+    <string name="no_connection">Internetga aloqa yoq</string>
+    <string name="nothing_found">Xech narsa topilmadi</string>
+    <string name="retry">QAYTA URISNISH</string>
+    <string name="test_name">Abror</string>
+    <string name="success_remove">Sevimli rasmlardan muvvafaqiyatli ochirildi</string>
+    <string name="success_add">Sevimli rasmlarga muvvafaqiyatli qoshildi</string>
+    <string name="settings">Sozlamalar</string>
+    <string name="dark_theme">Tungi tema</string>
+    <string name="bold_font">Til</string>
+    <string name="empty">Sevimli rasmlar yoq…</string>
+    <string name="recs">Men yoqtirgan mavzu</string>
+    <string name="save">saqlash</string>
+
+
+    <string name="life">Xayot</string>
+    <string name="love">Sevgi</string>
+    <string name="sport">Sport</string>
+    <string name="girls">Qizlar</string>
+    <string name="boys">Erkaklar</string>
+    <string name="football">Futbol</string>
+    <string name="tech">Texnologiyalar</string>
+    <string name="robots">Robotlar</string>
+    <string name="cats">Mushuklar</string>
+    <string name="animals">Xayvonlar</string>
+    <string name="dogs">Itlar</string>
+
+</resources>

@@ -1,5 +1,6 @@
 package com.example.exampletaxi.utils
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
@@ -9,6 +10,7 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.isVisible
+import com.example.exampletaxi.MainActivity
 import com.example.exampletaxi.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -30,4 +32,9 @@ fun DialogInterface.makeExpanded(){
 
 fun View.showIfEmpty(count:Int){
     this.isVisible = count != 0
+}
+
+fun Activity.restart() {
+    finish()
+    startActivity(Intent(this,MainActivity::class.java))
 }

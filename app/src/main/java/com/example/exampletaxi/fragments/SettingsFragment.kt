@@ -10,6 +10,12 @@ import androidx.fragment.app.viewModels
 import com.example.exampletaxi.databinding.FragmentSettingsBinding
 import com.example.exampletaxi.vm.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import android.app.AlertDialog
+import com.example.exampletaxi.R
+import com.example.exampletaxi.utils.UiConstants.langs
+import com.example.exampletaxi.utils.UiConstants.recommends
+import com.example.exampletaxi.utils.restart
+
 
 @AndroidEntryPoint
 class SettingsFragment : Fragment() {
@@ -35,6 +41,30 @@ class SettingsFragment : Fragment() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 viewModel.setMode(false)
             }
+        }
+
+        binding.selectRecommendation.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setSingleChoiceItems(recommends, recommends.indexOf(viewModel.fetchUserRecommends()), null)
+                .setPositiveButton(R.string.save) { dialog, _ ->
+                    dialog.dismiss()
+                    val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
+                    viewModel.setUserRecommends(recommends[position])
+                    requireActivity().restart()
+                }
+                .show()
+        }
+
+        binding.selectLang.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setSingleChoiceItems(langs, langs.indexOf(viewModel.fetchUserLanguage()), null)
+                .setPositiveButton(R.string.save) { dialog, _ ->
+                    dialog.dismiss()
+                    val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
+                    viewModel.setUserLanguage(langs[position])
+                    requireActivity().restart()
+                }
+                .show()
         }
     }
 }

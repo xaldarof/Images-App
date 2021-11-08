@@ -1,6 +1,7 @@
 package com.example.exampletaxi.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,6 @@ import com.example.exampletaxi.adapters.ImagesPagingAdapter
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.FragmentHomeBinding
 import com.example.exampletaxi.dialogs.ShowImageDialog
-import com.example.exampletaxi.utils.UiConstants.DEFAULT
 import com.example.exampletaxi.utils.openBrowser
 import com.example.exampletaxi.vm.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -54,7 +54,7 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
         }
 
         lifecycleScope.launch {
-            viewModel.fetchImages(DEFAULT).collectLatest {
+            viewModel.fetchImages(viewModel.fetchUserRecommends()!!).collectLatest {
                 adapter.submitData(it)
             }
         }
@@ -66,7 +66,7 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
     }
 
     override fun onClickOpenImage(uiModel: ImageUiModel, imageView: ImageView) {
-        ShowImageDialog(this,uiModel).show(parentFragmentManager,DEFAULT)
+        ShowImageDialog(this,uiModel).show(parentFragmentManager,viewModel.fetchUserRecommends())
     }
 
     override fun onShare(imageView: ImageView) {

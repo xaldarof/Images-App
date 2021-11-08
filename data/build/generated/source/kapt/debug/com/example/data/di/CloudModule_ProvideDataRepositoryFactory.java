@@ -2,7 +2,7 @@
 package com.example.data.di;
 
 import com.example.data.realization.DataRepositoryImpl;
-import com.example.domain.DataRepository;
+import com.example.domain.abstraction.DataRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;

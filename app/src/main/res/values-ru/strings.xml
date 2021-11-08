@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Фото искатель</string>
+    <string name="test_num">234</string>
+    <string name="search">Ищите изображение…</string>
+    <string name="no_connection">Нет подключение к интернету…</string>
+    <string name="nothing_found">Ничего не найдено</string>
+    <string name="retry">повторить</string>
+    <string name="test_name">Петр</string>
+    <string name="success_remove">Успешно удалено из избранных</string>
+    <string name="success_add">Успешно добавлено в избранные</string>
+    <string name="settings">Настройки</string>
+    <string name="dark_theme">Темная темя</string>
+    <string name="bold_font">Язык</string>
+    <string name="empty">Нет избранных…</string>
+    <string name="recs">Рекомендации</string>
+    <string name="save">сохранить</string>
+
+
+    <string name="life">Жизнь</string>
+    <string name="love">Любовь</string>
+    <string name="sport">Спорт</string>
+    <string name="girls">Девушки</string>
+    <string name="boys">Мальчики</string>
+    <string name="football">Футбол</string>
+    <string name="tech">Технологии</string>
+    <string name="robots">Роботы</string>
+    <string name="cats">Кошки</string>
+    <string name="animals">Животные</string>
+    <string name="dogs">Собаки</string>
+
+</resources>

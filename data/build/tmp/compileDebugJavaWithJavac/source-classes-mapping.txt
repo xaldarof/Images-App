@@ -1,5 +1,7 @@
 com/example/data/realization/DataRepositoryImpl_Factory.java
  com.example.data.realization.DataRepositoryImpl_Factory
+com/example/data/di/CloudModule_ProvideDataRepositoryFactory.java
+ com.example.data.di.CloudModule_ProvideDataRepositoryFactory
 com/example/data/BuildConfig.java
  com.example.data.BuildConfig
 com/example/data/realization/ImageDataSourceImpl_Factory.java
@@ -8,6 +10,8 @@ com/example/data/di/CloudModule_ProvideImageServiceFactory.java
  com.example.data.di.CloudModule_ProvideImageServiceFactory
 com/example/data/cloud/api/ImagePagingSource_Factory.java
  com.example.data.cloud.api.ImagePagingSource_Factory
+com/example/data/di/CloudModule_ProvideRetrofitClientFactory.java
+ com.example.data.di.CloudModule_ProvideRetrofitClientFactory
 com/example/data/di/CloudModule_ProvideRetrofitFactory.java
  com.example.data.di.CloudModule_ProvideRetrofitFactory
 hilt_aggregated_deps/_com_example_data_di_CloudModule.java
@@ -25,20 +29,16 @@ com/example/data/cache/ImageDao_Impl.java
 com/example/data/cache/AppDatabase_Impl.java
  com.example.data.cache.AppDatabase_Impl
  com.example.data.cache.AppDatabase_Impl$1
-com/example/data/di/CloudModule_ProvideRetrofitClientFactory.java
- com.example.data.di.CloudModule_ProvideRetrofitClientFactory
 hilt_aggregated_deps/_com_example_data_di_CacheModule.java
  hilt_aggregated_deps._com_example_data_di_CacheModule
-com/example/data/di/CloudModule_ProvideDataRepositoryFactory.java
- com.example.data.di.CloudModule_ProvideDataRepositoryFactory
-com/example/data/realization/UserSettingsImpl_Factory.java
- com.example.data.realization.UserSettingsImpl_Factory
 com/example/data/di/CacheModule_ProvideUserSettingsRepositoryFactory.java
  com.example.data.di.CacheModule_ProvideUserSettingsRepositoryFactory
 com/example/data/di/CacheModule_ProvideSharedPrfFactory.java
  com.example.data.di.CacheModule_ProvideSharedPrfFactory
 com/example/data/di/CacheModule_ProvideUserSettingsFactory.java
  com.example.data.di.CacheModule_ProvideUserSettingsFactory
+com/example/data/realization/UserSettingsImpl_Factory.java
+ com.example.data.realization.UserSettingsImpl_Factory
 com/example/data/di/CacheModule_ProvideImagesDaoFactory.java
  com.example.data.di.CacheModule_ProvideImagesDaoFactory
 com/example/data/di/CacheModule_ProvideImageSaverFactory.java
