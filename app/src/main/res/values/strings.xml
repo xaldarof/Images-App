@@ -15,15 +15,18 @@
     <string name="recs">My recommendations</string>
     <string name="save">save</string>
 
-    <string name="life">Life</string>
-    <string name="love">Love</string>
-    <string name="sport">Sport</string>
-    <string name="girls">Girls</string>
-    <string name="boys">Boys</string>
-    <string name="football">Football</string>
-    <string name="tech">Technology</string>
-    <string name="robots">Robots</string>
-    <string name="cats">Cats</string>
-    <string name="animals">Animals</string>
-    <string name="dogs">Dogs</string>
+    <string-array name="recs">
+        <item name="life">Life</item>
+        <item name="love">Love</item>
+        <item name="sport">Sport</item>
+        <item name="girls">Girls</item>
+        <item name="boys">Boys</item>
+        <item name="football">Football</item>
+        <item name="tech">Technology</item>
+        <item name="robots">Robots</item>
+        <item name="cats">Cats</item>
+        <item name="animals">Animals</item>
+        <item name="dogs">Dogs</item>
+    </string-array>
+
 </resources>

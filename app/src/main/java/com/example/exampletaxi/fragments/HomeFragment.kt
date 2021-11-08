@@ -51,6 +51,7 @@ class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.Ca
 
         binding.homeContainer.setOnRefreshListener {
             adapter.refresh()
+            binding.homeContainer.isRefreshing = false
         }
 
         lifecycleScope.launch {

@@ -7,5 +7,5 @@
     <color name="icon_white">#696766</color>
     <color name="black_light">#232121</color>
     <color name="icon_click">#696766</color>
-
+    <color name="tab_icon_color">#696766</color>
 </resources>

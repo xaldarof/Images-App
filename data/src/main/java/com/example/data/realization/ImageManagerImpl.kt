@@ -16,6 +16,8 @@ import android.provider.MediaStore
 import android.widget.Toast
 import com.example.data.R
 import com.example.data.utils.DataConstants
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.io.ByteArrayOutputStream
 
 
@@ -41,7 +43,7 @@ class ImageManagerImpl
 
             notifyDataChanged(outFile)
 
-            Toast.makeText(context, "${R.string.save_in} ${outFile.absolutePath}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "${R.string.saved_in} ${outFile.absolutePath}", Toast.LENGTH_SHORT).show()
 
         } catch (e: Exception) {
             Toast.makeText(context, R.string.an_error, Toast.LENGTH_SHORT).show()
@@ -61,7 +63,7 @@ class ImageManagerImpl
             bitmap, (System.currentTimeMillis() / 1000).toString(), null)
         val imageUri = Uri.parse(path)
         share.putExtra(Intent.EXTRA_STREAM, imageUri)
-        context.startActivity(Intent.createChooser(share, DataConstants.SELECT_APP))
+        context.startActivity(Intent.createChooser(share,context.resources.getString(R.string.select_app)))
 
     }
 

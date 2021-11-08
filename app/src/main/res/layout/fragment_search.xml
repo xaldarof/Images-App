@@ -37,7 +37,7 @@
             <EditText
                 android:id="@+id/searchView"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="?actionBarSize"
                 android:layout_margin="8dp"
                 android:background="@drawable/search_style"
                 android:hint="@string/search"

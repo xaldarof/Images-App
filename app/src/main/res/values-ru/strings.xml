@@ -16,16 +16,18 @@
     <string name="save">сохранить</string>
 
 
-    <string name="life">Жизнь</string>
-    <string name="love">Любовь</string>
-    <string name="sport">Спорт</string>
-    <string name="girls">Девушки</string>
-    <string name="boys">Мальчики</string>
-    <string name="football">Футбол</string>
-    <string name="tech">Технологии</string>
-    <string name="robots">Роботы</string>
-    <string name="cats">Кошки</string>
-    <string name="animals">Животные</string>
-    <string name="dogs">Собаки</string>
+    <string-array name="recs">
+        <item name="life">Жизнь</item>
+        <item name="love">Любовь</item>
+        <item name="sport">Спорт</item>
+        <item name="girls">Девушки</item>
+        <item name="boys">Мальчики</item>
+        <item name="football">Футбол</item>
+        <item name="tech">Технологии</item>
+        <item name="robots">Роботы</item>
+        <item name="cats">Кошки</item>
+        <item name="animals">Животные</item>
+        <item name="dogs">Собаки</item>
+    </string-array>
 
 </resources>

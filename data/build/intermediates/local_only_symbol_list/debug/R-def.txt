@@ -1,4 +1,5 @@
 R_DEF: Internal format may change without notice
 local
 string an_error
-string save_in
+string saved_in
+string select_app

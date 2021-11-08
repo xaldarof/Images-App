@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="save_in">"Successfully saved in "</string>
-    <string name="an_error">Произошла ошибка</string>
+    <string name="saved_in">Successfully saved in </string>
+    <string name="an_error">An error handled</string>
+    <string name="select_app">Which application ?</string>
 </resources>

@@ -62,10 +62,12 @@ class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.C
         binding.searchView.addTextChangedListener(CustomTextChangedListener(object :CallBack{
             override fun afterChanged(p0: Editable?) {
                 lifecycleScope.launch {
-                    viewModel.fetchImages(if (p0.toString().isEmpty()) NOTHING else p0.toString())
-                        .collectLatest {
-                            adapter.submitData(it)
-                        }
+                    if (p0.toString().length > 2) {
+                        viewModel.fetchImages(if (p0.toString().isEmpty()) NOTHING else p0.toString())
+                            .collectLatest {
+                                adapter.submitData(it)
+                            }
+                    }
                 }
             }
         }))

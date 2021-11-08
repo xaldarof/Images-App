@@ -13,7 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import android.app.AlertDialog
 import com.example.exampletaxi.R
 import com.example.exampletaxi.utils.UiConstants.langs
-import com.example.exampletaxi.utils.UiConstants.recommends
 import com.example.exampletaxi.utils.restart
 
 
@@ -43,6 +42,7 @@ class SettingsFragment : Fragment() {
             }
         }
 
+        val recommends = resources.getStringArray(R.array.recs)
         binding.selectRecommendation.setOnClickListener {
             AlertDialog.Builder(requireContext())
                 .setSingleChoiceItems(recommends, recommends.indexOf(viewModel.fetchUserRecommends()), null)
@@ -54,6 +54,7 @@ class SettingsFragment : Fragment() {
                 }
                 .show()
         }
+
 
         binding.selectLang.setOnClickListener {
             AlertDialog.Builder(requireContext())

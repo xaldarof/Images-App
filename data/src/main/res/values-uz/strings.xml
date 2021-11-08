@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saved_in">Muvvaqiyatli saqlandi </string>
+    <string name="an_error">Xatolik yuz berdi</string>
+    <string name="select_app">Dasturni tanlang</string>
+</resources>

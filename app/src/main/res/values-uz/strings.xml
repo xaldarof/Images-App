@@ -16,16 +16,18 @@
     <string name="save">saqlash</string>
 
 
-    <string name="life">Xayot</string>
-    <string name="love">Sevgi</string>
-    <string name="sport">Sport</string>
-    <string name="girls">Qizlar</string>
-    <string name="boys">Erkaklar</string>
-    <string name="football">Futbol</string>
-    <string name="tech">Texnologiyalar</string>
-    <string name="robots">Robotlar</string>
-    <string name="cats">Mushuklar</string>
-    <string name="animals">Xayvonlar</string>
-    <string name="dogs">Itlar</string>
+    <string-array name="recs">
+        <item name="life">Xayot</item>
+        <item name="love">Sevgi</item>
+        <item name="sport">Sport</item>
+        <item name="girls">Qizlar</item>
+        <item name="boys">Erkaklar</item>
+        <item name="football">Futbol</item>
+        <item name="tech">Texnologiyalar</item>
+        <item name="robots">Robotlar</item>
+        <item name="cats">Mushuklar</item>
+        <item name="animals">Xayvonlar</item>
+        <item name="dogs">Itlar</item>
+    </string-array>
 
 </resources>
