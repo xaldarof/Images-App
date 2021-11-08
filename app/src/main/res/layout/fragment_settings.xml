@@ -36,7 +36,6 @@
         android:layout_margin="12dp"
         android:background="@drawable/tab_layout_background"
         android:elevation="2dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +63,7 @@
             android:layout_marginBottom="12dp"
             android:src="@drawable/ic_baseline_dark_mode_24"
             app:tint="@color/black" />
+
 
         <TextView
             android:id="@+id/darkThemeSwitch"

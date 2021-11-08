@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.exampletaxi.R
-import com.example.exampletaxi.core.ImageUiModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,7 +16,6 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.domain.models.ImageDbModel
-import com.example.exampletaxi.databinding.ErrorLayoutBinding
 import com.example.exampletaxi.databinding.FavoriteItemDialogBinding
 import com.example.exampletaxi.utils.makeExpanded
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -30,11 +28,6 @@ class ShowFavoriteImageDialog(private val callBack:CallBack ,
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         dialog!!.setOnShowListener { it.makeExpanded() }
         return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        dialog?.window?.attributes?.windowAnimations = R.style.DialogAnimation
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

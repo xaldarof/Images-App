@@ -32,7 +32,7 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.themeSwitch.isChecked = viewModel.isDarkModelEnabled()
 
-        binding.themeSwitch.setOnCheckedChangeListener { compoundButton, b ->
+        binding.themeSwitch.setOnCheckedChangeListener { compoundButton, _ ->
             if (compoundButton.isChecked){
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 viewModel.setMode(true)

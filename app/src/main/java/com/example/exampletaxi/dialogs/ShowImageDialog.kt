@@ -17,24 +17,17 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.example.exampletaxi.databinding.ErrorLayoutBinding
 import com.example.exampletaxi.utils.makeExpanded
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ShowImageDialog(private val callBack:CallBack ,
-                      private val uiModel: ImageUiModel) :
-    BottomSheetDialogFragment() {
+                      private val uiModel: ImageUiModel) : BottomSheetDialogFragment() {
 
     private lateinit var binding:FragmentViewImageBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         dialog!!.setOnShowListener { it.makeExpanded() }
         return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        dialog?.window?.attributes?.windowAnimations = R.style.DialogAnimation
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
