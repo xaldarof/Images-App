@@ -2276,6 +2276,7 @@ id postLayout
 id progressView
 id progress_circular
 id progress_horizontal
+id query
 id radio
 id ratio
 id recommendations
@@ -2510,6 +2511,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout auto_complete_item
 layout cache_image_item
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2664,6 +2666,7 @@ string clear_text_end_icon_content_description
 string dark_theme
 string empty
 string error_icon_content_description
+string exit
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior

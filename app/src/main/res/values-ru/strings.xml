@@ -14,6 +14,7 @@
     <string name="empty">Нет избранных…</string>
     <string name="recs">Рекомендации</string>
     <string name="save">сохранить</string>
+    <string name="exit">выйти</string>
 
 
     <string-array name="recs">
@@ -28,6 +29,10 @@
         <item name="cats">Кошки</item>
         <item name="animals">Животные</item>
         <item name="dogs">Собаки</item>
+        <item name="sad">Грусть</item>
+        <item name="motivation">Мотивация</item>
+        <item name="friend">Дружба</item>
+        <item name="magic">Магия</item>
     </string-array>
 
 </resources>

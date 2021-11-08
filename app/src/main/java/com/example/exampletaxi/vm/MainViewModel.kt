@@ -4,6 +4,7 @@ import android.widget.ImageView
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagingData
 import androidx.paging.map
+import com.example.core.BaseViewModel
 import com.example.domain.abstraction.DataRepository
 import com.example.domain.abstraction.UserSettingsRepository
 import com.example.domain.models.ImageDbModel
@@ -19,7 +20,7 @@ class MainViewModel
 
 @Inject constructor(private val repository: DataRepository,
                     private val mapper: ImageMapperImpl,
-                    private val userSettingsRepository: UserSettingsRepository): ViewModel() {
+                    private val userSettingsRepository: UserSettingsRepository): BaseViewModel() {
 
     fun fetchImages(query:String): Flow<PagingData<ImageUiModel>> {
        return repository.fetchImages(query).map { it ->

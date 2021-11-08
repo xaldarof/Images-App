@@ -14,6 +14,7 @@
     <string name="empty">Sevimli rasmlar yoq…</string>
     <string name="recs">Men yoqtirgan mavzu</string>
     <string name="save">saqlash</string>
+    <string name="exit">chiqish</string>
 
 
     <string-array name="recs">
@@ -28,6 +29,10 @@
         <item name="cats">Mushuklar</item>
         <item name="animals">Xayvonlar</item>
         <item name="dogs">Itlar</item>
+        <item name="sad">Gamgin</item>
+        <item name="motivation">Motivatsiya</item>
+        <item name="friend">Dostlik</item>
+        <item name="magic">Sexr</item>
     </string-array>
 
 </resources>

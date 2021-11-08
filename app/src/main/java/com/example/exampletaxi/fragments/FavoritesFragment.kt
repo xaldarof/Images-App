@@ -1,7 +1,6 @@
 package com.example.exampletaxi.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.core.BaseFragment
 import com.example.domain.models.ImageDbModel
 import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.ImageFavoritesAdapter
@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
-class FavoritesFragment : Fragment(),ShowFavoriteImageDialog.CallBack,ImageFavoritesAdapter.CallBack {
+class FavoritesFragment : BaseFragment(),ShowFavoriteImageDialog.CallBack,ImageFavoritesAdapter.CallBack {
 
     private lateinit var binding:FragmentFavoritesBinding
     private val viewModel:MainViewModel by viewModels()
@@ -76,12 +76,10 @@ class FavoritesFragment : Fragment(),ShowFavoriteImageDialog.CallBack,ImageFavor
         requireContext().openBrowser(model.pageURL)
     }
 
-    override fun onClickRetry() {
-
-    }
+    override fun onClickRetry() {}
 
     override fun onClickRemoveFavorites(model: ImageDbModel) {
         viewModel.removeCacheImage(model)
-        Toast.makeText(requireContext(), R.string.success_remove , Toast.LENGTH_SHORT).show()
+        toast(R.string.success_remove)
     }
 }

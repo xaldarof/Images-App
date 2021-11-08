@@ -1,6 +1,7 @@
 package com.example.exampletaxi.vm
 
 import androidx.lifecycle.ViewModel
+import com.example.core.BaseViewModel
 import com.example.domain.abstraction.UserSettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -9,7 +10,7 @@ import javax.inject.Inject
 class SettingsViewModel
 
 @Inject
-constructor(private val userSettings: UserSettingsRepository): ViewModel() {
+constructor(private val userSettings: UserSettingsRepository): BaseViewModel() {
 
     fun isDarkModelEnabled() = userSettings.isDarkModelEnabled()
 

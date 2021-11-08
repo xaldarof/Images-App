@@ -2,17 +2,16 @@ package com.example.exampletaxi.fragments
 
 import android.os.Bundle
 import android.text.Editable
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.core.BaseFragment
 import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.HeaderFooterAdapter
 import com.example.exampletaxi.adapters.ImagesPagingAdapter
@@ -30,7 +29,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.CallBack {
+class SearchFragment : BaseFragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.CallBack {
 
     private lateinit var binding:FragmentSearchBinding
     private val viewModel: MainViewModel by viewModels()
@@ -58,6 +57,7 @@ class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.C
         binding.retryBtn.setOnClickListener {
             adapter.retry()
         }
+
 
         binding.searchView.addTextChangedListener(CustomTextChangedListener(object :CallBack{
             override fun afterChanged(p0: Editable?) {
@@ -104,7 +104,7 @@ class SearchFragment : Fragment(),ImagesPagingAdapter.CallBack,ShowImageDialog.C
     override fun onClickAddFavorites(uiModel: ImageUiModel) {
         lifecycleScope.launch {
             viewModel.saveCacheImage(uiModel)
-            Toast.makeText(requireContext(), R.string.success_add , Toast.LENGTH_SHORT).show()
+            toast(R.string.success_add)
         }
     }
 }

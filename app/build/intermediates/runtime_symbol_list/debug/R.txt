@@ -2275,6 +2275,7 @@ int id postLayout 0x7f090164
 int id progressView 0x7f090165
 int id progress_circular 0x7f090166
 int id progress_horizontal 0x7f090167
+int id query 0x7f09020f
 int id radio 0x7f090168
 int id ratio 0x7f090169
 int id recommendations 0x7f09016a
@@ -2509,6 +2510,7 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_main 0x7f0c001c
+int layout auto_complete_item 0x7f0c0086
 int layout cache_image_item 0x7f0c001d
 int layout custom_dialog 0x7f0c001e
 int layout design_bottom_navigation_item 0x7f0c001f
@@ -2663,6 +2665,7 @@ int string clear_text_end_icon_content_description 0x7f110025
 int string dark_theme 0x7f110026
 int string empty 0x7f110027
 int string error_icon_content_description 0x7f110028
+int string exit 0x7f11007c
 int string exposed_dropdown_menu_content_description 0x7f110029
 int string fab_transformation_scrim_behavior 0x7f11002a
 int string fab_transformation_sheet_behavior 0x7f11002b

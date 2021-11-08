@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.core.BaseFragment
 import com.example.exampletaxi.R
 import com.example.exampletaxi.adapters.HeaderFooterAdapter
 import com.example.exampletaxi.adapters.ImagesPagingAdapter
@@ -26,7 +27,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class HomeFragment : Fragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.CallBack {
+class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialog.CallBack {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewModel: MainViewModel by viewModels()

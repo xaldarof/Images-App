@@ -7,12 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.core.BaseFragment
 import com.example.exampletaxi.R
 import com.example.exampletaxi.databinding.FragmentHomeBinding
 import com.example.exampletaxi.databinding.FragmentViewImageBinding
 
 
-class ViewImageFragment : Fragment() {
+class ViewImageFragment : BaseFragment() {
 
     private lateinit var binding:FragmentViewImageBinding
 

@@ -11,13 +11,14 @@ import com.example.exampletaxi.databinding.FragmentSettingsBinding
 import com.example.exampletaxi.vm.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import android.app.AlertDialog
+import com.example.core.BaseFragment
 import com.example.exampletaxi.R
 import com.example.exampletaxi.utils.UiConstants.langs
 import com.example.exampletaxi.utils.restart
 
 
 @AndroidEntryPoint
-class SettingsFragment : Fragment() {
+class SettingsFragment :BaseFragment() {
 
     private lateinit var binding:FragmentSettingsBinding
     private val viewModel:SettingsViewModel by viewModels()
@@ -51,6 +52,8 @@ class SettingsFragment : Fragment() {
                     val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
                     viewModel.setUserRecommends(recommends[position])
                     requireActivity().restart()
+                }.setNegativeButton(R.string.exit){ dialog, _ ->
+                    dialog.dismiss()
                 }
                 .show()
         }
@@ -64,6 +67,8 @@ class SettingsFragment : Fragment() {
                     val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
                     viewModel.setUserLanguage(langs[position])
                     requireActivity().restart()
+                }.setNegativeButton(R.string.exit){ dialog, _ ->
+                    dialog.dismiss()
                 }
                 .show()
         }
