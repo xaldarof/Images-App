@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -18,8 +18,11 @@ import com.example.exampletaxi.adapters.ImagesPagingAdapter
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.FragmentHomeBinding
 import com.example.exampletaxi.dialogs.ShowImageDialog
+import com.example.exampletaxi.utils.UiConstants.chip_names
+import com.example.exampletaxi.utils.addChips
 import com.example.exampletaxi.utils.openBrowser
 import com.example.exampletaxi.vm.MainViewModel
+import com.google.android.material.chip.Chip
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -38,6 +41,16 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initData(viewModel.fetchUserRecommends()!!)
+        binding.chipGroup.addChips(chip_names)
+
+        binding.chipGroup.setOnCheckedChangeListener { group, _ ->
+            val text = binding.root.findViewById<Chip>(group.checkedChipId).text.toString()
+            initData(text)
+        }
+    }
+
+    private fun initData(query:String) {
         adapter = ImagesPagingAdapter(this,viewModel.isSafeMode())
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
@@ -49,7 +62,7 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
         }
 
         lifecycleScope.launch {
-            viewModel.fetchImages(viewModel.fetchUserRecommends()!!).collectLatest {
+            viewModel.fetchImages(query).collectLatest {
                 adapter.submitData(it)
             }
         }
@@ -91,7 +104,7 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
     override fun onClickAddFavorites(uiModel: ImageUiModel) {
         lifecycleScope.launch {
             viewModel.saveCacheImage(uiModel)
-            Toast.makeText(requireContext(), R.string.success_add , Toast.LENGTH_SHORT).show()
+            toast(R.string.success_add)
         }
     }
 

@@ -1,18 +1,23 @@
 package com.example.exampletaxi.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.exampletaxi.R
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.ImageItemBinding
+import android.util.TypedValue
 
-class ImagesPagingAdapter(private val callBack: CallBack,private val isSafeMode:Boolean): PagingDataAdapter<ImageUiModel, RecyclerView.ViewHolder>(Comparator) {
+
+
+
+class ImagesPagingAdapter(private val callBack: CallBack,private val isSafeMode:Boolean)
+    : PagingDataAdapter<ImageUiModel, RecyclerView.ViewHolder>(Comparator) {
 
 
     inner class ImageViewHolder(private val binding: ImageItemBinding) :
@@ -28,21 +33,31 @@ class ImagesPagingAdapter(private val callBack: CallBack,private val isSafeMode:
             binding.image.setOnClickListener {
                 callBack.onClickOpenImage(imageUiModel,binding.image)
             }
-
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         getItem(position)?.let { (holder as ImageViewHolder).onBind(it) }
+
+        if (position == 1 || position == 0) {
+            val tv = TypedValue()
+
+            if (holder.itemView.context.theme.resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+                val actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,
+                    holder.itemView.context.resources.displayMetrics)
+
+                val params = holder.itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams
+                params.topMargin = actionBarHeight
+                holder.itemView.layoutParams = params
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ImageViewHolder(
-            ImageItemBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            )
+        return ImageViewHolder(ImageItemBinding
+            .inflate(LayoutInflater
+            .from(parent.context),
+            parent, false)
         )
     }
 

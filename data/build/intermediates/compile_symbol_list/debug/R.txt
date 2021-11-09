@@ -2558,6 +2558,7 @@ int string search_menu_title 0x0
 int string select_app 0x0
 int string status_bar_notification_info_overflow 0x0
 int string success_apply 0x0
+int string wait 0x0
 int style AlertDialog_AppCompat 0x0
 int style AlertDialog_AppCompat_Light 0x0
 int style AndroidThemeColorAccentYellow 0x0

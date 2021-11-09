@@ -11,10 +11,10 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class DataRepositoryImpl
+
 @Inject constructor(
     private val imageDataSource: ImageDataSource,
-    private val imageManager: ImageManager
-) : DataRepository {
+    private val imageManager: ImageManager) : DataRepository {
 
     override fun fetchImages(query: String): Flow<PagingData<ImageDomainModel>> {
         return imageDataSource.fetchImages(query)

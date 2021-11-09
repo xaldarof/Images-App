@@ -14,8 +14,26 @@
     <string name="empty">No favorites…</string>
     <string name="recs">My recommendations</string>
     <string name="save">save</string>
-    <string name="exit">exit</string>
     <string name="safe_mode">Energy saving</string>
+
+
+    <string name="saved_in">Successfully saved in </string>
+    <string name="an_error">An error handled, please try again</string>
+    <string name="select_app">Choose application</string>
+
+    <string name="success_apply">Wallpaper successfully changed</string>
+    <string name="attention">Attention…</string>
+    <string name="give_permission">You need to allow storage permission in settings of your phone.</string>
+    <string name="ok">open</string>
+    <string name="exit">exit</string>
+    <string name="wait">Please wait…</string>
+    <string name="life">Art</string>
+    <string name="computers">Computers</string>
+    <string name="emoji">emoji</string>
+    <string name="locations">locations</string>
+    <string name="area">area</string>
+    <string name="programming">programming</string>
+    <string name="painting">painting</string>
 
     <string-array name="recs">
         <item name="life">Life</item>

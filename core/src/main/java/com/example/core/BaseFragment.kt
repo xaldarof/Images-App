@@ -16,5 +16,8 @@ abstract class BaseFragment : Fragment(){
         Toast.makeText(requireContext(),id,Toast.LENGTH_SHORT).show()
     }
 
+    fun toast(id: String){
+        Toast.makeText(requireContext(),id,Toast.LENGTH_SHORT).show()
+    }
 
 }

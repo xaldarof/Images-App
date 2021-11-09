@@ -48,120 +48,121 @@
 26-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:20:9-54
 27        android:supportsRtl="true"
 27-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:21:9-35
-28        android:theme="@style/Theme.ExampleTaxi"
-28-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:23:9-49
-29        android:usesCleartextTraffic="true" >
-29-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:9-44
-30        <activity
-30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:25:9-34:20
-31            android:name="com.example.exampletaxi.MainActivity"
-31-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:26:13-41
-32            android:exported="true"
-32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:27:13-36
-33            android:screenOrientation="portrait" >
-33-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:28:13-49
-34            <intent-filter>
-34-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:29:13-33:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
-35-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:32:17-77
-37-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:32:27-74
-38            </intent-filter>
-39        </activity>
-40
-41        <provider
-41-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:23:9-26:40
-42            android:name="com.readystatesoftware.chuck.internal.data.ChuckContentProvider"
-42-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:24:13-91
-43            android:authorities="com.example.exampletaxi.chuck.provider"
-43-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:25:13-66
-44            android:exported="false" />
-44-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:26:13-37
-45
-46        <activity
-46-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:28:9-33:50
-47            android:name="com.readystatesoftware.chuck.internal.ui.MainActivity"
-47-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:29:13-81
-48            android:label="@string/chuck_name"
-48-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:30:13-47
-49            android:launchMode="singleTask"
-49-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:31:13-44
-50            android:taskAffinity="com.readystatesoftware.chuck.task"
-50-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:32:13-69
-51            android:theme="@style/Chuck.Theme" />
-51-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:33:13-47
-52        <activity
-52-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:34:9-37:50
-53            android:name="com.readystatesoftware.chuck.internal.ui.TransactionActivity"
-53-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:35:13-88
-54            android:parentActivityName="com.readystatesoftware.chuck.internal.ui.MainActivity"
-54-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:36:13-95
-55            android:theme="@style/Chuck.Theme" />
-55-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:37:13-47
-56
-57        <service
-57-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:39:9-41:40
-58            android:name="com.readystatesoftware.chuck.internal.support.ClearTransactionsService"
-58-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:40:13-98
-59            android:exported="false" />
-59-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:41:13-37
-60        <service
-60-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
-61            android:name="androidx.room.MultiInstanceInvalidationService"
-61-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
-62            android:directBootAware="true"
-62-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
-63            android:exported="false" />
-63-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
-64
-65        <activity
-65-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:27:9-34:20
-66            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
-66-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:28:13-99
-67            android:exported="true"
-67-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:29:13-36
-68            android:theme="@android:style/Theme" >
-68-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:30:13-49
-69            <intent-filter>
-69-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
-70                <action android:name="android.intent.action.MAIN" />
-70-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
-70-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
-71            </intent-filter>
-72        </activity>
-73        <activity
-73-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:35:9-42:20
-74            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-74-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:36:13-95
-75            android:exported="true"
-75-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:37:13-36
-76            android:theme="@android:style/Theme" >
-76-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:38:13-49
-77            <intent-filter>
-77-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
-78                <action android:name="android.intent.action.MAIN" />
-78-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
-78-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
-79            </intent-filter>
-80        </activity>
-81        <activity
-81-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:43:9-50:20
-82            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-82-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:44:13-103
-83            android:exported="true"
-83-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:45:13-36
-84            android:theme="@android:style/Theme.Dialog" >
-84-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:46:13-56
-85            <intent-filter>
-85-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
-86                <action android:name="android.intent.action.MAIN" />
-86-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
-86-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
-87            </intent-filter>
-88        </activity>
-89    </application>
-90
-91</manifest>
+28        android:testOnly="true"
+29        android:theme="@style/Theme.ExampleTaxi"
+29-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:23:9-49
+30        android:usesCleartextTraffic="true" >
+30-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:19:9-44
+31        <activity
+31-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:25:9-34:20
+32            android:name="com.example.exampletaxi.MainActivity"
+32-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:26:13-41
+33            android:exported="true"
+33-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:27:13-36
+34            android:screenOrientation="portrait" >
+34-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:28:13-49
+35            <intent-filter>
+35-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:29:13-33:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
+36-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:32:17-77
+38-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:32:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <provider
+42-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:23:9-26:40
+43            android:name="com.readystatesoftware.chuck.internal.data.ChuckContentProvider"
+43-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:24:13-91
+44            android:authorities="com.example.exampletaxi.chuck.provider"
+44-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:25:13-66
+45            android:exported="false" />
+45-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:26:13-37
+46
+47        <activity
+47-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:28:9-33:50
+48            android:name="com.readystatesoftware.chuck.internal.ui.MainActivity"
+48-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:29:13-81
+49            android:label="@string/chuck_name"
+49-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:30:13-47
+50            android:launchMode="singleTask"
+50-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:31:13-44
+51            android:taskAffinity="com.readystatesoftware.chuck.task"
+51-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:32:13-69
+52            android:theme="@style/Chuck.Theme" />
+52-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:33:13-47
+53        <activity
+53-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:34:9-37:50
+54            android:name="com.readystatesoftware.chuck.internal.ui.TransactionActivity"
+54-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:35:13-88
+55            android:parentActivityName="com.readystatesoftware.chuck.internal.ui.MainActivity"
+55-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:36:13-95
+56            android:theme="@style/Chuck.Theme" />
+56-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:37:13-47
+57
+58        <service
+58-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:39:9-41:40
+59            android:name="com.readystatesoftware.chuck.internal.support.ClearTransactionsService"
+59-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:40:13-98
+60            android:exported="false" />
+60-->[com.readystatesoftware.chuck:library:1.1.0] C:\Users\Normal_User\.gradle\caches\transforms-3\c399f9c46358cb46dd03733f281f20f2\transformed\jetified-library-1.1.0\AndroidManifest.xml:41:13-37
+61        <service
+61-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+62            android:name="androidx.room.MultiInstanceInvalidationService"
+62-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+63            android:directBootAware="true"
+63-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+64            android:exported="false" />
+64-->[androidx.room:room-runtime:2.3.0] C:\Users\Normal_User\.gradle\caches\transforms-3\823af34f90beaad96b05b4446cf91312\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+65
+66        <activity
+66-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:27:9-34:20
+67            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+67-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:28:13-99
+68            android:exported="true"
+68-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:29:13-36
+69            android:theme="@android:style/Theme" >
+69-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:30:13-49
+70            <intent-filter>
+70-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
+71-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
+72            </intent-filter>
+73        </activity>
+74        <activity
+74-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:35:9-42:20
+75            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+75-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:36:13-95
+76            android:exported="true"
+76-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:37:13-36
+77            android:theme="@android:style/Theme" >
+77-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:38:13-49
+78            <intent-filter>
+78-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
+79                <action android:name="android.intent.action.MAIN" />
+79-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
+79-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
+80            </intent-filter>
+81        </activity>
+82        <activity
+82-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:43:9-50:20
+83            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+83-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:44:13-103
+84            android:exported="true"
+84-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:45:13-36
+85            android:theme="@android:style/Theme.Dialog" >
+85-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:46:13-56
+86            <intent-filter>
+86-->[androidx.test:core:1.4.0] C:\Users\Normal_User\.gradle\caches\transforms-3\d945181a767f839f6e4489d52fee8ff3\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
+87                <action android:name="android.intent.action.MAIN" />
+87-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:17-69
+87-->C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\app\src\main\AndroidManifest.xml:30:25-66
+88            </intent-filter>
+89        </activity>
+90    </application>
+91
+92</manifest>

@@ -1,6 +1,6 @@
 package com.example.data.cloud.api
 
-import com.example.data.core.Constants
+import com.example.data.utils.Constants
 import com.example.domain.models.ImageCloudModel
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -17,5 +17,6 @@ string ok
 string saved_in
 string select_app
 string success_apply
+string wait
 style BottomSheetDialogStyle
 style BottomSheetDialogTheme

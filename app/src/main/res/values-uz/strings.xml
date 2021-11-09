@@ -9,14 +9,23 @@
     <string name="success_remove">Sevimli rasmlardan muvvafaqiyatli ochirildi</string>
     <string name="success_add">Sevimli rasmlarga muvvafaqiyatli qoshildi</string>
     <string name="settings">Sozlamalar</string>
-    <string name="dark_theme">Tungi tema</string>
+    <string name="dark_theme">Tungi rejim</string>
     <string name="bold_font">Til</string>
     <string name="empty">Sevimli rasmlar yoq…</string>
     <string name="recs">Men yoqtirgan mavzu</string>
     <string name="save">saqlash</string>
     <string name="exit">chiqish</string>
-    <string name="safe_mode">Energy saving</string>
+    <string name="safe_mode">Quvvat tejash</string>
 
+    <string name="saved_in">Muvvaqiyatli saqlandi </string>
+    <string name="an_error">Kutilmagan xatolik yuz berdi</string>
+    <string name="select_app">Dasturni tanlang</string>
+
+    <string name="success_apply">Qurilma foni muvvaqiyatli ozgartirildi</string>
+    <string name="attention">Diqqat…</string>
+    <string name="give_permission">Вы должны дать разрешение приложению для чтения и записи в на настройках вашего устройства</string>
+    <string name="ok">ОТКРЫТЬ</string>
+    <string name="wait">Подождите…</string>
 
     <string-array name="recs">
         <item name="life">Xayot</item>

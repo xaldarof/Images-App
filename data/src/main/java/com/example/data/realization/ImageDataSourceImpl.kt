@@ -7,7 +7,7 @@ import com.example.data.cache.ImageDao
 import com.example.data.cloud.abstraction.ImageDataSource
 import com.example.data.cloud.api.ImageApiService
 import com.example.data.cloud.api.ImagePagingSource
-import com.example.data.core.Constants
+import com.example.data.utils.Constants
 import com.example.domain.models.ImageDbModel
 import com.example.domain.models.ImageDomainModel
 import kotlinx.coroutines.flow.Flow

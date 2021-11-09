@@ -4,7 +4,7 @@ import android.content.Context
 import com.example.data.cache.ImageDao
 import com.example.data.cloud.abstraction.ImageDataSource
 import com.example.data.cloud.api.ImageApiService
-import com.example.data.core.Constants
+import com.example.data.utils.Constants
 import com.example.data.realization.DataRepositoryImpl
 import com.example.data.realization.ImageDataSourceImpl
 import com.example.domain.abstraction.DataRepository
@@ -56,6 +56,7 @@ object CloudModule {
     @Provides
     fun provideRetrofitClient(@ApplicationContext context: Context):OkHttpClient {
         return OkHttpClient.Builder()
+            .addInterceptor(ChuckInterceptor(context))
             .build()
     }
 }

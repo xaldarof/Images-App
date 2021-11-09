@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="saved_in">Muvvaqiyatli saqlandi </string>
-    <string name="an_error">Xatolik yuz berdi</string>
+    <string name="an_error">Xatolik yuz berdi, qaytattan urinib koring</string>
     <string name="select_app">Dasturni tanlang</string>
+
+    <string name="success_apply">Sizning fonningiz muvaffaqiyatli ozgartirildi…</string>
+    <string name="attention">Diqqat…</string>
+    <string name="give_permission">Siz mobil qurilmangiz sozlamaridan shu dasturga malumot oqish va yozish uchun xuquq berishingiz kerak</string>
+    <string name="ok">ochish</string>
+    <string name="exit">yopish</string>
+    <string name="wait">Iltimos kuting…</string>
+
 </resources>

@@ -6,4 +6,7 @@ object UserSettings {
     const val DEFAULT_REC = "life"
     const val LANGUAGE = "user_language"
     const val SAFE_MODE = "safe_mode"
+
+    const val EN = "en"
+    const val RU = "ru"
 }

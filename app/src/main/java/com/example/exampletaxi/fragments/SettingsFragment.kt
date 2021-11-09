@@ -12,11 +12,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import android.app.AlertDialog
 import com.example.core.BaseFragment
 import com.example.exampletaxi.R
-import com.example.exampletaxi.utils.UiConstants.RU
 import com.example.exampletaxi.utils.UiConstants.langs
-import com.example.exampletaxi.utils.defineRecommend
+import com.example.exampletaxi.utils.UiConstants.recsEn
 import com.example.exampletaxi.utils.restart
-
 
 @AndroidEntryPoint
 class SettingsFragment :BaseFragment() {
@@ -39,13 +37,13 @@ class SettingsFragment :BaseFragment() {
             if (compoundButton.isChecked){
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 viewModel.setMode(true)
-            }else {
+            } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 viewModel.setMode(false)
             }
         }
 
-        binding.safeMode.setOnCheckedChangeListener { compoundButton, b ->
+        binding.safeMode.setOnCheckedChangeListener { compoundButton, _ ->
             viewModel.setSafeModel(compoundButton.isChecked)
             requireActivity().restart()
         }
@@ -55,14 +53,9 @@ class SettingsFragment :BaseFragment() {
             AlertDialog.Builder(requireContext())
                 .setSingleChoiceItems(recommends, recommends.indexOf(viewModel.fetchUserRecommends()), null)
                 .setPositiveButton(R.string.save) { dialog, _ ->
-                    dialog.dismiss()
                     val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
-
-                    if (viewModel.fetchUserLanguage() == RU) {
-                        viewModel.setUserRecommends(recommends[position].defineRecommend())
-                    }
-                    else viewModel.setUserRecommends(recommends[position])
-
+                    viewModel.setUserRecommends(recsEn[position])
+                    dialog.dismiss()
                     requireActivity().restart()
                 }.setNegativeButton(R.string.exit){ dialog, _ ->
                     dialog.dismiss()

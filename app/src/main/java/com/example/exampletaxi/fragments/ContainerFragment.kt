@@ -24,8 +24,7 @@ class ContainerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         FragmentController(
-            binding,
-            this,
+            binding, this,
             listOf(HomeFragment(), SearchFragment(), FavoritesFragment(), SettingsFragment()))
 
 
