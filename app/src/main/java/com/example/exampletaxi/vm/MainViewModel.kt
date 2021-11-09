@@ -38,6 +38,10 @@ class MainViewModel
         repository.shareImage(imageView)
     }
 
+    suspend fun setWallpaper(imageView: ImageView){
+        repository.setWallpaper(imageView)
+    }
+
     suspend fun fetchCacheImagesAsFlow() : Flow<List<ImageDbModel>> {
         return repository.fetchCacheImagesAsFlow()
     }
@@ -49,6 +53,10 @@ class MainViewModel
     fun removeCacheImage(model: ImageDbModel){
         repository.removeCacheImage(model.id)
     }
+
+    fun setSafeModel(mode: Boolean) = userSettingsRepository.setSafeModel(mode)
+
+    fun isSafeMode(): Boolean = userSettingsRepository.isSafeMode()
 
     suspend fun saveCacheImage(uiModel: ImageUiModel) = repository.saveCacheImage(mapper.mapToDb(uiModel))
 

@@ -42,7 +42,7 @@ class SearchFragment : BaseFragment(),ImagesPagingAdapter.CallBack,ShowImageDial
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = ImagesPagingAdapter(this)
+        adapter = ImagesPagingAdapter(this,viewModel.isSafeMode())
 
         val layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         binding.rv.layoutManager = layoutManager
@@ -105,6 +105,12 @@ class SearchFragment : BaseFragment(),ImagesPagingAdapter.CallBack,ShowImageDial
         lifecycleScope.launch {
             viewModel.saveCacheImage(uiModel)
             toast(R.string.success_add)
+        }
+    }
+
+    override fun onClickSetWallpaper(imageView: ImageView) {
+        lifecycleScope.launch {
+            viewModel.setWallpaper(imageView)
         }
     }
 }

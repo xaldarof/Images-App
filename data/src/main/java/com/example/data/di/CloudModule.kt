@@ -1,7 +1,6 @@
 package com.example.data.di
 
 import android.content.Context
-import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.example.data.cache.ImageDao
 import com.example.data.cloud.abstraction.ImageDataSource
 import com.example.data.cloud.api.ImageApiService
@@ -9,6 +8,7 @@ import com.example.data.core.Constants
 import com.example.data.realization.DataRepositoryImpl
 import com.example.data.realization.ImageDataSourceImpl
 import com.example.domain.abstraction.DataRepository
+import com.readystatesoftware.chuck.ChuckInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -56,10 +56,7 @@ object CloudModule {
     @Provides
     fun provideRetrofitClient(@ApplicationContext context: Context):OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(ChuckerInterceptor(context))
             .build()
-
     }
-
 }
 

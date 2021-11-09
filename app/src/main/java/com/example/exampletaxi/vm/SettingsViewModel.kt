@@ -21,4 +21,8 @@ constructor(private val userSettings: UserSettingsRepository): BaseViewModel() {
 
     fun setUserLanguage(langCode:String) = userSettings.setUserLanguage(langCode)
     fun fetchUserLanguage() = userSettings.fetchUserLanguage()
+
+    fun setSafeModel(mode: Boolean) = userSettings.setSafeModel(mode)
+
+    fun isSafeMode(): Boolean = userSettings.isSafeMode()
 }

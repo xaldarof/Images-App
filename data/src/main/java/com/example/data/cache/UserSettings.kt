@@ -10,4 +10,7 @@ interface UserSettings {
 
     fun setUserLanguage(name:String)
     fun fetchUserLanguage():String?
+
+    fun setSafeModel(mode:Boolean)
+    fun isSafeMode():Boolean
 }

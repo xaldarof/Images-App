@@ -39,7 +39,7 @@ class FavoritesFragment : BaseFragment(),ShowFavoriteImageDialog.CallBack,ImageF
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = ImageFavoritesAdapter(this)
+        adapter = ImageFavoritesAdapter(this,viewModel.isSafeMode())
         binding.rv.layoutManager = GridLayoutManager(requireContext(),
             2,GridLayoutManager.VERTICAL,false)
         binding.rv.adapter = adapter

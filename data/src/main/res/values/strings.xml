@@ -3,4 +3,9 @@
     <string name="saved_in">Successfully saved in </string>
     <string name="an_error">An error handled</string>
     <string name="select_app">Which application ?</string>
+    <string name="success_apply">Your wallpaper successfully changed…</string>
+    <string name="attention">Attention…</string>
+    <string name="give_permission">You need to allow storage permission in settings of your phone.</string>
+    <string name="ok">OPEN</string>
+    <string name="exit">exit</string>
 </resources>

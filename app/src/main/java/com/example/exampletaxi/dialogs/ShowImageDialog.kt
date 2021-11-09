@@ -49,19 +49,7 @@ class ShowImageDialog(private val callBack:CallBack ,
     private fun setUpImages(url:String,img:ImageView){
         Glide.with(requireContext())
             .load(url)
-            .error(R.drawable.ic_baseline_person_24)
-            .listener(object: RequestListener<Drawable> {
-                override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?,
-                                          isFirstResource: Boolean): Boolean {
-                    Toast.makeText(requireContext(), R.string.no_connection, Toast.LENGTH_SHORT).show()
-                    return false
-                }
-
-                override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?,
-                                             dataSource: DataSource?, isFirstResource: Boolean): Boolean {
-                    return false
-                }
-            })
+            .error(R.drawable.ic_baseline_signal_wifi_bad_24)
             .into(img)
     }
 
@@ -72,6 +60,7 @@ class ShowImageDialog(private val callBack:CallBack ,
         binding.userAvatarCardView.setOnClickListener { callBack.onOpenUserPage(uiModel) }
         binding.exitBtn.setOnClickListener { dismiss() }
         binding.addFavoritesBtn.setOnClickListener { callBack.onClickAddFavorites(uiModel) }
+        binding.setWallpaperBtn.setOnClickListener { callBack.onClickSetWallpaper(binding.largeImage) }
     }
 
     interface CallBack {
@@ -81,5 +70,6 @@ class ShowImageDialog(private val callBack:CallBack ,
         fun onOpenUserPage(uiModel: ImageUiModel)
         fun onClickRetry()
         fun onClickAddFavorites(uiModel: ImageUiModel)
+        fun onClickSetWallpaper(imageView: ImageView)
     }
 }

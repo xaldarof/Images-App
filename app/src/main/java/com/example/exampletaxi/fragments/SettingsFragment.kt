@@ -11,9 +11,13 @@ import com.example.exampletaxi.databinding.FragmentSettingsBinding
 import com.example.exampletaxi.vm.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import android.app.AlertDialog
+import android.util.Log
 import com.example.core.BaseFragment
 import com.example.exampletaxi.R
+import com.example.exampletaxi.utils.UiConstants.EN
+import com.example.exampletaxi.utils.UiConstants.RU
 import com.example.exampletaxi.utils.UiConstants.langs
+import com.example.exampletaxi.utils.defineRecommend
 import com.example.exampletaxi.utils.restart
 
 
@@ -32,6 +36,7 @@ class SettingsFragment :BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.themeSwitch.isChecked = viewModel.isDarkModelEnabled()
+        binding.safeMode.isChecked = viewModel.isSafeMode()
 
         binding.themeSwitch.setOnCheckedChangeListener { compoundButton, _ ->
             if (compoundButton.isChecked){
@@ -43,6 +48,11 @@ class SettingsFragment :BaseFragment() {
             }
         }
 
+        binding.safeMode.setOnCheckedChangeListener { compoundButton, b ->
+            viewModel.setSafeModel(compoundButton.isChecked)
+            requireActivity().restart()
+        }
+
         val recommends = resources.getStringArray(R.array.recs)
         binding.selectRecommendation.setOnClickListener {
             AlertDialog.Builder(requireContext())
@@ -50,14 +60,18 @@ class SettingsFragment :BaseFragment() {
                 .setPositiveButton(R.string.save) { dialog, _ ->
                     dialog.dismiss()
                     val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
-                    viewModel.setUserRecommends(recommends[position])
+
+                    if (viewModel.fetchUserLanguage() == RU) {
+                        viewModel.setUserRecommends(recommends[position].defineRecommend())
+                    }
+                    else viewModel.setUserRecommends(recommends[position])
+
                     requireActivity().restart()
                 }.setNegativeButton(R.string.exit){ dialog, _ ->
                     dialog.dismiss()
                 }
                 .show()
         }
-
 
         binding.selectLang.setOnClickListener {
             AlertDialog.Builder(requireContext())

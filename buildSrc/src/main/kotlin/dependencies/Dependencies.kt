@@ -18,13 +18,10 @@ object Dependencies {
             const val paging3_version = "3.0.1"
             const val gsonConverter_version = "2.9.0"
             const val glide_version = "4.12.0"
-            const val chuck_versionRelease = "3.5.2"
-            const val chuck_versionDebug = "3.5.2"
+            const val chuck_version= "1.1.0"
         }
 
-        const val chuckInterceptorRelease = "com.github.chuckerteam.chucker:library-no-op:${Versions.chuck_versionRelease}"
-
-
+        const val chuckInterceptor = "com.readystatesoftware.chuck:library:${Versions.chuck_version}"
         const val glide = "com.github.bumptech.glide:glide:${Versions.glide_version}"
         const val paging3 = "androidx.paging:paging-runtime:${Versions.paging3_version}"
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"

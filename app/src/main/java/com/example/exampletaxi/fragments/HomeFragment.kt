@@ -1,14 +1,12 @@
 package com.example.exampletaxi.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
@@ -40,7 +38,7 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = ImagesPagingAdapter(this)
+        adapter = ImagesPagingAdapter(this,viewModel.isSafeMode())
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
         binding.rv.layoutManager = layoutManager
@@ -48,11 +46,6 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
 
         binding.retryBtn.setOnClickListener {
             adapter.retry()
-        }
-
-        binding.homeContainer.setOnRefreshListener {
-            adapter.refresh()
-            binding.homeContainer.isRefreshing = false
         }
 
         lifecycleScope.launch {
@@ -99,6 +92,12 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
         lifecycleScope.launch {
             viewModel.saveCacheImage(uiModel)
             Toast.makeText(requireContext(), R.string.success_add , Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun onClickSetWallpaper(imageView: ImageView) {
+        lifecycleScope.launch {
+            viewModel.setWallpaper(imageView)
         }
     }
 }

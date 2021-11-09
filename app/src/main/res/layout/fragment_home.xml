@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_container"
@@ -14,9 +14,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
-            tools:listitem="@layout/image_item"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            tools:listitem="@layout/image_item" />
 
         <LinearLayout
             android:id="@+id/error_container"
@@ -49,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
+                android:padding="14dp"
                 android:background="@drawable/tab_layout_background"
                 android:src="@drawable/ic_baseline_signal_wifi_bad_24"
                 android:text="@string/retry"
@@ -74,4 +75,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

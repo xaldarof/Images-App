@@ -10,7 +10,7 @@ import com.example.exampletaxi.R
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.CacheImageItemBinding
 
-class ImageFavoritesAdapter(private val callBack: CallBack):
+class ImageFavoritesAdapter(private val callBack: CallBack,private val isSafeMode:Boolean):
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val oldList = ArrayList<ImageDbModel>()
@@ -27,7 +27,7 @@ class ImageFavoritesAdapter(private val callBack: CallBack):
         fun onBind(imageDbModel: ImageDbModel) {
 
             Glide.with(binding.root.context)
-                .load(imageDbModel.webFormat)
+                .load(if (isSafeMode) imageDbModel.previewURL else imageDbModel.webFormat)
                 .placeholder(R.drawable.ic_baseline_arrow_downward_24)
                 .into(binding.image)
 

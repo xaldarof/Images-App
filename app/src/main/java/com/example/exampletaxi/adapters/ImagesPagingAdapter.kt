@@ -12,7 +12,7 @@ import com.example.exampletaxi.R
 import com.example.exampletaxi.core.ImageUiModel
 import com.example.exampletaxi.databinding.ImageItemBinding
 
-class ImagesPagingAdapter(private val callBack: CallBack): PagingDataAdapter<ImageUiModel, RecyclerView.ViewHolder>(Comparator) {
+class ImagesPagingAdapter(private val callBack: CallBack,private val isSafeMode:Boolean): PagingDataAdapter<ImageUiModel, RecyclerView.ViewHolder>(Comparator) {
 
 
     inner class ImageViewHolder(private val binding: ImageItemBinding) :
@@ -21,7 +21,7 @@ class ImagesPagingAdapter(private val callBack: CallBack): PagingDataAdapter<Ima
         fun onBind(imageUiModel: ImageUiModel) {
 
             Glide.with(binding.root.context)
-                .load(imageUiModel.webFormat)
+                .load(if (isSafeMode) imageUiModel.previewURL else imageUiModel.webFormat)
                 .placeholder(R.drawable.ic_baseline_arrow_downward_24)
                 .into(binding.image)
 

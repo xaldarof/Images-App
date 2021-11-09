@@ -5,4 +5,5 @@ object UserSettings {
     const val RECOMMENDS = "user_recs"
     const val DEFAULT_REC = "life"
     const val LANGUAGE = "user_language"
+    const val SAFE_MODE = "safe_mode"
 }

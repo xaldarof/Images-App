@@ -41,16 +41,16 @@ dependencies {
     implementation (Dependencies.Network.retrofit)
     implementation (Dependencies.Network.paging3)
     implementation (Dependencies.Network.RetrofitGsonConverter)
-    implementation (Dependencies.Network.chuckInterceptorRelease)
+    implementation (Dependencies.Network.chuckInterceptor)
 
     implementation(Dependencies.Di.legacySupport)
+    implementation 'androidx.test:core-ktx:1.4.0'
     kapt(Dependencies.Di.hiltCompiler)
     kapt(Dependencies.Di.hiltAndroidCompilerAlpha)
     kapt(Dependencies.Di.hiltAndroidCompiler)
     implementation(Dependencies.Di.hiltAndroid)
     kapt(Dependencies.Di.hiltCompilerGoogle)
     implementation(Dependencies.Di.hiltViewModel)
-
 
 
     kapt "android.arch.persistence.room:compiler:1.1.1"
@@ -60,7 +60,6 @@ dependencies {
     implementation "androidx.room:room-runtime:2.3.0"
     implementation "androidx.room:room-ktx:2.3.0"
     kapt "androidx.room:room-compiler:2.3.0"
-    implementation "androidx.datastore:datastore-preferences:1.0.0"
 
 
 

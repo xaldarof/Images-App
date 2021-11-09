@@ -1,5 +1,21 @@
 R_DEF: Internal format may change without notice
 local
+color black
+color black_light
+color black_light2
+drawable ic_baseline_close_24
+drawable layout_background
+drawable rounded_background
+id exitBtn
+id openBtn
+layout permission_layout
 string an_error
+string attention
+string exit
+string give_permission
+string ok
 string saved_in
 string select_app
+string success_apply
+style BottomSheetDialogStyle
+style BottomSheetDialogTheme

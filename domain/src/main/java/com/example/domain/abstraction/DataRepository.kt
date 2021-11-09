@@ -15,6 +15,8 @@ interface DataRepository {
 
     suspend fun shareImage(imageView: ImageView)
 
+    suspend fun setWallpaper(imageView: ImageView)
+
     suspend fun fetchCacheImagesAsFlow():Flow<List<ImageDbModel>>
     fun fetchCacheImages():List<ImageDbModel>
 

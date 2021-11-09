@@ -28,6 +28,10 @@ class DataRepositoryImpl
         imageManager.shareImage(imageView)
     }
 
+    override suspend fun setWallpaper(imageView: ImageView) {
+        imageManager.setWallpaper(imageView)
+    }
+
     override suspend fun fetchCacheImagesAsFlow():Flow<List<ImageDbModel>> {
         return imageDataSource.fetchCacheImagesAsFlow()
     }

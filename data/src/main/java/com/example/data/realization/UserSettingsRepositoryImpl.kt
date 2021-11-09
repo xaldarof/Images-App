@@ -16,4 +16,8 @@ class UserSettingsRepositoryImpl(private val userSettings: UserSettings): UserSe
     override fun setUserLanguage(name: String) = userSettings.setUserLanguage(name)
 
     override fun fetchUserLanguage(): String? = userSettings.fetchUserLanguage()
+
+    override fun setSafeModel(mode: Boolean) = userSettings.setSafeModel(mode)
+
+    override fun isSafeMode(): Boolean = userSettings.isSafeMode()
 }
