@@ -1,7 +1,6 @@
 package com.example.exampletaxi.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +10,8 @@ import com.example.exampletaxi.databinding.FragmentSettingsBinding
 import com.example.exampletaxi.vm.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import android.app.AlertDialog
-import android.util.Log
 import com.example.core.BaseFragment
 import com.example.exampletaxi.R
-import com.example.exampletaxi.utils.UiConstants.EN
 import com.example.exampletaxi.utils.UiConstants.RU
 import com.example.exampletaxi.utils.UiConstants.langs
 import com.example.exampletaxi.utils.defineRecommend
