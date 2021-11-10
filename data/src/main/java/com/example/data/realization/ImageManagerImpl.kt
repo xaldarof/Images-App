@@ -1,7 +1,5 @@
 package com.example.data.realization
 
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Context
 import android.graphics.Bitmap
 import com.example.data.cloud.abstraction.ImageManager
@@ -21,7 +19,6 @@ import java.io.ByteArrayOutputStream
 import android.app.WallpaperManager
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.provider.Settings
-import android.transition.TransitionManager
 import com.example.data.R
 
 
@@ -63,6 +60,7 @@ class ImageManagerImpl
     }
 
     override fun shareImage(imageView: ImageView) {
+        try {
         val bitmapDrawable = imageView.drawable as BitmapDrawable
         val bitmap = bitmapDrawable.bitmap
 
@@ -78,7 +76,9 @@ class ImageManagerImpl
         share.addFlags(FLAG_ACTIVITY_NEW_TASK)
         share.putExtra(Intent.EXTRA_STREAM, imageUri)
         context.startActivity(Intent.createChooser(share, context.resources.getString(R.string.select_app)))
-
+    }catch (e:Exception){
+            Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
+        }
     }
 
     override suspend fun setWallpaper(imageView: ImageView) {

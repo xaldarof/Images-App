@@ -1,7 +1,6 @@
 package com.example.exampletaxi.vm
 
 import android.widget.ImageView
-import androidx.lifecycle.ViewModel
 import androidx.paging.PagingData
 import androidx.paging.map
 import com.example.core.BaseViewModel

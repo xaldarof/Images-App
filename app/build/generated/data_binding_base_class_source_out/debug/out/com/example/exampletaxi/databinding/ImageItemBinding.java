@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.exampletaxi.R;
@@ -17,19 +17,19 @@ import java.lang.String;
 
 public final class ImageItemBinding implements ViewBinding {
   @NonNull
-  private final CardView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final ImageView image;
 
-  private ImageItemBinding(@NonNull CardView rootView, @NonNull ImageView image) {
+  private ImageItemBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView image) {
     this.rootView = rootView;
     this.image = image;
   }
 
   @Override
   @NonNull
-  public CardView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -60,7 +60,7 @@ public final class ImageItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ImageItemBinding((CardView) rootView, image);
+      return new ImageItemBinding((ConstraintLayout) rootView, image);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
