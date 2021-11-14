@@ -2864,7 +2864,6 @@ id legacy
 id line1
 id line3
 id linear
-id linearLayout
 id list
 id listMode
 id list_item

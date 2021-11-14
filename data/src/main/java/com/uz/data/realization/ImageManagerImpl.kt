@@ -17,9 +17,12 @@ import android.widget.Toast
 import com.uz.data.utils.DataConstants
 import java.io.ByteArrayOutputStream
 import android.app.WallpaperManager
+import android.content.ContentValues
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+import android.os.Build
 import android.provider.Settings
 import com.uz.data.R
+import java.util.*
 
 
 class ImageManagerImpl
@@ -27,8 +30,8 @@ class ImageManagerImpl
 
     override suspend fun saveImage(imageView: ImageView) {
         try {
-            val bitmapDrawable = imageView.drawable as BitmapDrawable
-            val bitmap = bitmapDrawable.bitmap
+           val bitmapDrawable = imageView.drawable as BitmapDrawable
+           val bitmap = bitmapDrawable.bitmap
 
             var outStream: FileOutputStream? = null
             val path: File = Environment.getExternalStorageDirectory()
@@ -43,6 +46,18 @@ class ImageManagerImpl
             notifyDataChanged(outFile)
 
             Toast.makeText(context, outFile.absolutePath, Toast.LENGTH_SHORT).show()
+
+            /**
+             * for Android 11
+             */
+
+//            val contentValues = ContentValues()
+//            contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME,System.currentTimeMillis().toString())
+//            contentValues.put(MediaStore.MediaColumns.MIME_TYPE,"image/jpeg")
+//                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH,Environment.DIRECTORY_PICTURES+File.separator+"image_founder_folder")
+//                val imgUri = context.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues)
+//                val outputStream = context.contentResolver.openOutputStream(imgUri!!)
+//                bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream)
 
         } catch (e: NullPointerException) {
             Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
