@@ -2841,7 +2841,6 @@ id ignoreRequest
 id image
 id img
 id img2
-id img3
 id img5
 id immediateStop
 id included
@@ -2980,8 +2979,6 @@ id protocol
 id query
 id radio
 id ratio
-id recommendations
-id recommendationsTv
 id rectangles
 id relativeLayout
 id relativeLayout3
@@ -3025,7 +3022,6 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id selectRecommendation
 id select_dialog_listview
 id select_lang
 id selected

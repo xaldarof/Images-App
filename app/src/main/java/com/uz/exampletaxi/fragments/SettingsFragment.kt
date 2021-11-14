@@ -48,20 +48,6 @@ class SettingsFragment :BaseFragment() {
             requireActivity().restart()
         }
 
-        val recommends = resources.getStringArray(R.array.recs)
-        binding.selectRecommendation.setOnClickListener {
-            AlertDialog.Builder(requireContext())
-                .setSingleChoiceItems(recommends, recommends.indexOf(viewModel.fetchUserRecommends()), null)
-                .setPositiveButton(R.string.save) { dialog, _ ->
-                    val position: Int = (dialog as AlertDialog).listView.checkedItemPosition
-                    viewModel.setUserRecommends(recsEn[position])
-                    dialog.dismiss()
-                    requireActivity().restart()
-                }.setNegativeButton(R.string.exit){ dialog, _ ->
-                    dialog.dismiss()
-                }
-                .show()
-        }
 
         binding.selectLang.setOnClickListener {
             AlertDialog.Builder(requireContext())

@@ -2840,7 +2840,6 @@ int id ignoreRequest 0x7f0900ee
 int id image 0x7f0900ef
 int id img 0x7f0900f0
 int id img2 0x7f0900f1
-int id img3 0x7f0900f2
 int id img5 0x7f0900f3
 int id immediateStop 0x7f0900f4
 int id included 0x7f0900f5
@@ -2979,8 +2978,6 @@ int id protocol 0x7f090179
 int id query 0x7f09017a
 int id radio 0x7f09017b
 int id ratio 0x7f09017c
-int id recommendations 0x7f09017d
-int id recommendationsTv 0x7f09017e
 int id rectangles 0x7f09017f
 int id relativeLayout 0x7f090180
 int id relativeLayout3 0x7f090181
@@ -3024,7 +3021,6 @@ int id search_mag_icon 0x7f0901a6
 int id search_plate 0x7f0901a7
 int id search_src_text 0x7f0901a8
 int id search_voice_btn 0x7f0901a9
-int id selectRecommendation 0x7f0901aa
 int id select_dialog_listview 0x7f0901ab
 int id select_lang 0x7f0901ac
 int id selected 0x7f0901ad
