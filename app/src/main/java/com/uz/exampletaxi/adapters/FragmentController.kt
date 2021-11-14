@@ -68,7 +68,7 @@ class FragmentController(
 
                 3 -> {
                     tab.icon =  ContextCompat.getDrawable(binding.root.context,
-                        R.drawable.ic_baseline_star_24)
+                        R.drawable.ic_baseline_settings_suggest_24)
                     tab.icon?.setTint(ContextCompat.getColor(context,R.color.tab_icon_color))
                 }
             }
