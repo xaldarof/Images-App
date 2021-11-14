@@ -4,7 +4,7 @@ ADDED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\
 INJECTED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\AndroidManifest.xml:2:1-6:12
 INJECTED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\AndroidManifest.xml:2:1-6:12
 	package
-		ADDED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\AndroidManifest.xml:3:5-31
+		ADDED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\AndroidManifest.xml:3:5-26
 		INJECTED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Normal_User\AndroidStudioProjects\ExampleTaxi\data\src\main\AndroidManifest.xml
 	xmlns:android

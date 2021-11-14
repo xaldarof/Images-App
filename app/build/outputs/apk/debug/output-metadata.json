@@ -4,14 +4,14 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.exampletaxi",
+  "applicationId": "com.uz.exampletaxi",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
+      "versionCode": 6,
       "versionName": "1.0",
       "outputFile": "app-debug.apk"
     }

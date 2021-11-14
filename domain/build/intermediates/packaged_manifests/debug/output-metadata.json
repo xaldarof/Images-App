@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.domain",
+  "applicationId": "com.uz.domain",
   "variantName": "debug",
   "elements": [
     {

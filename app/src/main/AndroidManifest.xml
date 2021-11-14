@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.exampletaxi">
+    package="com.uz.exampletaxi">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <application
-        android:name=".core.App"
+        android:name="com.uz.exampletaxi.core.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +20,7 @@
         android:theme="@style/Theme.ExampleTaxi"
         tools:targetApi="m">
         <activity
-            android:name=".MainActivity"
+            android:name="com.uz.exampletaxi.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
