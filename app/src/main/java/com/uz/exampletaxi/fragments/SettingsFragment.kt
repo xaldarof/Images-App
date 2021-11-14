@@ -45,7 +45,7 @@ class SettingsFragment :BaseFragment() {
 
         binding.safeMode.setOnCheckedChangeListener { compoundButton, _ ->
             viewModel.setSafeModel(compoundButton.isChecked)
-            requireActivity().restart()
+            requireActivity().recreate()
         }
 
 

@@ -8,4 +8,5 @@
     <color name="black_light">#232121</color>
     <color name="icon_click">#696766</color>
     <color name="tab_icon_color">#696766</color>
+    <color name="app_bar_color">#121212</color>
 </resources>
