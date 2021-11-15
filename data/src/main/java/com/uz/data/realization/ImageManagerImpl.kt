@@ -17,54 +17,56 @@ import android.widget.Toast
 import com.uz.data.utils.DataConstants
 import java.io.ByteArrayOutputStream
 import android.app.WallpaperManager
-import android.content.ContentValues
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
-import android.os.Build
+import android.provider.DocumentsContract
 import android.provider.Settings
+import androidx.appcompat.app.AppCompatActivity
 import com.uz.data.R
-import java.util.*
+import java.io.FileNotFoundException
+import java.net.URI
 
 
 class ImageManagerImpl
 @Inject constructor(@ApplicationContext private val context: Context) : ImageManager {
 
     override suspend fun saveImage(imageView: ImageView) {
-        try {
-           val bitmapDrawable = imageView.drawable as BitmapDrawable
-           val bitmap = bitmapDrawable.bitmap
+        var outFile:File? = null
+        kotlin.runCatching {
+
+            val bitmapDrawable = imageView.drawable as BitmapDrawable
+            val bitmap = bitmapDrawable.bitmap
 
             var outStream: FileOutputStream? = null
             val path: File = Environment.getExternalStorageDirectory()
             val dir = File(path.absolutePath.toString())
             val fileName = String.format("%d.jpg", System.currentTimeMillis())
-            val outFile = File(dir, fileName)
+            outFile = File(dir, fileName)
             outStream = FileOutputStream(outFile)
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream)
             outStream.flush()
             outStream.close()
 
-            notifyDataChanged(outFile)
 
-            Toast.makeText(context, outFile.absolutePath, Toast.LENGTH_SHORT).show()
+        }.onFailure {
+            if (it is NullPointerException) Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
+            if (it is FileNotFoundException) openPermissionIntent()
+            else Toast.makeText(context, R.string.an_error, Toast.LENGTH_SHORT).show()
 
-            /**
-             * for Android 11
-             */
+        }.onSuccess {
+            Toast.makeText(context, outFile?.absolutePath, Toast.LENGTH_SHORT).show()
+            outFile?.let { it1 -> notifyDataChanged(it1) }
 
-//            val contentValues = ContentValues()
-//            contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME,System.currentTimeMillis().toString())
-//            contentValues.put(MediaStore.MediaColumns.MIME_TYPE,"image/jpeg")
-//                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH,Environment.DIRECTORY_PICTURES+File.separator+"image_founder_folder")
-//                val imgUri = context.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues)
-//                val outputStream = context.contentResolver.openOutputStream(imgUri!!)
-//                bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream)
-
-        } catch (e: NullPointerException) {
-            Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
-        }catch (e:Exception){
-            openPermissionIntent()
         }
     }
+
+    private fun createFile() {
+        Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/jpeg"
+            putExtra(Intent.EXTRA_TITLE, (System.currentTimeMillis().toString().plus(".jpeg")))
+        }
+    }
+
 
     private fun openPermissionIntent() {
         val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
@@ -76,23 +78,28 @@ class ImageManagerImpl
 
     override fun shareImage(imageView: ImageView) {
         try {
-        val bitmapDrawable = imageView.drawable as BitmapDrawable
-        val bitmap = bitmapDrawable.bitmap
+            val bitmapDrawable = imageView.drawable as BitmapDrawable
+            val bitmap = bitmapDrawable.bitmap
 
-        val share = Intent(Intent.ACTION_SEND)
-        share.type = DataConstants.IMAGE_TYPE
-        val bytes = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-        val path = MediaStore.Images.Media.insertImage(
-            context.contentResolver,
-            bitmap, (System.currentTimeMillis() / 1000).toString(), null
-        )
-        val imageUri = Uri.parse(path)
-        share.addFlags(FLAG_ACTIVITY_NEW_TASK)
-        share.putExtra(Intent.EXTRA_STREAM, imageUri)
-        context.startActivity(Intent.createChooser(share, context.resources.getString(R.string.select_app)))
-    }catch (e:Exception){
-            Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
+            val share = Intent(Intent.ACTION_SEND)
+            share.type = DataConstants.IMAGE_TYPE
+            val bytes = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+            val path = MediaStore.Images.Media.insertImage(
+                context.contentResolver,
+                bitmap, (System.currentTimeMillis() / 1000).toString(), null
+            )
+            val imageUri = Uri.parse(path)
+            share.addFlags(FLAG_ACTIVITY_NEW_TASK)
+            share.putExtra(Intent.EXTRA_STREAM, imageUri)
+            context.startActivity(
+                Intent.createChooser(
+                    share,
+                    context.resources.getString(R.string.select_app)
+                )
+            )
+        } catch (e: Exception) {
+            Toast.makeText(context, R.string.an_error, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -106,7 +113,7 @@ class ImageManagerImpl
             Toast.makeText(context, R.string.success_apply, Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
             Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
-        }catch (e:NullPointerException){
+        } catch (e: NullPointerException) {
             Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
         }
     }
