@@ -10,5 +10,6 @@
     <string name="ok">ochish</string>
     <string name="exit">yopish</string>
     <string name="wait">Iltimos kuting…</string>
+    <string name="success_save">Muvaffaqiyatli saqlandi</string>
 
 </resources>

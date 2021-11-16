@@ -17,4 +17,6 @@
     <color name="icon_click">#C3BDBB</color>
     <color name="black_light">#FFFFFF</color>
     <color name="app_bar_color">#FFFFFF</color>
+    <color name="super_light_black">#FFFFFF</color>
+    <color name="mega_light_black">#DAD3D3</color>
 </resources>

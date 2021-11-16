@@ -112,10 +112,30 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/super_light_black"
+            app:cardCornerRadius="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pixabay"
+                android:text="@string/author"
+                android:textColor="@color/mega_light_black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="26dp"
+            android:layout_margin="14dp"
             android:background="@drawable/tab_layout_background"
             android:elevation="1dp"
             android:gravity="center"
@@ -124,12 +144,28 @@
 
 
             <ImageView
-                android:id="@+id/saveBtn"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:id="@+id/shareBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/image_margin"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/click_anim"
+                android:elevation="1dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_share_24"
+                app:layout_constraintStart_toStartOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:tint="@color/black" />
+
+
+            <ImageView
+                android:id="@+id/saveBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/click_anim"
                 android:elevation="1dp"
                 android:padding="8dp"
@@ -139,27 +175,27 @@
                 app:tint="@color/black" />
 
             <ImageView
-                android:id="@+id/shareBtn"
-                android:layout_width="56dp"
-                android:layout_height="52dp"
+                android:id="@+id/setWallpaperBtn"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/image_margin"
-                android:layout_marginStart="12dp"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/click_anim"
                 android:elevation="1dp"
                 android:padding="8dp"
-                android:src="@drawable/ic_baseline_share_24"
+                android:src="@drawable/ic_baseline_wallpaper_24"
                 app:layout_constraintStart_toStartOf="@+id/image"
                 app:layout_constraintTop_toBottomOf="@+id/image"
                 app:tint="@color/black" />
 
             <ImageView
                 android:id="@+id/openBrowserBtn"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/image_margin"
-                android:layout_marginStart="12dp"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/click_anim"
                 android:elevation="1dp"
                 android:padding="8dp"
@@ -170,10 +206,10 @@
 
             <ImageView
                 android:id="@+id/removeFavoriteBtn"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/image_margin"
+                android:layout_margin="8dp"
                 android:layout_marginStart="12dp"
                 android:background="@drawable/click_anim"
                 android:elevation="1dp"

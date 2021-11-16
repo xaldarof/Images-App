@@ -9,4 +9,5 @@
     <string name="ok">OPEN</string>
     <string name="exit">exit</string>
     <string name="wait">Please wait…</string>
+    <string name="success_save">Successfully saved to gallery</string>
 </resources>

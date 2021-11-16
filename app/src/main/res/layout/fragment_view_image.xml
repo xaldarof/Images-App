@@ -117,15 +117,19 @@
             android:layout_width="200dp"
             android:layout_height="24dp"
             android:layout_gravity="end"
+            android:backgroundTint="@color/super_light_black"
             android:layout_marginEnd="10dp"
             app:cardCornerRadius="4dp">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:src="@drawable/pixabay" />
+                android:textColor="@color/mega_light_black"
+                android:src="@drawable/pixabay"
+                android:text="@string/author"
+                android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
 

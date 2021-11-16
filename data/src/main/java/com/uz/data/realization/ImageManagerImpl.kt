@@ -18,19 +18,19 @@ import com.uz.data.utils.DataConstants
 import java.io.ByteArrayOutputStream
 import android.app.WallpaperManager
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
-import android.provider.DocumentsContract
 import android.provider.Settings
+import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
+import com.readystatesoftware.chuck.internal.ui.MainActivity
 import com.uz.data.R
 import java.io.FileNotFoundException
-import java.net.URI
-
 
 class ImageManagerImpl
 @Inject constructor(@ApplicationContext private val context: Context) : ImageManager {
 
     override suspend fun saveImage(imageView: ImageView) {
-        var outFile:File? = null
+        var outFile: File? = null
+
         kotlin.runCatching {
 
             val bitmapDrawable = imageView.drawable as BitmapDrawable
@@ -46,24 +46,15 @@ class ImageManagerImpl
             outStream.flush()
             outStream.close()
 
-
         }.onFailure {
             if (it is NullPointerException) Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
             if (it is FileNotFoundException) openPermissionIntent()
-            else Toast.makeText(context, R.string.an_error, Toast.LENGTH_SHORT).show()
+            else Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
 
         }.onSuccess {
-            Toast.makeText(context, outFile?.absolutePath, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,context.getString(R.string.success_save).plus(" ${outFile?.absolutePath}"), Toast.LENGTH_SHORT).show()
             outFile?.let { it1 -> notifyDataChanged(it1) }
 
-        }
-    }
-
-    private fun createFile() {
-        Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-            addCategory(Intent.CATEGORY_OPENABLE)
-            type = "application/jpeg"
-            putExtra(Intent.EXTRA_TITLE, (System.currentTimeMillis().toString().plus(".jpeg")))
         }
     }
 
@@ -104,16 +95,14 @@ class ImageManagerImpl
     }
 
     override suspend fun setWallpaper(imageView: ImageView) {
-        try {
+        kotlin.runCatching {
             val bitmapDrawable = imageView.drawable as BitmapDrawable
             val bitmap = bitmapDrawable.bitmap
             val manager = WallpaperManager.getInstance(context)
-
             manager.setBitmap(bitmap)
+        }.onSuccess {
             Toast.makeText(context, R.string.success_apply, Toast.LENGTH_SHORT).show()
-        } catch (e: Exception) {
-            Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
-        } catch (e: NullPointerException) {
+        }.onFailure {
             Toast.makeText(context, R.string.wait, Toast.LENGTH_SHORT).show()
         }
     }

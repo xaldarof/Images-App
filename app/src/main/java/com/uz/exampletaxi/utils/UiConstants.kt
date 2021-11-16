@@ -22,13 +22,18 @@ object UiConstants {
         "Magic"
     )
     val chip_names = arrayOf(
-    "life",
-    "computers",
-    "emoji",
-    "locations",
-    "area",
-    "programming",
-    "painting")
+        "life",
+        "computers",
+        "love",
+        "games",
+        "girls",
+        "sad",
+        "happiness",
+        "art",
+        "area",
+        "programming",
+        "painting"
+    )
 
     const val EN = "en"
     const val RU = "ru"

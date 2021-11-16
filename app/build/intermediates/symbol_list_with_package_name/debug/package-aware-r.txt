@@ -1732,6 +1732,7 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color mega_light_black
 color mtrl_btn_bg_color_selector
 color mtrl_btn_ripple_color
 color mtrl_btn_stroke_color_selector
@@ -1805,6 +1806,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color super_light_black
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -3407,6 +3409,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string area
 string attention
+string author
 string bold_font
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
@@ -3564,6 +3567,7 @@ string status_bar_notification_info_overflow
 string success_add
 string success_apply
 string success_remove
+string success_save
 string test_name
 string test_num
 string wait

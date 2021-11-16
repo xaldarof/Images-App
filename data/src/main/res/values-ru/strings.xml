@@ -10,5 +10,6 @@
     <string name="ok">ОТКРЫТЬ</string>
     <string name="exit">Выйти</string>
     <string name="wait">Подождите…</string>
+    <string name="success_save">Успешно сохранено</string>
 
 </resources>

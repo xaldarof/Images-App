@@ -81,4 +81,10 @@ class FavoritesFragment : BaseFragment(),ShowFavoriteImageDialog.CallBack,ImageF
         viewModel.removeCacheImage(model)
         toast(R.string.success_remove)
     }
+
+    override fun onClickSetWallpaper(imageView: ImageView) {
+        lifecycleScope.launch {
+            viewModel.setWallpaper(imageView)
+        }
+    }
 }

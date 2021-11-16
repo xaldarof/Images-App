@@ -35,18 +35,26 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.chipGroup.setOnCheckedChangeListener { _, _ ->
+            for (i in 0 until binding.chipGroup.childCount) {
+                val chip = binding.chipGroup.getChildAt(i) as Chip
+
+                if (chip.isChecked) {
+                    initData(chip.text.toString())
+                }
+            }
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initData(viewModel.fetchUserRecommends()!!)
-        binding.chipGroup.addChips(chip_names)
+        binding.chipGroup.addChips()
 
-        binding.chipGroup.setOnCheckedChangeListener { group, _ ->
-            val text = binding.root.findViewById<Chip>(group.checkedChipId).text.toString()
-            initData(text)
-        }
+
     }
 
     private fun initData(query:String) {

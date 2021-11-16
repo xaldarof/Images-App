@@ -34,6 +34,7 @@
     <string name="area">area</string>
     <string name="programming">programming</string>
     <string name="painting">painting</string>
+    <string name="author">Creator : Xoldarov Temur</string>
 
     <string-array name="recs">
         <item name="life">Life</item>

@@ -9,4 +9,7 @@
     <color name="icon_click">#696766</color>
     <color name="tab_icon_color">#696766</color>
     <color name="app_bar_color">#121212</color>
+    <color name="mega_light_black">#353333</color>
+    <color name="super_light_black">#121212</color>
+
 </resources>

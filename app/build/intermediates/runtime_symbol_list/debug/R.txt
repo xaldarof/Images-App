@@ -1731,6 +1731,7 @@ int color material_timepicker_button_stroke 0x7f06020a
 int color material_timepicker_clock_text_color 0x7f06020b
 int color material_timepicker_clockface 0x7f06020c
 int color material_timepicker_modebutton_tint 0x7f06020d
+int color mega_light_black 0x7f060267
 int color mtrl_btn_bg_color_selector 0x7f06020e
 int color mtrl_btn_ripple_color 0x7f06020f
 int color mtrl_btn_stroke_color_selector 0x7f060210
@@ -1804,6 +1805,7 @@ int color secondary_text_default_material_dark 0x7f060253
 int color secondary_text_default_material_light 0x7f060254
 int color secondary_text_disabled_material_dark 0x7f060255
 int color secondary_text_disabled_material_light 0x7f060256
+int color super_light_black 0x7f060268
 int color switch_thumb_disabled_material_dark 0x7f060257
 int color switch_thumb_disabled_material_light 0x7f060258
 int color switch_thumb_material_dark 0x7f060259
@@ -3406,6 +3408,7 @@ int string app_name 0x7f11001c
 int string appbar_scrolling_view_behavior 0x7f11001d
 int string area 0x7f11001e
 int string attention 0x7f11001f
+int string author 0x7f1100c1
 int string bold_font 0x7f110020
 int string bottom_sheet_behavior 0x7f110021
 int string bottomsheet_action_expand_halfway 0x7f110022
@@ -3563,6 +3566,7 @@ int string status_bar_notification_info_overflow 0x7f1100b9
 int string success_add 0x7f1100ba
 int string success_apply 0x7f1100bb
 int string success_remove 0x7f1100bc
+int string success_save 0x7f1100c0
 int string test_name 0x7f1100bd
 int string test_num 0x7f1100be
 int string wait 0x7f1100bf

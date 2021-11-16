@@ -76,6 +76,7 @@ class ShowFavoriteImageDialog(private val callBack:CallBack ,
             callBack.onClickRemoveFavorites(model)
             dismiss()
         }
+        binding.setWallpaperBtn.setOnClickListener { callBack.onClickSetWallpaper(binding.largeImage) }
     }
 
     interface CallBack {
@@ -85,5 +86,6 @@ class ShowFavoriteImageDialog(private val callBack:CallBack ,
         fun onOpenUserPage(model: ImageDbModel)
         fun onClickRetry()
         fun onClickRemoveFavorites(model: ImageDbModel)
+        fun onClickSetWallpaper(imageView: ImageView)
     }
 }

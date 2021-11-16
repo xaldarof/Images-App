@@ -43,7 +43,7 @@ fun View.showIfEmpty(count: Int) {
     this.isVisible = count != 0
 }
 
-fun ChipGroup.addChips(source:Array<String>){
+fun ChipGroup.addChips(){
     UiConstants.chip_names.forEachIndexed { index, s ->
         val chip = Chip(this.context)
         chip.text = s

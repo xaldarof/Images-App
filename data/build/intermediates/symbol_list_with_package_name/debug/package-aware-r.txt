@@ -2559,6 +2559,7 @@ string search_menu_title
 string select_app
 string status_bar_notification_info_overflow
 string success_apply
+string success_save
 string wait
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
