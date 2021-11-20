@@ -45,7 +45,6 @@ class HomeFragment : BaseFragment(), ImagesPagingAdapter.CallBack,ShowImageDialo
                 }
             }
         }
-
         return binding.root
     }
 

@@ -5,12 +5,15 @@ import android.app.Activity
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.net.Uri
 import android.view.View
 import android.widget.FrameLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isVisible
 import com.uz.exampletaxi.MainActivity
 import com.uz.exampletaxi.R
@@ -49,6 +52,8 @@ fun ChipGroup.addChips(){
         chip.text = s
         chip.checkedIcon = ContextCompat.getDrawable(this.context, R.drawable.ic_baseline_search_24)
         chip.text = UiConstants.chip_names[index]
+        chip.chipStrokeWidth = 1f
+        chip.chipStrokeColor = ColorStateList.valueOf(Color.WHITE)
         chip.isCheckable = true
         addView(chip)
     }

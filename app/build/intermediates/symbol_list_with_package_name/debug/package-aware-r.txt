@@ -2491,6 +2491,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable chip_background
 drawable chuck_ic_delete_white_24dp
 drawable chuck_ic_https_grey_24dp
 drawable chuck_ic_notification_white_24dp
