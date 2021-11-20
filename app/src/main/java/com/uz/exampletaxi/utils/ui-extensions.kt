@@ -57,7 +57,6 @@ fun ChipGroup.addChips(){
         chip.isCheckable = true
         addView(chip)
     }
-
 }
 
 fun Activity.restart() {
